@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Топ 1% Носитель уровня C1 — Roadmap 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --black: #0a0a0f;
+  --dark: #111118;
+  --card: #16161f;
+  --border: #242435;
+  --accent: #6c63ff;
+  --accent2: #ff6584;
+  --accent3: #43e97b;
+  --accent4: #f7971e;
+  --accent5: #38f9d7;
+  --text: #e8e8f0;
+  --muted: #7878a0;
+  --white: #ffffff;
+  --ph1: #6c63ff;
+  --ph2: #f7971e;
+  --ph3: #43e97b;
+  --ph4: #ff6584;
+  --ph5: #38f9d7;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--black);
+  color: var(--text);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: var(--dark);
+  padding: 14mm 12mm;
+  position: relative;
+  overflow: hidden;
+}
+
+.page + .page {
+  margin-top: 4mm;
+  border-top: 2px solid var(--border);
+}
+
+/* ─── COVER ─── */
+.cover {
+  background: var(--black);
+  position: relative;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(108,99,255,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(255,101,132,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.category-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(108,99,255,0.12);
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.category-bar span { color: var(--muted); }
+
+.cover-title {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  background: linear-gradient(135deg, #fff 0%, #a8a3ff 50%, #6c63ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.cover-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-bottom: 32px;
+  letter-spacing: 0.3px;
+}
+
+.cover-subtitle strong { color: var(--text); font-weight: 600; }
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.stat-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 20px 0;
+}
+
+.nav-title {
+  font-size: 9px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.phase-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.phase-nav-item {
+  border-radius: 6px;
+  padding: 10px 8px;
+  text-align: center;
+  border: 1px solid;
+}
+
+.phase-nav-item .phase-num {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.phase-nav-item .phase-weeks {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.phase-nav-item .phase-name {
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.phase-nav-item .phase-dur {
+  font-size: 8px;
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+
+
+<!-- ═══════════════════════════════════════════════════════ COVER PAGE -->
+<div class="page cover">
+
+  <div class="category-bar">
+    АНГЛИЙСКИЙ ЯЗЫК <span>·</span> 2026 <span>·</span> ROADMAP <span>·</span> V1.0
+  </div>
+
+  <div class="cover-title">Топ 1%<br>Носитель<br>уровня C1</div>
+
+  <div class="cover-subtitle">
+    <strong>12 месяцев · 52 недели · 5 фаз · 38 тем · без воды</strong> —
+    актуально для 2026: AI-собеседник как ускоритель, не замена
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-num" style="color:#6c63ff">52</div>
+      <div class="stat-label">Недели</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:#f7971e">5</div>
+      <div class="stat-label">Фаз</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:#43e97b">38</div>
+      <div class="stat-label">Тем</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:#ff6584">5</div>
+      <div class="stat-label">Капстонов</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="nav-title">▸ Навигация по фазам</div>
+
+  <div class="phase-nav">
+    <div class="phase-nav-item" style="background:rgba(108,99,255,0.08);border-color:rgba(108,99,255,0.35);color:#6c63ff">
+      <div class="phase-num">1</div>
+      <div class="phase-weeks">НЕД 1–6</div>
+      <div class="phase-name" style="color:#e8e8f0">ФУНДАМЕНТ</div>
+      <div class="phase-dur">6 недель · 6 тем</div>
+    </div>
+    <div class="phase-nav-item" style="background:rgba(247,151,30,0.08);border-color:rgba(247,151,30,0.35);color:#f7971e">
+      <div class="phase-num">2</div>
+      <div class="phase-weeks">НЕД 7–20</div>
+      <div class="phase-name" style="color:#e8e8f0">ОБЪЁМ</div>
+      <div class="phase-dur">14 недель · 10 тем</div>
+    </div>
+    <div class="phase-nav-item" style="background:rgba(67,233,123,0.08);border-color:rgba(67,233,123,0.35);color:#43e97b">
+      <div class="phase-num">3</div>
+      <div class="phase-weeks">НЕД 21–36</div>
+      <div class="phase-name" style="color:#e8e8f0">СТРОГОСТЬ</div>
+      <div class="phase-dur">16 недель · 9 тем</div>
+    </div>
+    <div class="phase-nav-item" style="background:rgba(255,101,132,0.08);border-color:rgba(255,101,132,0.35);color:#ff6584">
+      <div class="phase-num">4</div>
+      <div class="phase-weeks">НЕД 37–48</div>
+      <div class="phase-name" style="color:#e8e8f0">ПОЛЁТ</div>
+      <div class="phase-dur">12 недель · 8 тем</div>
+    </div>
+    <div class="phase-nav-item" style="background:rgba(56,249,215,0.08);border-color:rgba(56,249,215,0.35);color:#38f9d7">
+      <div class="phase-num">5</div>
+      <div class="phase-weeks">НЕД 49–52</div>
+      <div class="phase-name" style="color:#e8e8f0">ПРИВЫЧКИ</div>
+      <div class="phase-dur">4 недели · 5 тем</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FINAL GOAL BOX -->
+  <div style="background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.25);border-radius:8px;padding:14px 16px;margin-top:4px;">
+    <div style="font-size:9px;color:#6c63ff;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;">▸ Финальная цель</div>
+    <div style="font-size:13px;font-weight:700;color:#fff;line-height:1.4;">
+      30-минутный незаписанный разговор с носителем без подготовки<br>
+      <span style="color:#a8a3ff;font-weight:400;font-size:11px;">по теме, которую собеседник выбирает сам — уверенно, без пауз на перевод</span>
+    </div>
+  </div>
+
+</div><!-- end cover page -->
+
+
+<!-- ═══════════════════════════════════════════════════ PHILOSOPHY PAGE -->
+<style>
+.page-phil { background: var(--dark); }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-tag {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(108,99,255,0.12);
+  border: 1px solid rgba(108,99,255,0.3);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.manifesto {
+  background: linear-gradient(135deg, rgba(108,99,255,0.08), rgba(255,101,132,0.05));
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #c8c8e0;
+}
+
+.manifesto strong { color: var(--white); }
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.principle {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 12px 14px;
+}
+
+.principle-num {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--border);
+  line-height: 1;
+  margin-bottom: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.principle-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.principle-body {
+  font-size: 9.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.phase-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.phase-table th {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  font-weight: 700;
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.phase-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(36,36,53,0.6);
+  vertical-align: top;
+}
+
+.phase-table tr:last-child td { border-bottom: none; }
+
+.phase-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.phase-name-cell {
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.phase-focus { color: var(--muted); font-size: 9.5px; line-height: 1.4; }
+.phase-range { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); }
+.phase-dur-cell { font-weight: 700; font-size: 9.5px; }
+</style>
+
+<div class="page page-phil">
+
+  <div class="section-header">
+    <span class="section-tag">02</span>
+    <span class="section-title">Философия / Манифест</span>
+  </div>
+
+  <div class="manifesto">
+    <strong>Парадокс этой программы:</strong> ты не изучаешь английский — ты перестаёшь
+    переводить с русского. Первый месяц кажется медленным, потому что ты строишь
+    мышление на другом языке, а не словарь. <strong>Говори с первого дня — коряво,
+    неточно, вслух.</strong> AI-собеседник принимает любой уровень и разбирает каждую
+    ошибку. Живой носитель видит твой прогресс только тогда, когда ты уже не боишься
+    звучать плохо. Сначала объём — потом точность. Сначала смелость — потом
+    грамматика. <strong>Через 52 недели ты не «выучишь» язык — ты на нём живёшь.</strong>
+  </div>
+
+  <div class="principles-grid">
+
+    <div class="principle">
+      <div class="principle-num">01</div>
+      <div class="principle-title">Глубина одного навыка — до уверенности</div>
+      <div class="principle-body">Один инструмент или тему — до автоматизма, прежде чем брать следующий.
+      Anki-колода по Present Simple закрыта только тогда, когда ты не думаешь о ней
+      в разговоре, а не тогда, когда прочитал правило.</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">02</div>
+      <div class="principle-title">Осознанный пропуск — часть плана</div>
+      <div class="principle-body">Каждая фаза имеет список «не трогай сейчас». Пропускать
+      сложную грамматику на A1 — не лень, а дисциплина. Преждевременная сложность
+      создаёт страх, а не знание.</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">03</div>
+      <div class="principle-title">Топ 1% — это привычки, а не сложность</div>
+      <div class="principle-body">Носитель C1 отличается не знанием редких слов, а
+      ежедневными 20-минутными сессиями без пропусков. 52 недели × 7 дней × 20 минут =
+      ~121 час активной практики. Это и есть разница.</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">04</div>
+      <div class="principle-title">Реальная ставка обязательна</div>
+      <div class="principle-body">Каждый капстоун имеет живого собеседника или реальную
+      аудиторию — запись для YouTube, встреча в Tandem, интервью на англоязычном
+      митапе. Тренировочный полигон без ставки не засчитывается.</div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">05</div>
+      <div class="principle-title">Не используешь — не знаешь</div>
+      <div class="principle-body">Правило для каждого инструмента — Anki, grammarly,
+      shadowing-метод, транскрипции. Если не можешь объяснить, зачем ты это делаешь
+      и что это меняет в твоей речи — выброси инструмент, он стал ритуалом.</div>
+    </div>
+
+    <div class="principle" style="border-color:rgba(108,99,255,0.35);background:rgba(108,99,255,0.06)">
+      <div class="principle-num" style="color:rgba(108,99,255,0.25)">06</div>
+      <div class="principle-title" style="color:#a8a3ff">AI-собеседник: партнёр по объёму, не костыль</div>
+      <div class="principle-body">ChatGPT / Claude — это 24/7 терпеливый носитель,
+      который разбирает каждую ошибку без осуждения. Его роль меняется по фазам:
+      объясняющий партнёр → тренер произношения → строгий аудитор.
+      Живое общение он не заменяет — он создаёт смелость для него.</div>
+    </div>
+
+  </div>
+
+  <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px;">▸ Обзор фаз</div>
+
+  <table class="phase-table">
+    <tr>
+      <th>#</th>
+      <th>Фаза</th>
+      <th>Фокус</th>
+      <th>Недели</th>
+      <th>Длительность</th>
+      <th>Тем</th>
+    </tr>
+    <tr>
+      <td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:#6c63ff">1</td>
+      <td class="phase-name-cell"><span class="phase-dot" style="background:#6c63ff"></span>Фундамент</td>
+      <td class="phase-focus">Базовые конструкции + ежедневное говорение без страха</td>
+      <td class="phase-range">1–6</td>
+      <td class="phase-dur-cell" style="color:#6c63ff">6 нед.</td>
+      <td style="font-weight:700">6</td>
+    </tr>
+    <tr>
+      <td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:#f7971e">2</td>
+      <td class="phase-name-cell"><span class="phase-dot" style="background:#f7971e"></span>Объём</td>
+      <td class="phase-focus">Грамматика, лексика, слушание — массовое поглощение</td>
+      <td class="phase-range">7–20</td>
+      <td class="phase-dur-cell" style="color:#f7971e">14 нед.</td>
+      <td style="font-weight:700">10</td>
+    </tr>
+    <tr>
+      <td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:#43e97b">3</td>
+      <td class="phase-name-cell"><span class="phase-dot" style="background:#43e97b"></span>Строгость</td>
+      <td class="phase-focus">Точность, произношение, реальные условия — выход из зоны комфорта</td>
+      <td class="phase-range">21–36</td>
+      <td class="phase-dur-cell" style="color:#43e97b">16 нед.</td>
+      <td style="font-weight:700">9</td>
+    </tr>
+    <tr>
+      <td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:#ff6584">4</td>
+      <td class="phase-name-cell"><span class="phase-dot" style="background:#ff6584"></span>Полёт</td>
+      <td class="phase-focus">Спонтанная речь, широкий словарный запас, C1-регистры</td>
+      <td class="phase-range">37–48</td>
+      <td class="phase-dur-cell" style="color:#ff6584">12 нед.</td>
+      <td style="font-weight:700">8</td>
+    </tr>
+    <tr>
+      <td style="font-family:'JetBrains Mono',monospace;font-weight:700;color:#38f9d7">5</td>
+      <td class="phase-name-cell"><span class="phase-dot" style="background:#38f9d7"></span>Привычки</td>
+      <td class="phase-focus">Система поддержания C1 + финальная живая демонстрация</td>
+      <td class="phase-range">49–52</td>
+      <td class="phase-dur-cell" style="color:#38f9d7">4 нед.</td>
+      <td style="font-weight:700">5</td>
+    </tr>
+  </table>
+
+</div><!-- end philosophy page -->
+
+
+<!-- ═══════════════════════════════════════════════════ PHASE STYLES -->
+<style>
+.phase-page { background: var(--dark); }
+
+.phase-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.phase-header-left { flex: 1; }
+
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.phase-title {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  margin-bottom: 5px;
+}
+
+.phase-subtitle {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.phase-stats-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  min-width: 100px;
+}
+
+.mini-stat {
+  font-size: 9px;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: right;
+}
+
+.mini-stat strong { font-weight: 800; font-size: 10px; }
+
+.skip-box {
+  border-radius: 7px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.skip-title {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.skip-item {
+  font-size: 9.5px;
+  color: #c8c8e0;
+  line-height: 1.5;
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.skip-item::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.topics-grid.three-col { grid-template-columns: 1fr 1fr 1fr; }
+
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 10px 12px;
+}
+
+.topic-weeks {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.topic-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.topic-body {
+  font-size: 9px;
+  color: #9090b8;
+  line-height: 1.5;
+}
+
+.topic-duration {
+  margin-top: 6px;
+  font-size: 8px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.parallel-tag {
+  display: inline-block;
+  font-size: 7.5px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(56,249,215,0.12);
+  color: #38f9d7;
+  border: 1px solid rgba(56,249,215,0.25);
+  margin-left: 4px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+.capstone-box {
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.capstone-header {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.capstone-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.capstone-results {
+  list-style: none;
+  padding: 0;
+}
+
+.capstone-results li {
+  font-size: 9.5px;
+  color: #c8c8e0;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.capstone-results li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+</style>
+
+
+<!-- ═══════════════════════════════════════════════════ PHASE 1 PAGE -->
+<div class="page phase-page">
+
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(108,99,255,0.12);border:1px solid rgba(108,99,255,0.3);color:#6c63ff">
+        ● ФАЗА 1 &nbsp;·&nbsp; НЕД 1–6 &nbsp;·&nbsp; FOUNDATION
+      </div>
+      <div class="phase-title" style="color:#6c63ff">Фундамент</div>
+      <div class="phase-subtitle">
+        Строишь мышление на английском — не словарь. AI-собеседник выступает
+        <strong style="color:#c8c8e0">объясняющим партнёром</strong>: ты говоришь вслух любые фразы,
+        он исправляет, объясняет, повторяет — без осуждения, 24/7.
+      </div>
+    </div>
+    <div class="phase-stats-mini">
+      <div class="mini-stat">Недели: <strong style="color:#6c63ff">1–6</strong></div>
+      <div class="mini-stat">Длит.: <strong style="color:#6c63ff">6 нед.</strong></div>
+      <div class="mini-stat">Тем: <strong style="color:#6c63ff">6</strong></div>
+    </div>
+  </div>
+
+  <div class="skip-box" style="background:rgba(255,101,132,0.05);border:1px solid rgba(255,101,132,0.2)">
+    <div class="skip-title" style="color:#ff6584">✕ Пропускай на этой фазе</div>
+    <div class="skip-item"><strong>Present Perfect vs Past Simple</strong> — детальное разграничение времён убивает скорость речи на старте; добавишь в фазе 2.</div>
+    <div class="skip-item"><strong>Учебники IELTS / TOEFL</strong> — экзаменационный формат ломает естественное говорение на уровне A1; он не нужен раньше B2.</div>
+    <div class="skip-item"><strong>Перевод сложных текстов</strong> — переводной режим закрепляет русскоязычное мышление; на этой фазе только короткие фразы и диалоги.</div>
+    <div class="skip-item"><strong>Грамматические таблицы с исключениями</strong> — сначала паттерн, потом исключения. Таблица «всех неправильных глаголов» — позже.</div>
+  </div>
+
+  <div class="topics-grid">
+
+    <div class="topic-card" style="border-left:3px solid #6c63ff">
+      <div class="topic-weeks">НЕД 1–2</div>
+      <div class="topic-name">Фонетика и алфавит произношения</div>
+      <div class="topic-body">IPA-символы (44 звука британского RP): Forvo, Cambridge Dictionary — слушай и повторяй каждый звук. Minimal pairs: ship/sheep, bit/beat — Youglish по каждому звуку. AI: диктуй слова вслух, проси транскрипцию и разбор.</div>
+      <div class="topic-duration" style="color:#6c63ff">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #6c63ff">
+      <div class="topic-weeks">НЕД 1–6</div>
+      <div class="topic-name">Ежедневное говорение (5 мин/день)<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Каждый день: 5 минут с AI-собеседником (Claude / ChatGPT). Тема — твой день, что ел, куда шёл. Правило: говори сначала — исправляй потом. Запись голоса в Otter.ai — сравнивай неделю к неделе.</div>
+      <div class="topic-duration" style="color:#6c63ff">6 недель (весь старт)</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #6c63ff">
+      <div class="topic-weeks">НЕД 2–3</div>
+      <div class="topic-name">Present Simple + Present Continuous</div>
+      <div class="topic-body">Anki-колода: 150 карточек — только контекстные предложения, не переводы слов. British Council Grammar Guide — упражнения онлайн. Правило закрытия: 50 предложений вслух без запинки.</div>
+      <div class="topic-duration" style="color:#6c63ff">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #6c63ff">
+      <div class="topic-weeks">НЕД 3–4</div>
+      <div class="topic-name">Топ-500 слов — ядерный словарный запас</div>
+      <div class="topic-body">Oxford 3000 Word List — первые 500. Anki с аудио (Forvo). Метод: слово → пример → вслух → AI проверяет использование в предложении. Цель: 500 слов в активном использовании, не в списке.</div>
+      <div class="topic-duration" style="color:#6c63ff">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #6c63ff">
+      <div class="topic-weeks">НЕД 4–5</div>
+      <div class="topic-name">Past Simple — регулярные и топ-30 нерегулярных</div>
+      <div class="topic-body">Только топ-30 неправильных глаголов (go/went, see/saw, make/made и т.д.). Anki + аудио-повторение. British Council exercises. AI: расскажи свой вчерашний день — только Past Simple.</div>
+      <div class="topic-duration" style="color:#6c63ff">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #6c63ff">
+      <div class="topic-weeks">НЕД 5–6</div>
+      <div class="topic-name">Базовые вопросы и диалоговые паттерны</div>
+      <div class="topic-body">Wh-вопросы (what, where, when, who, why, how) + Yes/No. Shadowing метод: BBC Learning English — Short Talks. 10 диалоговых сценариев: знакомство, покупка, направления, заказ еды. AI roleplay каждый сценарий.</div>
+      <div class="topic-duration" style="color:#6c63ff">2 недели</div>
+    </div>
+
+  </div>
+
+  <div class="capstone-box" style="background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.3)">
+    <div class="capstone-header" style="color:#6c63ff">→ Капстоун фазы 1</div>
+    <div class="capstone-title">«Моя жизнь за 3 минуты» — первый живой разговор</div>
+    <ul class="capstone-results">
+      <li>5-минутный звонок с партнёром на Tandem или HelloTalk: расскажи о себе, своём городе, своей работе — без подготовки тезисов.</li>
+      <li>AI-разбор после звонка: запиши себя на 3 минуты, отправь транскрипцию в Claude — получи список топ-5 ошибок с объяснениями.</li>
+      <li>Ты называешь 10 предметов вокруг себя и описываешь их за 1 минуту без пауз на русский.</li>
+      <li>Критерий прохождения: собеседник тебя понял, продолжил разговор — не попросил повторить дважды.</li>
+    </ul>
+  </div>
+
+</div><!-- end phase 1 -->
+
+
+<!-- ═══════════════════════════════════════════════════ PHASE 2 PAGE -->
+<div class="page phase-page">
+
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(247,151,30,0.12);border:1px solid rgba(247,151,30,0.3);color:#f7971e">
+        ● ФАЗА 2 &nbsp;·&nbsp; НЕД 7–20 &nbsp;·&nbsp; VOLUME
+      </div>
+      <div class="phase-title" style="color:#f7971e">Объём</div>
+      <div class="phase-subtitle">
+        Массовое поглощение — грамматика, лексика, слушание. AI-собеседник переходит в роль
+        <strong style="color:#c8c8e0">тренера беглости</strong>: ежедневные 10-минутные сессии с расширением тем,
+        отслеживание прогресса словарного запаса, объяснение контекстных ошибок.
+      </div>
+    </div>
+    <div class="phase-stats-mini">
+      <div class="mini-stat">Недели: <strong style="color:#f7971e">7–20</strong></div>
+      <div class="mini-stat">Длит.: <strong style="color:#f7971e">14 нед.</strong></div>
+      <div class="mini-stat">Тем: <strong style="color:#f7971e">10</strong></div>
+    </div>
+  </div>
+
+  <div class="skip-box" style="background:rgba(255,101,132,0.05);border:1px solid rgba(255,101,132,0.2)">
+    <div class="skip-title" style="color:#ff6584">✕ Пропускай на этой фазе</div>
+    <div class="skip-item"><strong>Subjunctive Mood (сослагательное наклонение)</strong> — редкая структура, не нужна до B2; сейчас только запутает.</div>
+    <div class="skip-item"><strong>Идиомы и сленг из TikTok/Reels</strong> — без грамматической базы они звучат неуместно; идиомы — фаза 4.</div>
+    <div class="skip-item"><strong>Академическое письмо (essays)</strong> — для экзамена, не для разговора; ты строишь устную речь, не письменную.</div>
+    <div class="skip-item"><strong>Параллельный учебник (второй курс)</strong> — один источник грамматики до конца, иначе конфликт систем. English Grammar in Use — и точка.</div>
+    <div class="skip-item"><strong>Нативные подкасты без транскрипции</strong> — на уровне A2-B1 слушание без текста создаёт иллюзию понимания; всегда с транскриптом.</div>
+  </div>
+
+  <div class="topics-grid three-col">
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 7–9</div>
+      <div class="topic-name">Ядро грамматики: времена глагола</div>
+      <div class="topic-body">Murphy «English Grammar in Use» (синяя, B1): Units 1–20. Все времена Present/Past/Future + Perfect. Anki: 200 карточек с контекстом. AI: ежедневный диалог — намеренно используй все времена.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 7–10</div>
+      <div class="topic-name">Слушание — транскрипт-метод<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">BBC 6 Minute English — 3 эпизода в неделю: слушай → читай транскрипт → слушай без текста. Цель к нед. 10: понимать 70% без транскрипта. Плейлист на YouTube с субтитрами.</div>
+      <div class="topic-duration" style="color:#f7971e">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 9–11</div>
+      <div class="topic-name">Словарный запас 500→1500 слов</div>
+      <div class="topic-body">Oxford 3000: следующие 1000 слов тематическими кластерами (еда, работа, город, эмоции). Anki с примером и аудио Forvo. Правило: слово активно только после 3 использований вслух.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 11–13</div>
+      <div class="topic-name">Модальные глаголы и conditionals (0,1,2)</div>
+      <div class="topic-body">Murphy Units 25–35: can/could/must/should/would. Conditionals Type 0,1,2 — три отдельных Anki-деки. AI roleplay: «Что ты сделаешь, если...» — только с conditionals. Цель: natural use без обдумывания.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 11–14</div>
+      <div class="topic-name">Разговорная практика 15 мин/день<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Увеличение с 5 до 15 минут. Tandem / HelloTalk: 2 сессии в неделю с носителями. AI ежедневно: случайная тема (погода → политика → хобби). Запись + анализ скорости речи (слов/мин).</div>
+      <div class="topic-duration" style="color:#f7971e">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 13–15</div>
+      <div class="topic-name">Предлоги и фразовые глаголы (топ-50)</div>
+      <div class="topic-body">Prepositions of time/place/movement. Топ-50 phrasal verbs: pick up, turn off, give up, run out of — только с контекстом Anki. AI: мини-истории, где каждое предложение содержит изучаемый глагол.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 15–17</div>
+      <div class="topic-name">Чтение на уровне A2–B1</div>
+      <div class="topic-body">Penguin Readers Level 2–3: одна книга в 2 недели (например, «Forrest Gump» Adapted). Неизвестные слова → контекстный вывод значения (не словарь сразу). Затем — короткие статьи на BBC News Simple English.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 17–19</div>
+      <div class="topic-name">Произношение: интонация и связная речь</div>
+      <div class="topic-body">Rachel's English (YouTube): connected speech, linking, reduction. Shadowing: TED-Ed короткие видео (3–4 мин) — 5 раз каждое. AI: диктуй абзацы вслух, получай оценку натуральности. Цель: убрать роботизированность.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 18–20</div>
+      <div class="topic-name">Пассивный залог + reported speech<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Murphy Units 40–50. Passive voice во всех временах — только те, что реально используются в разговоре. Reported speech: say/tell/ask + backshift. AI: перескажи новость (BBC), используя только reported speech.</div>
+      <div class="topic-duration" style="color:#f7971e">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #f7971e">
+      <div class="topic-weeks">НЕД 19–20</div>
+      <div class="topic-name">Лексика 1500→2500 слов</div>
+      <div class="topic-body">Oxford 3000: финальный блок. Плюс Oxford Collocations Dictionary — 100 ключевых коллокаций (make a decision, take a risk). Anki + использование в AI-диалогах ежедневно.</div>
+      <div class="topic-duration" style="color:#f7971e">2 недели</div>
+    </div>
+
+  </div>
+
+  <div class="capstone-box" style="background:rgba(247,151,30,0.08);border:1px solid rgba(247,151,30,0.3)">
+    <div class="capstone-header" style="color:#f7971e">→ Капстоун фазы 2</div>
+    <div class="capstone-title">«10 минут без остановки» — структурированный разговор на B1</div>
+    <ul class="capstone-results">
+      <li>Живой звонок в Tandem/Preply (30 мин) на свободную тему: работа, новости, путешествия — без заготовок.</li>
+      <li>AI-аудит: запись разговора → транскрипция → Claude составляет статистику: % правильных времён, топ-10 ошибок, скорость речи в словах/мин.</li>
+      <li>Читаешь адаптированную книгу вслух 5 минут на запись — без пауз на незнакомые слова (skip or guess).</li>
+      <li>Критерий: скорость речи ≥ 90 слов/мин, собеседник не переспрашивает чаще 1 раза в 5 минут.</li>
+    </ul>
+  </div>
+
+</div><!-- end phase 2 -->
+
+
+<!-- ═══════════════════════════════════════════════════ PHASE 3 PAGE -->
+<div class="page phase-page">
+
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(67,233,123,0.12);border:1px solid rgba(67,233,123,0.3);color:#43e97b">
+        ● ФАЗА 3 &nbsp;·&nbsp; НЕД 21–36 &nbsp;·&nbsp; PRECISION
+      </div>
+      <div class="phase-title" style="color:#43e97b">Строгость</div>
+      <div class="phase-subtitle">
+        Выход из зоны комфорта — точность произношения, реальные условия, исправление системных ошибок.
+        AI-собеседник становится <strong style="color:#c8c8e0">строгим аудитором</strong>: отмечает каждую грамматическую
+        неточность и акцентные слова, строит персональный error log.
+      </div>
+    </div>
+    <div class="phase-stats-mini">
+      <div class="mini-stat">Недели: <strong style="color:#43e97b">21–36</strong></div>
+      <div class="mini-stat">Длит.: <strong style="color:#43e97b">16 нед.</strong></div>
+      <div class="mini-stat">Тем: <strong style="color:#43e97b">9</strong></div>
+    </div>
+  </div>
+
+  <div class="skip-box" style="background:rgba(255,101,132,0.05);border:1px solid rgba(255,101,132,0.2)">
+    <div class="skip-title" style="color:#ff6584">✕ Пропускай на этой фазе</div>
+    <div class="skip-item"><strong>Новые грамматические темы из Murphy</strong> — грамматика закрыта на фазе 2. Сейчас только применение и исправление ошибок из error log.</div>
+    <div class="skip-item"><strong>Adanced IELTS writing tasks</strong> — письмо не финальная цель; академический стиль ломает естественную устную интонацию.</div>
+    <div class="skip-item"><strong>Расширение словаря редкими словами</strong> — 2500 слов достаточно для B2. Сейчас задача — глубина и точность использования, а не ширина.</div>
+    <div class="skip-item"><strong>Просмотр сериалов «для фона»</strong> — пассивное аудирование без задачи не даёт прогресса; только активные задания с конкретной лингвистической целью.</div>
+  </div>
+
+  <div class="topics-grid">
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 21–23</div>
+      <div class="topic-name">Произношение: акцент и редукция</div>
+      <div class="topic-body">Rachel's English + American English pronunciation (выбери один диалект — British RP или General American — и не меняй). Shadowing нативных TED Talks: Gary Vaynerchuk, Brené Brown. AI: ежедневная запись 1 мин → транскрипция → разбор проблемных звуков.</div>
+      <div class="topic-duration" style="color:#43e97b">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 21–36</div>
+      <div class="topic-name">Error Log — персональный дневник ошибок<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Notion-таблица: дата, ошибка, правильный вариант, контекст. После каждой AI-сессии — 3 записи в лог. Раз в 2 недели: AI анализирует лог и выдаёт топ-3 системные паттерны. Цель: каждый паттерн устранить до нулевого повторения.</div>
+      <div class="topic-duration" style="color:#43e97b">16 недель (весь этап)</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 23–26</div>
+      <div class="topic-name">Нативный слух: сериалы с заданием</div>
+      <div class="topic-body">«Friends» или «The Crown» — не для фона. Задание: 15 минут в день → пауза → повтори последнюю фразу вслух (mirroring). Затем запиши 10 новых естественных выражений в Anki. Цель: понимать 85% без субтитров.</div>
+      <div class="topic-duration" style="color:#43e97b">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 25–28</div>
+      <div class="topic-name">Сложные грамматические структуры</div>
+      <div class="topic-body">Cleft sentences, inversion (Never have I…), Conditional Type 3, mixed conditionals. Murphy Advanced (красная): Units 1–30. Цель не экзамен — цель узнавать и понимать эти структуры в нативной речи и уметь использовать 2–3 в разговоре.</div>
+      <div class="topic-duration" style="color:#43e97b">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 27–30</div>
+      <div class="topic-name">Лексика 2500→4000 слов<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Oxford 5000 Word List: следующий блок. Фокус на Academic Word List (AWL) — 570 слов для образованной речи. Anki + Vocabulary.com для контекстного усвоения. Тест: использование 10 новых слов в одном AI-разговоре без подсказки.</div>
+      <div class="topic-duration" style="color:#43e97b">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 29–32</div>
+      <div class="topic-name">Регулярные встречи с носителями</div>
+      <div class="topic-body">Преплати 4 сессии на iTalki с certified teacher (не community tutor). Цель сессий: teacher делает error correction в реальном времени. Тема — всегда новая, предложена учителем. Записывай каждую сессию → AI-анализ потом.</div>
+      <div class="topic-duration" style="color:#43e97b">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 31–33</div>
+      <div class="topic-name">Коллокации и регистры речи</div>
+      <div class="topic-body">Oxford Collocations Dictionary: 500 ключевых пар. Formal vs Informal register — Oxford Living Dictionaries примеры. AI roleplay: одна тема в двух регистрах (формальное собеседование vs друг-носитель). Anki с пометкой formal/informal.</div>
+      <div class="topic-duration" style="color:#43e97b">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 33–35</div>
+      <div class="topic-name">Чтение оригинальных текстов</div>
+      <div class="topic-body">Первая неадаптированная книга: «The Alchemist» Коэльо (лёгкий язык) или «Sherlock Holmes». Правило 50: если 50+ непонятных слов на странице — текст сложный. Незнакомые слова — выводи из контекста, не ищи сразу. 20 стр/день.</div>
+      <div class="topic-duration" style="color:#43e97b">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #43e97b">
+      <div class="topic-weeks">НЕД 35–36</div>
+      <div class="topic-name">Fluency drill — скорость без качества</div>
+      <div class="topic-body">Задача: говорить 2 минуты без остановки на случайную тему (используй RandomWordGenerator.com). Качество вторично — темп и непрерывность. AI фиксирует только паузы и слова-паразиты (um, like, you know). Цель: ≥ 110 слов/мин.</div>
+      <div class="topic-duration" style="color:#43e97b">2 недели</div>
+    </div>
+
+  </div>
+
+  <div class="capstone-box" style="background:rgba(67,233,123,0.08);border:1px solid rgba(67,233,123,0.3)">
+    <div class="capstone-header" style="color:#43e97b">→ Капстоун фазы 3</div>
+    <div class="capstone-title">«Запись для реальной аудитории» — YouTube-монолог 5 минут</div>
+    <ul class="capstone-results">
+      <li>Запись видео на 5 минут на тему по твоему выбору — без сценария, только 3 тезиса на бумаге. Опубликуй на YouTube (хоть unlisted — но существует).</li>
+      <li>AI-аудит транскрипции: подсчёт error rate, слов-паразитов, грамматических ошибок на минуту. Цель: ≤ 3 ошибок/мин.</li>
+      <li>iTalki-сессия: показываешь видео учителю, получаешь письменный feedback с оценкой B2/C1 готовности.</li>
+      <li>Критерий: незнакомый носитель понимает тебя без усилий, accent не мешает коммуникации.</li>
+    </ul>
+  </div>
+
+</div><!-- end phase 3 -->
+
+
+<!-- ═══════════════════════════════════════════════════ PHASE 4 PAGE -->
+<div class="page phase-page">
+
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(255,101,132,0.12);border:1px solid rgba(255,101,132,0.3);color:#ff6584">
+        ● ФАЗА 4 &nbsp;·&nbsp; НЕД 37–48 &nbsp;·&nbsp; FLIGHT
+      </div>
+      <div class="phase-title" style="color:#ff6584">Полёт</div>
+      <div class="phase-subtitle">
+        Спонтанная речь, широкий лексический запас, C1-регистры. AI-собеседник теперь
+        <strong style="color:#c8c8e0">симулятор носителя</strong>: задаёт неудобные темы, перебивает, переводит разговор —
+        готовит к непредсказуемому живому общению.
+      </div>
+    </div>
+    <div class="phase-stats-mini">
+      <div class="mini-stat">Недели: <strong style="color:#ff6584">37–48</strong></div>
+      <div class="mini-stat">Длит.: <strong style="color:#ff6584">12 нед.</strong></div>
+      <div class="mini-stat">Тем: <strong style="color:#ff6584">8</strong></div>
+    </div>
+  </div>
+
+  <div class="skip-box" style="background:rgba(255,101,132,0.05);border:1px solid rgba(255,101,132,0.2)">
+    <div class="skip-title" style="color:#ff6584">✕ Пропускай на этой фазе</div>
+    <div class="skip-item"><strong>Новые карточки Anki базовой лексики</strong> — база закрыта. Сейчас только коллокации, идиомы, C1-фразеология.</div>
+    <div class="skip-item"><strong>Graded readers (адаптированные книги)</strong> — ты читаешь оригинал. Адаптация замедляет рост восприятия нативной скорости.</div>
+    <div class="skip-item"><strong>Переспрашивать собеседника каждые 2 минуты</strong> — тренируй inference: угадывай из контекста. Переспрашивание — только если критично для смысла.</div>
+    <div class="skip-item"><strong>Фокус на одном акценте</strong> — теперь слушай британский, американский, австралийский, индийский. C1 понимает все акценты.</div>
+  </div>
+
+  <div class="topics-grid">
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 37–39</div>
+      <div class="topic-name">Идиомы и разговорные выражения C1</div>
+      <div class="topic-body">Oxford Dictionary of Idioms + Phrasal Verb Organiser (Headway). Топ-200 идиом в разбивке по темам (business, emotions, time). Anki с контекстом и аудио. AI: разговор, где ты используешь 5 идиом органично — не в ряд, а по смыслу.</div>
+      <div class="topic-duration" style="color:#ff6584">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 37–48</div>
+      <div class="topic-name">Ежедневные AI-дебаты (20 мин)<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Каждый день: AI задаёт спорную тему (должно ли государство регулировать ИИ?). Ты защищаешь позицию 5 минут → AI контраргументирует → ты отвечаешь. Фиксируй: убедительность аргументов, скорость, лексическое разнообразие. Нет повторяющихся тем.</div>
+      <div class="topic-duration" style="color:#ff6584">12 недель</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 39–42</div>
+      <div class="topic-name">Лексика 4000→6000 слов</div>
+      <div class="topic-body">Oxford 5000 — финальный блок + C1 Word List. Акцент на low-frequency high-impact words: nuance, compelling, elaborate, paramount. Читай The Economist / The Atlantic — 2 статьи в неделю, выписывай 10 слов. Тест: объясни слово без перевода.</div>
+      <div class="topic-duration" style="color:#ff6584">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 40–43</div>
+      <div class="topic-name">Нативный контент без субтитров<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Подкасты без транскрипта: «How I Built This» (Гай Рэй), «Lex Fridman Podcast» (лёгкий нативный). 30 минут/день. Задача: после 15 мин — пересказать AI главные идеи вслух. Цель к нед.43: понимание ≥ 90% без вспомогательных материалов.</div>
+      <div class="topic-duration" style="color:#ff6584">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 42–45</div>
+      <div class="topic-name">Длинные разговоры с носителями (30+ мин)</div>
+      <div class="topic-body">Еженедельно: 1 сессия 45 мин на Preply или Tandem — тема всегда незнакомая, предложена собеседником. Правило: не готовиться к теме заранее. После — AI-анализ: сколько раз ты уходил в паузу, какие темы вызвали блок.</div>
+      <div class="topic-duration" style="color:#ff6584">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 44–46</div>
+      <div class="topic-name">Метафоры, юмор и культурный код</div>
+      <div class="topic-body">Культурные отсылки: The Office, Friends, популярные memes — Explainxkcd, KnowYourMeme. Британский юмор vs American: различие в ironii и sarcasm. AI roleplay: веди small talk с юмором. Цель: понимать шутку носителя и уместно реагировать.</div>
+      <div class="topic-duration" style="color:#ff6584">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 45–47</div>
+      <div class="topic-name">Оригинальная литература и нон-фикшн</div>
+      <div class="topic-body">«Sapiens» Юваль Харари или «Thinking, Fast and Slow» — оригинал. Чтение без словаря (контекстный вывод). 25 стр/день. Параллельно — статьи The Guardian, Wired. AI: обсуди прочитанное как с образованным носителем — аргументированно, не пересказом.</div>
+      <div class="topic-duration" style="color:#ff6584">3 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #ff6584">
+      <div class="topic-weeks">НЕД 47–48</div>
+      <div class="topic-name">Симуляция финального разговора</div>
+      <div class="topic-body">AI проводит mock-интервью: 30 минут, 3 смены темы без предупреждения. Оценивает: когезию, скорость, лексическое разнообразие (Type-Token Ratio). Цель: набрать оценку «C1» по Cambridge Assessment Speaking Grid (AI-калибровка).</div>
+      <div class="topic-duration" style="color:#ff6584">2 недели</div>
+    </div>
+
+  </div>
+
+  <div class="capstone-box" style="background:rgba(255,101,132,0.08);border:1px solid rgba(255,101,132,0.3)">
+    <div class="capstone-header" style="color:#ff6584">→ Капстоун фазы 4</div>
+    <div class="capstone-title">«Незнакомая тема, живой носитель» — 20-минутный разговор без подготовки</div>
+    <ul class="capstone-results">
+      <li>Сессия с носителем на iTalki: он выбирает тему из 5 предложенных (ты не знаешь заранее). Длительность — 20 минут непрерывного разговора.</li>
+      <li>AI-аудит записи: error rate, паузы, лексическое разнообразие, сравнение с капстоуном фазы 3 — количественная дельта роста.</li>
+      <li>Пересказываешь AI статью The Economist (800 слов) за 3 минуты вслух, используя свои слова — без чтения текста.</li>
+      <li>Критерий: собеседник оценивает твой уровень как «advanced» — без подсказки с твоей стороны.</li>
+    </ul>
+  </div>
+
+</div><!-- end phase 4 -->
+
+
+<!-- ═══════════════════════════════════════════════════ PHASE 5 PAGE -->
+<div class="page phase-page">
+
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(56,249,215,0.12);border:1px solid rgba(56,249,215,0.3);color:#38f9d7">
+        ● ФАЗА 5 &nbsp;·&nbsp; НЕД 49–52 &nbsp;·&nbsp; HABITS
+      </div>
+      <div class="phase-title" style="color:#38f9d7">Привычки</div>
+      <div class="phase-subtitle">
+        Новый материал не нужен — нужна система. AI-собеседник превращается в
+        <strong style="color:#c8c8e0">личный компас качества</strong>: еженедельный прогресс-репорт, отслеживание деградации
+        навыков, поддержание уровня без постоянного усилия.
+      </div>
+    </div>
+    <div class="phase-stats-mini">
+      <div class="mini-stat">Недели: <strong style="color:#38f9d7">49–52</strong></div>
+      <div class="mini-stat">Длит.: <strong style="color:#38f9d7">4 нед.</strong></div>
+      <div class="mini-stat">Тем: <strong style="color:#38f9d7">5</strong></div>
+    </div>
+  </div>
+
+  <div class="skip-box" style="background:rgba(255,101,132,0.05);border:1px solid rgba(255,101,132,0.2)">
+    <div class="skip-title" style="color:#ff6584">✕ Пропускай на этой фазе</div>
+    <div class="skip-item"><strong>Новые темы и учебники</strong> — фаза закрытия, не расширения. Новый материал разбавляет систематизацию достигнутого.</div>
+    <div class="skip-item"><strong>Переход на другой диалект</strong> — RP или GA выбраны в фазе 3. Не экспериментируй: смешение акцентов хуже, чем один чистый.</div>
+    <div class="skip-item"><strong>Откладывание финального живого разговора</strong> — капстоун этой фазы не переносится. Он и есть доказательство всего года работы.</div>
+  </div>
+
+  <div class="topics-grid">
+
+    <div class="topic-card" style="border-left:3px solid #38f9d7">
+      <div class="topic-weeks">НЕД 49–50</div>
+      <div class="topic-name">Система поддержания C1 — daily stack</div>
+      <div class="topic-body">Проектируешь устойчивый ежедневный стек: 10 мин Anki (поддержание 6000 слов) + 15 мин нативный контент + 10 мин разговор с AI. Итого: 35 мин/день. Habit tracker в Notion или Streaks app. Цель: система, которую выдержишь 5 лет.</div>
+      <div class="topic-duration" style="color:#38f9d7">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #38f9d7">
+      <div class="topic-weeks">НЕД 49–52</div>
+      <div class="topic-name">Еженедельный AI progress-report<span class="parallel-tag">// ПАРАЛЛЕЛЬНО</span></div>
+      <div class="topic-body">Каждое воскресенье: 10-минутная AI-сессия по 5 метрикам — скорость речи, error rate, лексическое разнообразие, паузы/мин, количество переспросов. AI строит недельный граф. Если метрика деградирует — немедленный drill-день.</div>
+      <div class="topic-duration" style="color:#38f9d7">4 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #38f9d7">
+      <div class="topic-weeks">НЕД 50–51</div>
+      <div class="topic-name">Финальный error-log разбор</div>
+      <div class="topic-body">Полный аудит error log за 52 недели: выявляешь 5 ошибок, которые ты повторял больше всего. AI строит целевые micro-drills на каждую. 3 дня финальной проработки каждой из 5 ошибок — минимальный, но хирургически точный.</div>
+      <div class="topic-duration" style="color:#38f9d7">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #38f9d7">
+      <div class="topic-weeks">НЕД 51–52</div>
+      <div class="topic-name">Карта своего английского — рефлексия</div>
+      <div class="topic-body">Документируешь: что работало (топ-5 инструментов), что оказалось лишним, какой навык дал наибольший прирост. AI помогает структурировать. Это твой личный плейбук для поддержания уровня следующие 5 лет. Делись с сообществом — это реальная ставка.</div>
+      <div class="topic-duration" style="color:#38f9d7">2 недели</div>
+    </div>
+
+    <div class="topic-card" style="border-left:3px solid #38f9d7">
+      <div class="topic-weeks">НЕД 52</div>
+      <div class="topic-name">День финального разговора</div>
+      <div class="topic-body">Отдельная сессия в iTalki: носитель, которого ты не видел раньше. Он сам выбирает тему разговора. 30 минут. Не записываешь заранее тезисы. Это и есть цель программы — не диплом, а живой разговор как факт.</div>
+      <div class="topic-duration" style="color:#38f9d7">1 неделя</div>
+    </div>
+
+  </div>
+
+  <div class="capstone-box" style="background:rgba(56,249,215,0.08);border:1px solid rgba(56,249,215,0.3)">
+    <div class="capstone-header" style="color:#38f9d7">→ Капстоун фазы 5 — ФИНАЛЬНЫЙ</div>
+    <div class="capstone-title">«30 минут. Незнакомый носитель. Его тема. Без подготовки.»</div>
+    <ul class="capstone-results">
+      <li>Сессия на iTalki с новым носителем: он выбирает тему. Ты разговариваешь 30 минут — свободно, уверенно, с аргументами, юмором и точными словами.</li>
+      <li>После сессии: попроси носителя оценить твой уровень в 1 предложении. «Advanced / C1» — это финальный критерий.</li>
+      <li>AI финальный отчёт за 52 недели: кривая прогресса всех 5 метрик от фазы 1 до фазы 5 — твоё доказательство.</li>
+      <li>Публикуешь запись разговора (или его AI-summary) как публичный артефакт — в соцсетях, на GitHub, в дневнике. Реальная ставка закрыта.</li>
+    </ul>
+  </div>
+
+</div><!-- end phase 5 -->
+
+
+<!-- ═══════════════════════════════════════════════════ FINISH PAGE -->
+<style>
+.finish-page { background: var(--black); }
+
+.finish-question {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  background: linear-gradient(135deg, #fff 0%, #a8a3ff 60%, #6c63ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.finish-sub {
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 22px;
+  font-style: italic;
+}
+
+.markers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.marker {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.marker::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+}
+
+.marker-label {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.marker-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.marker-body {
+  font-size: 9.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.closing-line {
+  background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(255,101,132,0.08));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.closing-text {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+.closing-text em {
+  font-style: normal;
+  background: linear-gradient(90deg, #6c63ff, #ff6584);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+</style>
+
+<div class="page finish-page">
+
+  <div class="section-header">
+    <span class="section-tag" style="color:#ff6584;background:rgba(255,101,132,0.1);border-color:rgba(255,101,132,0.3)">05</span>
+    <span class="section-title">Финиш / Самопроверка</span>
+  </div>
+
+  <div class="finish-question">Ты в топ-1%,<br>когда —</div>
+  <div class="finish-sub">Поведенческие маркеры, а не сертификаты. Ты их замечаешь в разговоре — не в тесте.</div>
+
+  <div class="markers-grid">
+
+    <div class="marker" style="border-top-color:#6c63ff">
+      <div class="marker::before" style="background:#6c63ff"></div>
+      <div class="marker-label" style="color:#6c63ff">// БЕГЛОСТЬ</div>
+      <div class="marker-title">Думаешь на английском, а не переводишь</div>
+      <div class="marker-body">Ловишь себя на том, что внутренний монолог переключился на английский в моменты концентрации. Перевод — это усилие, а не автоматизм. Ты замечаешь это при чтении: значение появляется сразу, без промежуточного русского слова.</div>
+    </div>
+
+    <div class="marker" style="border-top-color:#f7971e">
+      <div class="marker-label" style="color:#f7971e">// ТОЧНОСТЬ</div>
+      <div class="marker-title">Слышишь ошибки у других (и у себя в записях)</div>
+      <div class="marker-body">Когда носитель говорит неправильно (yes, they do make mistakes), ты это замечаешь. Когда слушаешь свою запись месячной давности — слышишь то, что раньше казалось нормальным. Точность выросла раньше скорости.</div>
+    </div>
+
+    <div class="marker" style="border-top-color:#43e97b">
+      <div class="marker-label" style="color:#43e97b">// ВКУС</div>
+      <div class="marker-title">Выбираешь слово по нюансу, а не по первому варианту</div>
+      <div class="marker-body">Между «big», «large», «vast», «enormous» — ты выбираешь осознанно, под контекст. Чувствуешь, когда «however» звучит тяжело, а «but» — живее. Это и есть C1: не словарный запас, а точность выбора.</div>
+    </div>
+
+    <div class="marker" style="border-top-color:#ff6584">
+      <div class="marker-label" style="color:#ff6584">// СТРЕССОУСТОЙЧИВОСТЬ</div>
+      <div class="marker-title">Незнакомая тема не вызывает паники, а включает режим inference</div>
+      <div class="marker-body">Разговор ушёл в незнакомую область — ты не замолкаешь, а начинаешь строить из того, что есть. «I'm not sure about the exact term, but what I mean is...» — это C1-ответ, а не провал.</div>
+    </div>
+
+    <div class="marker" style="border-top-color:#38f9d7">
+      <div class="marker-label" style="color:#38f9d7">// СИСТЕМА</div>
+      <div class="marker-title">35 минут в день не ощущаются как учёба — это просто жизнь</div>
+      <div class="marker-body">Ты слушаешь подкаст во время еды, читаешь статью вместо ленты, болтаешь с AI пока ждёшь. Язык перестал быть отдельным занятием — он встроен в поток. Это и есть топ 1%: не интенсивность, а устойчивость.</div>
+    </div>
+
+    <div class="marker" style="border-top-color:#a8a3ff;background:rgba(108,99,255,0.06)">
+      <div class="marker-label" style="color:#a8a3ff">// AI-ИНСТРУМЕНТ</div>
+      <div class="marker-title">Используешь AI как зеркало, а не как переводчик</div>
+      <div class="marker-body">Ты давно не просишь AI «переведи». Ты просишь: «оцени, насколько убедительно», «найди три слова точнее», «где в этом абзаце я потерял темп». AI стал инструментом самооценки — это и есть топ 1% использования.</div>
+    </div>
+
+  </div>
+
+  <div class="closing-line">
+    <div class="closing-text">
+      Язык учат годами — <em>носителями становятся за 52 недели</em> привычек.<br>
+      <span style="font-size:13px;color:#7878a0;font-weight:500">Не знание делает разницу — делает разницу то, что ты делаешь каждый день.</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="margin-top:16px;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border)">
+    <div style="font-size:8px;color:var(--muted);font-family:'JetBrains Mono',monospace">
+      АНГЛИЙСКИЙ ЯЗЫК · ROADMAP · 2026 · V1.0
+    </div>
+    <div style="font-size:8px;color:var(--muted)">
+      A1 → C1 · 52 нед. · 5 фаз · 38 тем · 5 капстонов
+    </div>
+    <div style="font-size:8px;color:var(--muted);font-family:'JetBrains Mono',monospace">
+      ТОП 1% НОСИТЕЛЬ
+    </div>
+  </div>
+
+</div><!-- end finish page -->
+
+</body>
+</html>
