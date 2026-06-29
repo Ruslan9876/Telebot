@@ -1,991 +1,642 @@
 #!/usr/bin/env python3
 """
-Pure-Python PDF generator for the English C1 Roadmap.
-Uses only Python stdlib (struct, zlib) — no external dependencies.
-Produces a properly formatted A4 PDF with multiple pages.
+Pure-Python PDF generator — English C1 Roadmap 2026
+No external dependencies. Fixed xref table, correct object IDs.
 """
 
-import zlib
-import struct
-from datetime import datetime
-
-# ─── PDF low-level helpers ────────────────────────────────────────────────────
+# ─── PDF Writer ───────────────────────────────────────────────────────────────
 
 class PDFWriter:
+    """Minimal but correct PDF 1.4 writer."""
+
     def __init__(self):
-        self.objects = []      # list of (obj_id, content_bytes)
-        self.obj_id = 0
-        self.pages = []
-        self.fonts = {}
-        self.font_objs = {}
+        self._objs = {}   # id -> bytes
+        self._next = 1
 
-    def new_id(self):
-        self.obj_id += 1
-        return self.obj_id
-
-    def add_object(self, content: str) -> int:
-        oid = self.new_id()
-        self.objects.append((oid, content.encode('latin-1', errors='replace')))
+    def reserve(self):
+        oid = self._next
+        self._next += 1
         return oid
 
-    def add_object_raw(self, content: bytes) -> int:
-        oid = self.new_id()
-        self.objects.append((oid, content))
-        return oid
+    def put(self, oid: int, content: str):
+        self._objs[oid] = content.encode('latin-1', errors='replace')
+
+    def put_stream(self, oid: int, data: bytes):
+        header = f'<< /Length {len(data)} >>\nstream\n'.encode()
+        self._objs[oid] = header + data + b'\nendstream'
 
     def build(self) -> bytes:
         buf = bytearray()
-        buf += b'%PDF-1.4\n'
-        buf += b'%\xe2\xe3\xcf\xd3\n'  # binary comment
-
+        buf += b'%PDF-1.4\n%\xe2\xe3\xcf\xd3\n'
         offsets = {}
-        for oid, content in self.objects:
+        max_id = max(self._objs.keys())
+        for oid in range(1, max_id + 1):
+            if oid not in self._objs:
+                continue
             offsets[oid] = len(buf)
             buf += f'{oid} 0 obj\n'.encode()
-            buf += content
-            if not content.endswith(b'\n'):
+            buf += self._objs[oid]
+            if not self._objs[oid].endswith(b'\n'):
                 buf += b'\n'
             buf += b'endobj\n'
-
-        xref_offset = len(buf)
+        xref_start = len(buf)
         buf += b'xref\n'
-        buf += f'0 {self.obj_id + 1}\n'.encode()
+        buf += f'0 {max_id + 1}\n'.encode()
         buf += b'0000000000 65535 f \n'
-        for i in range(1, self.obj_id + 1):
+        for i in range(1, max_id + 1):
             if i in offsets:
                 buf += f'{offsets[i]:010d} 00000 n \n'.encode()
             else:
                 buf += b'0000000000 65535 f \n'
-
         buf += b'trailer\n'
-        buf += f'<< /Size {self.obj_id + 1} /Root 1 0 R /Info 2 0 R >>\n'.encode()
+        buf += f'<< /Size {max_id + 1} /Root 1 0 R /Info 2 0 R >>\n'.encode()
         buf += b'startxref\n'
-        buf += f'{xref_offset}\n'.encode()
+        buf += f'{xref_start}\n'.encode()
         buf += b'%%EOF\n'
         return bytes(buf)
 
 
-# ─── Color helpers ────────────────────────────────────────────────────────────
+# ─── Page stream builder ──────────────────────────────────────────────────────
 
-def hex_to_rgb(h):
-    h = h.lstrip('#')
-    return tuple(int(h[i:i+2], 16)/255 for i in (0, 2, 4))
+PW, PH = 595, 842   # A4 points
+M  = 36             # margin
+CW = PW - 2 * M    # content width = 523
 
+def hx(c):
+    c = c.lstrip('#')
+    return tuple(int(c[i:i+2], 16) / 255 for i in (0, 2, 4))
 
-def rgb_str(h):
-    r, g, b = hex_to_rgb(h)
+def rgb(c):
+    r, g, b = hx(c)
     return f'{r:.4f} {g:.4f} {b:.4f}'
 
+class Stream:
+    def __init__(self):
+        self._ops = []
 
-# ─── Page content builder ─────────────────────────────────────────────────────
+    def op(self, s):
+        self._ops.append(s)
 
-# A4: 595 x 842 pts  (1pt = 1/72 inch)
-PW, PH = 595, 842
-MARGIN = 36
-CW = PW - 2 * MARGIN  # content width = 523
+    # ── Shapes ──────────────────────────────────────────────────────────────
 
-COLORS = {
-    'bg':      '#0d0d14',
-    'card':    '#16161f',
-    'border':  '#242435',
-    'text':    '#e8e8f0',
-    'muted':   '#7878a0',
-    'accent':  '#6c63ff',
-    'accent2': '#ff6584',
-    'accent3': '#43e97b',
-    'accent4': '#f7971e',
-    'accent5': '#38f9d7',
-    'white':   '#ffffff',
-    'ph1':     '#6c63ff',
-    'ph2':     '#f7971e',
-    'ph3':     '#43e97b',
-    'ph4':     '#ff6584',
-    'ph5':     '#38f9d7',
-}
+    def bg(self, color):
+        self.op(f'{rgb(color)} rg 0 0 {PW} {PH} re f')
 
-def c(name): return hex_to_rgb(COLORS[name])
-def cs(name): return rgb_str(COLORS[name])
+    def rect(self, x, y, w, h, fill=None, stroke=None, lw=0.5):
+        if fill:
+            self.op(f'{rgb(fill)} rg')
+        if stroke:
+            self.op(f'{lw:.2f} w {rgb(stroke)} RG')
+        if fill and stroke:
+            self.op(f'{x:.1f} {y:.1f} {w:.1f} {h:.1f} re B')
+        elif fill:
+            self.op(f'{x:.1f} {y:.1f} {w:.1f} {h:.1f} re f')
+        elif stroke:
+            self.op(f'{x:.1f} {y:.1f} {w:.1f} {h:.1f} re S')
 
-class PageBuilder:
-    """Builds PDF page content stream."""
+    def line(self, x1, y1, x2, y2, color, lw=0.5):
+        self.op(f'{lw:.2f} w {rgb(color)} RG {x1:.1f} {y1:.1f} m {x2:.1f} {y2:.1f} l S')
 
-    def __init__(self, width=PW, height=PH):
-        self.w = width
-        self.h = height
-        self.ops = []
-        self.y = height - MARGIN  # current y (top-down)
+    def vbar(self, x, y, h, color, lw=2):
+        self.line(x, y, x, y + h, color, lw)
 
-    def _y(self, y): return y  # PDF coords are bottom-up; we handle externally
+    # ── Text ────────────────────────────────────────────────────────────────
 
-    def op(self, s): self.ops.append(s)
-
-    def fill_page(self, color_hex):
-        r, g, b = hex_to_rgb(color_hex)
-        self.op(f'{r:.4f} {g:.4f} {b:.4f} rg')
-        self.op(f'0 0 {self.w} {self.h} re f')
-
-    def rect_filled(self, x, y, w, h, color_hex):
-        r, g, b = hex_to_rgb(color_hex)
-        self.op(f'{r:.4f} {g:.4f} {b:.4f} rg')
-        self.op(f'{x:.2f} {y:.2f} {w:.2f} {h:.2f} re f')
-
-    def rect_stroke(self, x, y, w, h, color_hex, lw=0.5):
-        r, g, b = hex_to_rgb(color_hex)
-        self.op(f'{lw:.2f} w')
-        self.op(f'{r:.4f} {g:.4f} {b:.4f} RG')
-        self.op(f'{x:.2f} {y:.2f} {w:.2f} {h:.2f} re S')
-
-    def rect_filled_stroke(self, x, y, w, h, fill_hex, stroke_hex, lw=0.5):
-        fr, fg, fb = hex_to_rgb(fill_hex)
-        sr, sg, sb = hex_to_rgb(stroke_hex)
-        self.op(f'{lw:.2f} w')
-        self.op(f'{fr:.4f} {fg:.4f} {fb:.4f} rg')
-        self.op(f'{sr:.4f} {sg:.4f} {sb:.4f} RG')
-        self.op(f'{x:.2f} {y:.2f} {w:.2f} {h:.2f} re B')
-
-    def line_h(self, x, y, length, color_hex, lw=0.5):
-        r, g, b = hex_to_rgb(color_hex)
-        self.op(f'{lw:.2f} w')
-        self.op(f'{r:.4f} {g:.4f} {b:.4f} RG')
-        self.op(f'{x:.2f} {y:.2f} m {x+length:.2f} {y:.2f} l S')
-
-    def line_v(self, x, y, height, color_hex, lw=1.5):
-        r, g, b = hex_to_rgb(color_hex)
-        self.op(f'{lw:.2f} w')
-        self.op(f'{r:.4f} {g:.4f} {b:.4f} RG')
-        self.op(f'{x:.2f} {y:.2f} m {x:.2f} {y+height:.2f} l S')
-
-    def circle_filled(self, cx, cy, r, color_hex):
-        k = 0.5523
-        ops_c = hex_to_rgb(color_hex)
-        self.op(f'{ops_c[0]:.4f} {ops_c[1]:.4f} {ops_c[2]:.4f} rg')
-        self.op(f'{cx-r:.2f} {cy:.2f} m')
-        self.op(f'{cx-r:.2f} {cy+k*r:.2f} {cx-k*r:.2f} {cy+r:.2f} {cx:.2f} {cy+r:.2f} c')
-        self.op(f'{cx+k*r:.2f} {cy+r:.2f} {cx+r:.2f} {cy+k*r:.2f} {cx+r:.2f} {cy:.2f} c')
-        self.op(f'{cx+r:.2f} {cy-k*r:.2f} {cx+k*r:.2f} {cy-r:.2f} {cx:.2f} {cy-r:.2f} c')
-        self.op(f'{cx-k*r:.2f} {cy-r:.2f} {cx-r:.2f} {cy-k*r:.2f} {cx-r:.2f} {cy:.2f} c f')
-
-    def set_font(self, name, size):
-        self.op(f'/{name} {size} Tf')
-
-    def set_text_color(self, color_hex):
-        r, g, b = hex_to_rgb(color_hex)
-        self.op(f'{r:.4f} {g:.4f} {b:.4f} rg')
-
-    def text(self, x, y, s, font='F1', size=9, color='#e8e8f0'):
+    def txt(self, x, y, s, font='F1', size=9, color='#e8e8f0'):
         if not s:
             return
-        r, g, b = hex_to_rgb(color)
-        safe = s.replace('\\', '\\\\').replace('(', '\\(').replace(')', '\\)')
-        # Replace common unicode
-        safe = safe.replace('→', '->').replace('✕', 'x').replace('●', '*')
-        safe = safe.replace('▸', '>').replace('–', '-').replace('—', '--')
-        safe = safe.replace('"', '"').replace('"', '"').replace(''', "'").replace(''', "'")
-        safe = safe.replace('…', '...').replace('≥', '>=').replace('×', 'x')
-        safe = safe.encode('latin-1', errors='replace').decode('latin-1')
-        self.op(f'BT /{font} {size} Tf {r:.4f} {g:.4f} {b:.4f} rg {x:.2f} {y:.2f} Td ({safe}) Tj ET')
+        s = str(s)
+        for old, new in [
+            ('→','->'),('✕','x'),('●','*'),('▸','>'),('–','-'),('—','--'),
+            ('"','"'),('"','"'),('\u2019',"'"),(''',"'"),(''',"'"),
+            ('…','...'),('≥','>='),('×','x'),('\n',' ')
+        ]:
+            s = s.replace(old, new)
+        s = s.encode('latin-1', errors='replace').decode('latin-1')
+        s = s.replace('\\','\\\\').replace('(','\\(').replace(')','\\)')
+        r, g, b = hx(color)
+        self.op(f'BT /{font} {size} Tf {r:.4f} {g:.4f} {b:.4f} rg '
+                f'{x:.1f} {y:.1f} Td ({s}) Tj ET')
 
-    def text_wrapped(self, x, y, text_str, max_width, font='F1', size=9,
-                     color='#e8e8f0', line_height=None, char_width_factor=0.55):
-        """Wrap text and return final y position after last line."""
-        if line_height is None:
-            line_height = size * 1.4
-        words = str(text_str).split()
-        lines = []
-        line = ''
-        char_w = size * char_width_factor
-        max_chars = int(max_width / char_w)
-        for word in words:
-            test = (line + ' ' + word).strip()
-            if len(test) <= max_chars:
-                line = test
+    def txt_wrap(self, x, y, s, max_w, font='F1', size=9,
+                 color='#e8e8f0', leading=None):
+        """Wrap text, return y after last line."""
+        if leading is None:
+            leading = size * 1.35
+        cw = size * 0.52
+        limit = max(1, int(max_w / cw))
+        words = str(s).split()
+        lines, cur = [], ''
+        for w in words:
+            test = (cur + ' ' + w).strip()
+            if len(test) <= limit:
+                cur = test
             else:
-                if line:
-                    lines.append(line)
-                line = word
-        if line:
-            lines.append(line)
-        cur_y = y
+                if cur:
+                    lines.append(cur)
+                cur = w
+        if cur:
+            lines.append(cur)
+        cy = y
         for ln in lines:
-            self.text(x, cur_y, ln, font, size, color)
-            cur_y -= line_height
-        return cur_y
+            self.txt(x, cy, ln, font, size, color)
+            cy -= leading
+        return cy
 
-    def build(self):
-        return '\n'.join(self.ops)
+    def build(self) -> bytes:
+        return '\n'.join(self._ops).encode('latin-1', errors='replace')
 
 
+# ─── Phase colors & data ──────────────────────────────────────────────────────
 
-# ─── Content definitions ──────────────────────────────────────────────────────
+PC = ['#6c63ff','#f7971e','#43e97b','#ff6584','#38f9d7']
+PH_NAMES  = ['Fundament','Ob\'yom','Strogost','Polet','Privychki']
+PH_WEEKS  = ['1-6','7-20','21-36','37-48','49-52']
+PH_DUR    = ['6 ned.','14 ned.','16 ned.','12 ned.','4 ned.']
+PH_TOPICS = [6,10,9,8,5]
+PH_CODE   = ['FOUNDATION','VOLUME','PRECISION','FLIGHT','HABITS']
 
 PHASES = [
-    {
-        'num': '1', 'weeks': '1-6', 'dur': '6 нед.', 'topics_count': 6,
-        'color': '#6c63ff', 'code': 'FOUNDATION',
-        'name': 'Фундамент',
-        'desc': 'Строишь мышление на английском. AI-собеседник: объясняющий партнёр -- говоришь вслух, он исправляет, объясняет, повторяет.',
-        'skip': [
-            'Present Perfect vs Past Simple -- разграничение убивает скорость на старте; добавишь в фазе 2',
-            'Учебники IELTS/TOEFL -- экзаменационный формат ломает естественную речь на A1',
-            'Перевод сложных текстов -- закрепляет русскоязычное мышление',
-            'Таблицы всех неправильных глаголов -- сначала паттерн, потом исключения',
-        ],
-        'topics': [
-            ('НЕД 1-2', 'Фонетика и алфавит произношения',
-             'IPA (44 звука RP): Forvo, Cambridge Dictionary -- слушай и повторяй. Minimal pairs: ship/sheep, bit/beat. Youglish по каждому звуку.',
-             '2 нед.', False),
-            ('НЕД 1-6', 'Ежедневное говорение 5 мин/день',
-             '5 минут с AI ежедневно. Тема -- твой день. Говори сначала, исправляй потом. Запись голоса в Otter.ai.',
-             '6 нед.', True),
-            ('НЕД 2-3', 'Present Simple + Present Continuous',
-             'Anki 150 карточек -- контекстные предложения, не переводы слов. British Council Grammar Guide. Цель: 50 предложений вслух без запинки.',
-             '2 нед.', False),
-            ('НЕД 3-4', 'Топ-500 слов -- ядерный словарный запас',
-             'Oxford 3000 Word List -- первые 500. Anki с аудио Forvo. Слово активно только после 3 использований вслух.',
-             '2 нед.', False),
-            ('НЕД 4-5', 'Past Simple -- регулярные и топ-30 нерегулярных',
-             'Топ-30 неправильных глаголов (go/went, see/saw). Anki + аудио. AI: расскажи вчерашний день только на Past Simple.',
-             '2 нед.', False),
-            ('НЕД 5-6', 'Базовые вопросы и диалоговые паттерны',
-             'Wh-вопросы + Yes/No. Shadowing: BBC Learning English Short Talks. 10 сценариев: знакомство, покупка, заказ еды. AI roleplay.',
-             '2 нед.', False),
-        ],
-        'capstone_title': '«Моя жизнь за 3 минуты» -- первый живой разговор',
-        'capstone': [
-            '5-минутный звонок на Tandem/HelloTalk: расскажи о себе без заготовок',
-            'AI-разбор: запись 3 мин -> транскрипция -> Claude выдаёт топ-5 ошибок',
-            'Называешь 10 предметов вокруг и описываешь их за 1 минуту без пауз',
-            'Критерий: собеседник понял, продолжил разговор, не просил повторить дважды',
-        ],
-    },
-    {
-        'num': '2', 'weeks': '7-20', 'dur': '14 нед.', 'topics_count': 10,
-        'color': '#f7971e', 'code': 'VOLUME',
-        'name': 'Объём',
-        'desc': 'Массовое поглощение -- грамматика, лексика, слушание. AI: тренер беглости -- 10-минутные сессии, отслеживание прогресса словарного запаса.',
-        'skip': [
-            'Subjunctive Mood -- редкая структура, не нужна до B2',
-            'Идиомы и сленг из TikTok -- без грамматической базы звучат неуместно',
-            'Академическое письмо -- для экзамена, не для разговора',
-            'Параллельный учебник -- один источник до конца (English Grammar in Use)',
-            'Нативные подкасты без транскрипции -- создают иллюзию понимания',
-        ],
-        'topics': [
-            ('НЕД 7-9', 'Ядро грамматики: времена глагола',
-             'Murphy "English Grammar in Use" B1: Units 1-20. Все времена + Perfect. Anki 200 карточек. AI ежедневно -- намеренно используй все времена.',
-             '3 нед.', False),
-            ('НЕД 7-10', 'Слушание -- транскрипт-метод',
-             'BBC 6 Minute English -- 3 эпизода/нед: слушай -> читай транскрипт -> слушай без текста. Цель к нед.10: 70% без транскрипта.',
-             '4 нед.', True),
-            ('НЕД 9-11', 'Словарный запас 500->1500 слов',
-             'Oxford 3000: следующие 1000 слов тематическими кластерами (еда, работа, эмоции). Anki с аудио. Слово активно после 3 использований.',
-             '3 нед.', False),
-            ('НЕД 11-13', 'Модальные глаголы и conditionals (0,1,2)',
-             'Murphy Units 25-35. Conditionals Type 0,1,2. AI roleplay: "Что сделаешь, если..." -- только с conditionals.',
-             '3 нед.', False),
-            ('НЕД 11-14', 'Разговорная практика 15 мин/день',
-             'Tandem/HelloTalk: 2 сессии/нед. AI ежедневно -- случайная тема. Запись + анализ скорости (слов/мин).',
-             '4 нед.', True),
-            ('НЕД 13-15', 'Предлоги и фразовые глаголы (топ-50)',
-             'Prepositions of time/place/movement. Топ-50 phrasal verbs: pick up, turn off, give up. AI: мини-истории с изучаемым глаголом.',
-             '3 нед.', False),
-            ('НЕД 15-17', 'Чтение на уровне A2-B1',
-             'Penguin Readers L2-3: одна книга за 2 недели (Forrest Gump Adapted). Контекстный вывод значений. BBC News Simple English.',
-             '3 нед.', False),
-            ('НЕД 17-19', 'Произношение: интонация и связная речь',
-             "Rachel's English: connected speech, linking, reduction. Shadowing: TED-Ed (3-4 мин) -- 5 раз каждое. AI: оценка натуральности.",
-             '3 нед.', False),
-            ('НЕД 18-20', 'Пассивный залог + reported speech',
-             'Murphy Units 40-50. Passive во всех временах. Reported speech: say/tell/ask + backshift. AI: перескажи новость BBC.',
-             '3 нед.', True),
-            ('НЕД 19-20', 'Лексика 1500->2500 слов',
-             'Oxford 3000 финальный блок. Oxford Collocations Dictionary: 100 ключевых пар (make a decision, take a risk). Anki + AI-диалоги.',
-             '2 нед.', False),
-        ],
-        'capstone_title': '«10 минут без остановки» -- структурированный разговор на B1',
-        'capstone': [
-            'Звонок в Tandem/Preply (30 мин) на свободную тему -- без заготовок',
-            'AI-аудит: транскрипция -> статистика (% правильных времён, топ-10 ошибок, слов/мин)',
-            'Адаптированная книга вслух 5 минут на запись -- без пауз (skip or guess)',
-            'Критерий: скорость >= 90 слов/мин, собеседник не переспрашивает > 1 раза за 5 мин',
-        ],
-    },
-    {
-        'num': '3', 'weeks': '21-36', 'dur': '16 нед.', 'topics_count': 9,
-        'color': '#43e97b', 'code': 'PRECISION',
-        'name': 'Строгость',
-        'desc': 'Точность произношения, реальные условия, исправление системных ошибок. AI: строгий аудитор -- отмечает каждую неточность, строит персональный error log.',
-        'skip': [
-            'Новые темы из Murphy -- грамматика закрыта в фазе 2; только применение',
-            'Advanced IELTS writing tasks -- ломает естественную устную интонацию',
-            'Расширение редкими словами -- 2500 слов достаточно для B2; нужна глубина',
-            'Просмотр сериалов "для фона" -- пассивное аудирование без задачи не даёт прогресса',
-        ],
-        'topics': [
-            ('НЕД 21-23', 'Произношение: акцент и редукция',
-             "Rachel's English + нативные TED Talks (Brené Brown). Выбери один диалект (RP или GA) и не меняй. AI: запись 1 мин -> разбор проблемных звуков.",
-             '3 нед.', False),
-            ('НЕД 21-36', 'Error Log -- персональный дневник ошибок',
-             'Notion-таблица: дата, ошибка, правильный вариант, контекст. После каждой AI-сессии -- 3 записи. Раз в 2 недели -- AI анализирует топ-3 паттерна.',
-             '16 нед.', True),
-            ('НЕД 23-26', 'Нативный слух: сериалы с заданием',
-             '"Friends" или "The Crown" -- не для фона. 15 мин -> пауза -> повтори фразу вслух (mirroring). 10 новых выражений в Anki. Цель: 85% без субтитров.',
-             '4 нед.', False),
-            ('НЕД 25-28', 'Сложные грамматические структуры',
-             'Cleft sentences, inversion (Never have I...), Conditional Type 3, mixed. Murphy Advanced Units 1-30. Цель: понимать и использовать 2-3 в разговоре.',
-             '4 нед.', False),
-            ('НЕД 27-30', 'Лексика 2500->4000 слов',
-             'Oxford 5000 + Academic Word List (570 слов). Vocabulary.com для контекста. Тест: 10 новых слов в одном AI-разговоре без подсказки.',
-             '4 нед.', True),
-            ('НЕД 29-32', 'Регулярные встречи с носителями',
-             '4 сессии на iTalki с certified teacher. Тема -- всегда новая, предложена учителем. Error correction в реальном времени. Запись каждой сессии.',
-             '4 нед.', False),
-            ('НЕД 31-33', 'Коллокации и регистры речи',
-             'Oxford Collocations: 500 пар. Formal vs Informal -- Oxford Living Dictionaries. AI roleplay: одна тема в двух регистрах (интервью vs друг).',
-             '3 нед.', False),
-            ('НЕД 33-35', 'Чтение оригинальных текстов',
-             'Первая неадаптированная книга: "The Alchemist" или Sherlock Holmes. Правило 50 (50+ непонятных слов/стр = слишком сложно). 20 стр/день.',
-             '3 нед.', False),
-            ('НЕД 35-36', 'Fluency drill -- скорость без качества',
-             '2 минуты без остановки на случайную тему (RandomWordGenerator.com). AI фиксирует паузы и слова-паразиты. Цель: >= 110 слов/мин.',
-             '2 нед.', False),
-        ],
-        'capstone_title': '«Запись для реальной аудитории» -- YouTube-монолог 5 минут',
-        'capstone': [
-            'Запись видео 5 минут без сценария, только 3 тезиса. Опубликуй на YouTube (хоть unlisted)',
-            'AI-аудит транскрипции: error rate, паузы, грамматические ошибки на минуту. Цель: <= 3 ошибок/мин',
-            'iTalki-сессия: учитель смотрит видео и даёт письменный feedback с оценкой B2/C1 готовности',
-            'Критерий: незнакомый носитель понимает без усилий, accent не мешает коммуникации',
-        ],
-    },
-    {
-        'num': '4', 'weeks': '37-48', 'dur': '12 нед.', 'topics_count': 8,
-        'color': '#ff6584', 'code': 'FLIGHT',
-        'name': 'Полёт',
-        'desc': 'Спонтанная речь, широкий словарный запас, C1-регистры. AI: симулятор носителя -- задаёт неудобные темы, перебивает, переводит разговор.',
-        'skip': [
-            'Новые карточки Anki базовой лексики -- база закрыта; только C1-фразеология',
-            'Graded readers (адаптированные книги) -- замедляют восприятие нативной скорости',
-            'Переспрашивать собеседника каждые 2 минуты -- тренируй inference из контекста',
-            'Фокус на одном акценте -- C1 понимает British, American, Australian, Indian',
-        ],
-        'topics': [
-            ('НЕД 37-39', 'Идиомы и разговорные выражения C1',
-             'Oxford Dictionary of Idioms. Топ-200 идиом по темам (business, emotions, time). Anki + аудио. AI: разговор с 5 идиомами органично.',
-             '3 нед.', False),
-            ('НЕД 37-48', 'Ежедневные AI-дебаты 20 мин',
-             'AI задаёт спорную тему. Ты защищаешь позицию 5 мин -> AI контраргументирует -> ты отвечаешь. Нет повторяющихся тем. 12 недель.',
-             '12 нед.', True),
-            ('НЕД 39-42', 'Лексика 4000->6000 слов',
-             'Oxford 5000 финальный блок + C1 Word List. The Economist/Atlantic: 2 статьи/нед, 10 слов. Тест: объясни слово без перевода.',
-             '4 нед.', False),
-            ('НЕД 40-43', 'Нативный контент без субтитров',
-             '"How I Built This", "Lex Fridman Podcast". 30 мин/день. После 15 мин -- пересказ AI вслух. Цель: >= 90% понимание без вспомогательных.',
-             '4 нед.', True),
-            ('НЕД 42-45', 'Длинные разговоры с носителями (30+ мин)',
-             'Еженедельно: 45 мин на Preply -- тема предложена собеседником, не готовиться заранее. AI-анализ после: паузы, темы-блоки.',
-             '4 нед.', False),
-            ('НЕД 44-46', 'Метафоры, юмор и культурный код',
-             'The Office, Friends. British irony vs American sarcasm. KnowYourMeme. AI roleplay: small talk с юмором. Понимать шутку и уместно реагировать.',
-             '3 нед.', False),
-            ('НЕД 45-47', 'Оригинальная литература и нон-фикшн',
-             '"Sapiens" или "Thinking, Fast and Slow" -- оригинал. 25 стр/день без словаря. The Guardian, Wired. AI: обсуди как с образованным носителем.',
-             '3 нед.', False),
-            ('НЕД 47-48', 'Симуляция финального разговора',
-             'AI проводит mock-интервью: 30 минут, 3 смены темы без предупреждения. Оценивает когезию, скорость, TTR. Цель: оценка C1.',
-             '2 нед.', False),
-        ],
-        'capstone_title': '«Незнакомая тема, живой носитель» -- 20 минут без подготовки',
-        'capstone': [
-            'Сессия iTalki: носитель выбирает тему из 5 (ты не знаешь). 20 минут непрерывного разговора',
-            'AI-аудит: error rate, паузы, TTR -- сравнение с капстоуном фазы 3 (дельта роста)',
-            'Пересказываешь статью The Economist (800 слов) за 3 мин вслух своими словами',
-            'Критерий: собеседник оценивает уровень как "advanced" без подсказки с твоей стороны',
-        ],
-    },
-    {
-        'num': '5', 'weeks': '49-52', 'dur': '4 нед.', 'topics_count': 5,
-        'color': '#38f9d7', 'code': 'HABITS',
-        'name': 'Привычки',
-        'desc': 'Новый материал не нужен -- нужна система. AI: личный компас качества -- еженедельный прогресс-репорт, отслеживание деградации.',
-        'skip': [
-            'Новые темы и учебники -- фаза закрытия, не расширения',
-            'Переход на другой диалект -- смешение акцентов хуже, чем один чистый',
-            'Откладывание финального живого разговора -- капстоун не переносится',
-        ],
-        'topics': [
-            ('НЕД 49-50', 'Система поддержания C1 -- daily stack',
-             'Устойчивый стек: 10 мин Anki + 15 мин нативный контент + 10 мин AI. Итого: 35 мин/день. Habit tracker в Notion или Streaks.',
-             '2 нед.', False),
-            ('НЕД 49-52', 'Еженедельный AI progress-report',
-             'Каждое воскресенье: 10 мин AI по 5 метрикам -- скорость, error rate, TTR, паузы, переспросы. Граф прогресса. Если деградация -- немедленный drill.',
-             '4 нед.', True),
-            ('НЕД 50-51', 'Финальный error-log разбор',
-             'Полный аудит error log за 52 недели. 5 ошибок-лидеров. AI строит micro-drills на каждую. 3 дня финальной проработки каждой.',
-             '2 нед.', False),
-            ('НЕД 51-52', 'Карта своего английского -- рефлексия',
-             'Документируешь: топ-5 инструментов, что было лишним, самый эффективный навык. AI помогает структурировать. Публикуй -- это реальная ставка.',
-             '2 нед.', False),
-            ('НЕД 52', 'День финального разговора',
-             'iTalki: новый носитель, он выбирает тему. 30 минут. Никаких тезисов. Это и есть цель -- живой разговор как факт, не диплом.',
-             '1 нед.', False),
-        ],
-        'capstone_title': '«30 минут. Незнакомый носитель. Его тема. Без подготовки.»',
-        'capstone': [
-            'Сессия iTalki с новым носителем: он выбирает тему, ты разговариваешь 30 минут',
-            'Попроси носителя оценить уровень в 1 предложении. "Advanced / C1" -- финальный критерий',
-            'AI финальный отчёт: кривая прогресса всех 5 метрик от фазы 1 до фазы 5',
-            'Публикуешь запись или AI-summary -- в соцсетях, дневнике. Реальная ставка закрыта.',
-        ],
-    },
-]
-
-MARKERS = [
-    ('#6c63ff', '// БЕГЛОСТЬ',
-     'Думаешь на английском, не переводишь',
-     'Внутренний монолог переключился на английский в моменты концентрации. При чтении значение появляется сразу -- без промежуточного русского слова.'),
-    ('#f7971e', '// ТОЧНОСТЬ',
-     'Слышишь ошибки у других (и у себя в записях)',
-     'Когда носитель говорит неправильно -- замечаешь. Слушая запись месячной давности -- слышишь то, что казалось нормальным.'),
-    ('#43e97b', '// ВКУС',
-     'Выбираешь слово по нюансу, а не первое попавшееся',
-     'Между big/large/vast/enormous -- выбираешь осознанно. Чувствуешь, когда "however" тяжело, а "but" -- живее.'),
-    ('#ff6584', '// СТРЕССОУСТОЙЧИВОСТЬ',
-     'Незнакомая тема включает inference, а не панику',
-     '"I\'m not sure about the exact term, but what I mean is..." -- это C1-ответ, а не провал. Строишь из того, что есть.'),
-    ('#38f9d7', '// СИСТЕМА',
-     '35 минут в день не ощущаются как учёба',
-     'Подкаст во время еды, статья вместо ленты, AI пока ждёшь. Язык встроен в поток -- не интенсивность, а устойчивость.'),
-    ('#a8a3ff', '// AI-ИНСТРУМЕНТ',
-     'Используешь AI как зеркало, а не переводчик',
-     'Ты давно не просишь "переведи". Просишь: "оцени убедительность", "найди 3 точнее", "где потерял темп". AI -- инструмент самооценки.'),
+  { 'n':'1','col':'#6c63ff','weeks':'1-6','dur':'6 ned.','ntop':6,'code':'FOUNDATION',
+    'name':'Fundament',
+    'desc':'Stroish myshlenie na angliyskom. AI -- ob\'yasnyayuschiy partner: govori vslukh, on ispravlyayet.',
+    'skip':[
+      'Present Perfect vs Past Simple -- slozhno na starte, dobavish v faze 2',
+      'Uchebniki IELTS/TOEFL -- ekzamenatsionnyy format lomayet estestvennuyu rech na A1',
+      'Perevod slozhnyh tekstov -- zakreplyayet russkoeyazychnoye myshlenie',
+      'Tablitsy vseh nepr. glagolov -- snachala pattern, potom isklyucheniya',
+    ],
+    'topics':[
+      ('N 1-2','IPA Fonetika','44 zvuka British RP: Forvo, Cambridge Dict. Minimal pairs: ship/sheep. Youglish po kazhdomu zvuku.','2 ned.',False),
+      ('N 1-6','Ezhednevnoye govorenie 5 min','5 min s AI kazhdyy den. Tema -- tvoy den. Govori snachala, ispravlyay potom. Zapis v Otter.ai.','6 ned.',True),
+      ('N 2-3','Present Simple + Continuous','Anki 150 kartochek -- kontekstnye predlozheniya. British Council Grammar. Tsel: 50 predlozheniy bez zapinki.','2 ned.',False),
+      ('N 3-4','Top-500 slov -- yadro','Oxford 3000 -- pervye 500. Anki + audio Forvo. Slovo aktivno posle 3 ispolzovaniy vslukh.','2 ned.',False),
+      ('N 4-5','Past Simple -- top-30 glagolov','go/went, see/saw, make/made. Anki + audio. AI: rasskazhi vcherashney den -- tolko Past Simple.','2 ned.',False),
+      ('N 5-6','Voprosy i dialogovye patterny','Wh-voprosy + Yes/No. BBC Learning English Short Talks shadowing. 10 stsenariyev. AI roleplay.','2 ned.',False),
+    ],
+    'cap_title':'[Kapston 1] "Moya zhizn za 3 minuty" -- pervyy zhivoy razgovor',
+    'cap':[
+      '-> 5-min zvonok na Tandem/HelloTalk: rasskazhi o sebe bez zagotovok',
+      '-> AI-razbor: zapis 3 min -> transkriptsiya -> top-5 oshibok',
+      '-> Nazyvaesh 10 predmetov i opisyvaesh za 1 minutu bez paus',
+      '-> Kriteriy: sobesednik ponyal i prodolzhil razgovor',
+    ],
+  },
+  { 'n':'2','col':'#f7971e','weeks':'7-20','dur':'14 ned.','ntop':10,'code':'VOLUME',
+    'name':'Ob\'yom',
+    'desc':'Massovoe pogloschenie: grammatika, leksika, slushanie. AI -- trener beglosty, 10-minutnye sessii.',
+    'skip':[
+      'Subjunctive Mood -- redkaya struktura, ne nuzhna do B2',
+      'Idiomy i sleng iz TikTok -- bez grammatiki zvuchat neusmestno',
+      'Akademicheskoe pismo -- dlya ekzamena, ne dlya razgovora',
+      'Parallelnyy uchebnik -- odin istochnik do kontsa (English Grammar in Use)',
+      'Nativnye podkasty bez transkriptsii -- sozdayut illyuziyu ponimaniya',
+    ],
+    'topics':[
+      ('N 7-9','Vremena glagola -- yadro','Murphy "English Grammar in Use" B1: Units 1-20. Vse vremena + Perfect. Anki 200 kart. AI: naumerenno ispolzuy vse vremena.','3 ned.',False),
+      ('N 7-10','Slushanie -- transkript-metod','BBC 6 Minute English -- 3 epizoda/ned: slushay -> chitay transkript -> slushay bez teksta. Tsel: 70% bez transkripta.','4 ned.',True),
+      ('N 9-11','Slovar 500->1500 slov','Oxford 3000: sleduyuschie 1000 slov tematich. klasterami. Anki + audio. Slovo aktivno posle 3 ispolzovaniy.','3 ned.',False),
+      ('N 11-13','Modalnyye glagoly + Conditionals 0,1,2','Murphy Units 25-35. Anki deck na kazhdyy tip. AI roleplay: "Chto sdelayesh, yesli..." tolko s conditionals.','3 ned.',False),
+      ('N 11-14','Razgovornaya praktika 15 min/den','Tandem 2x/ned. AI ezhednevno -- sluchaynaya tema. Zapis + analiz skorosti (slov/min).','4 ned.',True),
+      ('N 13-15','Predlogi + Frazovye glagoly top-50','Prepositions of time/place/movement. pick up, turn off, give up. AI: mini-istoriya s kazdym glagolom.','3 ned.',False),
+      ('N 15-17','Chtenie A2-B1','Penguin Readers L2-3: 1 kniga/2 ned (Forrest Gump Adapted). Kontekstnyy vyvod znacheniy. BBC News Simple.','3 ned.',False),
+      ('N 17-19','Intonatsiya i svyaznaya rech',"Rachel's English: connected speech, linking, reduction. TED-Ed shadowing (5 raz). AI: otsenka naturalnosti.",'3 ned.',False),
+      ('N 18-20','Passivnyy zalog + reported speech','Murphy Units 40-50. AI: pereskazi novost BBC tolko v reported speech.','3 ned.',True),
+      ('N 19-20','Slovar 1500->2500','Oxford 3000 finalnyy blok + 100 kollokatsiy (make a decision, take a risk). Anki + AI-dialogi.','2 ned.',False),
+    ],
+    'cap_title':'[Kapston 2] "10 minut bez ostanovki" -- razgovor na B1',
+    'cap':[
+      '-> Zvonok Tandem/Preply 30 min na svobodnuyu temu bez zagotovok',
+      '-> AI-audit: transkriptsiya -> % pravilnyh vremen, top-10 oshibok, slov/min',
+      '-> Adaptirovannaya kniga vslukh 5 min na zapis -- bez paus (skip or guess)',
+      '-> Kriteriy: skorost >= 90 slov/min, sobesednik ne peresprashivayet > 1r/5min',
+    ],
+  },
+  { 'n':'3','col':'#43e97b','weeks':'21-36','dur':'16 ned.','ntop':9,'code':'PRECISION',
+    'name':'Strogost',
+    'desc':'Tochnost, proiznosheniye, realnyye usloviya. AI -- strogiy auditor: otmechayet kazhdyy lyap, stroyt error log.',
+    'skip':[
+      'Novyye temy iz Murphy -- grammatika zakryta v faze 2, tolko primeneniye',
+      'Advanced IELTS writing -- lomayet estestvennuyu ustnuyu intonatsiyu',
+      'Rasshireniye redkimi slovami -- 2500 slov dostatochno dlya B2, nuzhna glubina',
+      'Serialy "dlya fona" -- passivnoye audirovaniye bez zadachi ne dayet progressa',
+    ],
+    'topics':[
+      ('N 21-23','Aktsent i reduktsiya',"Rachel's English + TED Talks (Brene Brown). Vyberi odin dialekt (RP ili GA). AI: zapis 1 min -> razbor zvukov.",'3 ned.',False),
+      ('N 21-36','Error Log -- dnevnik oshibok','Notion-tablitsa: data, oshibka, pravilno, kontekst. 3 zapisi posle kazhdoy AI-sessii. Raz v 2 ned: AI analizirует top-3 pattern.','16 ned.',True),
+      ('N 23-26','Nativnyy slukh: serialy s zadaniyem','"Friends" ili "The Crown" -- ne dlya fona. 15 min -> pauza -> povtori frazu vslukh. 10 novykh vyrazheniy v Anki/den.','4 ned.',False),
+      ('N 25-28','Slozhnyye grammatich. struktury','Cleft sentences, inversion (Never have I...), Conditional 3, mixed. Murphy Advanced Units 1-30.','4 ned.',False),
+      ('N 27-30','Slovar 2500->4000','Oxford 5000 + Academic Word List (570 slov). Vocabulary.com. Test: 10 novykh slov v AI-razgovore bez podskazki.','4 ned.',True),
+      ('N 29-32','Vstrechi s nositelyami','4 sessii iTalki s certified teacher. Tema -- vsegda novaya, predlozhena uchitelem. Error correction v realnom vremeni.','4 ned.',False),
+      ('N 31-33','Kollokatsii i registry rechi','Oxford Collocations: 500 par. Formal vs Informal. AI roleplay: odna tema v dvukh registrakh (intervyu vs drug).','3 ned.',False),
+      ('N 33-35','Originalnyye teksty -- pervaya kniga',"'The Alchemist' ili Sherlock Holmes. Pravilo 50. Kontekstnyy vyvod znacheniy. 20 str/den.",'3 ned.',False),
+      ('N 35-36','Fluency drill -- skorost bez kachestva','2 min bez ostanovki (RandomWordGenerator.com). AI: tolko pauzy i slova-parazity. Tsel: >= 110 slov/min.','2 ned.',False),
+    ],
+    'cap_title':'[Kapston 3] "Zapis dlya YouTube" -- monolog 5 minut',
+    'cap':[
+      '-> Video 5 min bez stsenariya, tolko 3 tezisa. Opublikuy na YouTube',
+      '-> AI-audit: error rate, pauzy, oshibki na minutu. Tsel: <= 3 oshibok/min',
+      '-> iTalki-sessiya: uchitel smotrit video, dayet otsenku B2/C1 gotovnosti',
+      '-> Kriteriy: nositel ponimayet bez usiliy, aktsent ne meshayet kommunikatsii',
+    ],
+  },
+  { 'n':'4','col':'#ff6584','weeks':'37-48','dur':'12 ned.','ntop':8,'code':'FLIGHT',
+    'name':'Polet',
+    'desc':'Spontannaya rech, shirokiy slovar, C1-registry. AI -- simulator nositelya: neudob. temy, perebivaet, menyaet temu.',
+    'skip':[
+      'Novyye kartochki Anki bazovoy leksiki -- baza zakryta, tolko C1-frazeologiya',
+      'Graded readers (adaptirovannye) -- zamedlyayut vospriyatiye nativnoy skorosti',
+      'Peresprashivat sobesednika kazhdye 2 min -- treniruy inference iz konteksta',
+      'Fokus na odnom aktse -- C1 ponimayet British, American, Australian, Indian',
+    ],
+    'topics':[
+      ('N 37-39','Idiomy i razgovornye vyrazheniya C1','Oxford Dict of Idioms. Top-200 idiom po temam (business, emotions, time). AI: razgovor s 5 idiomami organichno.','3 ned.',False),
+      ('N 37-48','Ezhednevnye AI-debaty 20 min','AI zadayet spornuyu temu. Ty zashchischaesh pozitsiyu 5 min -> AI kontrargumentiruyet -> ty otvechaesh. 12 nedel.','12 ned.',True),
+      ('N 39-42','Slovar 4000->6000 slov','Oxford 5000 + C1 Word List. The Economist/Atlantic: 2 stati/ned, 10 slov. Test: ob\'yasni slovo bez perevoda.','4 ned.',False),
+      ('N 40-43','Nativnyy kontent bez subtitrov','"How I Built This", "Lex Fridman Podcast". 30 min/den. Posle 15 min -- pereskaz AI. Tsel: >= 90% bez pomoschi.','4 ned.',True),
+      ('N 42-45','Dlinnye razgovory 30+ min','Ezhenedelno: 45 min na Preply, tema predlozhena sobesednikom. Ne gotovitsya zaranee. AI-analiz posle.','4 ned.',False),
+      ('N 44-46','Metafory, yumor, kulturnyy kod','The Office, Friends. British irony vs American sarcasm. KnowYourMeme. AI: small talk s yumorom.','3 ned.',False),
+      ('N 45-47','Originalnaya literatura i non-fiction','"Sapiens" ili "Thinking Fast and Slow" -- original. 25 str/den bez slovarya. AI: obsudi kak s obrazovannym nositelem.','3 ned.',False),
+      ('N 47-48','Simulyatsiya finalnogo razgovora','AI mock-intervyu: 30 min, 3 smeny temy. Otsenka kogezii, skorosti, TTR. Tsel: otsenka C1.','2 ned.',False),
+    ],
+    'cap_title':'[Kapston 4] "Neznakomaya tema, zhivoy nositel" -- 20 min bez podgotovki',
+    'cap':[
+      '-> Sessiya iTalki: nositel vybirayet temu iz 5. 20 min nepreryvnogo razgovora',
+      '-> AI-audit: error rate, pauzy, TTR -- sravneniye s kapston-3 (delta rosta)',
+      '-> Pereskaz stati The Economist (800 slov) za 3 min vslukh svoimi slovami',
+      '-> Kriteriy: sobesednik otseniva uroven kak "advanced" bez podskazki',
+    ],
+  },
+  { 'n':'5','col':'#38f9d7','weeks':'49-52','dur':'4 ned.','ntop':5,'code':'HABITS',
+    'name':'Privychki',
+    'desc':'Novyy material ne nuzhen -- nuzhna sistema. AI -- lichnyy kompas kachestva: ezhenedelnyy progress-report.',
+    'skip':[
+      'Novyye temy i uchebniki -- faza zakrytiya, ne rasshireniya',
+      'Perekhod na drugoy dialekt -- smesheniye aktsentov khuzhe, chem odin chistyy',
+      'Otkladyvaniye finalnogo razgovora -- kapston ne perenositsya',
+    ],
+    'topics':[
+      ('N 49-50','Systema C1 -- daily stack','10 min Anki + 15 min nativnyy kontent + 10 min AI. Itogo 35 min/den. Habit tracker v Notion ili Streaks app.','2 ned.',False),
+      ('N 49-52','Ezhenedelnyy AI progress-report','Kazhdoye voskresenye: 10 min po 5 metrikam -- skorost, error rate, TTR, pauzy, peresprasy. Graf progressa.','4 ned.',True),
+      ('N 50-51','Finalnyy error-log razbor','Polnyy audit loga za 52 nedeli. Top-5 povtoryayuschkhsya oshibok. AI micro-drills. 3 dnya na kazhdyy pattern.','2 ned.',False),
+      ('N 51-52','Karta svoyego angliyskogo','Top-5 instrumentov, chto bylo lishnim, samyy effektivnyy navyk. AI pomogaet strukturirovat. Publikuy.','2 ned.',False),
+      ('N 52','Den finalnogo razgovora','iTalki: novyy nositel, on vybirayet temu. 30 minut. Nikakih tezisov. Zhivoy razgovor kak fakt, ne diplom.','1 ned.',False),
+    ],
+    'cap_title':'[Kapston 5 -- FINALNYY] "30 minut. Neznakomyy nositel. Ego tema. Bez podgotovki."',
+    'cap':[
+      '-> Sessiya iTalki: nositel vybirayet temu, ty govopish 30 minut svobodno',
+      '-> Popros nositelya otsenit tvoy uroven v 1 predlozhenii -- "C1" = kriteriy',
+      '-> AI finalnyy otchet: krivaya progressa vsekh 5 metrik za 52 nedeli',
+      '-> Publikuesh zapis ili AI-sammari -- v sotsssetyakh, dnevnike. Stavka zakryta.',
+    ],
+  },
 ]
 
 
+# ─── Page renderers ───────────────────────────────────────────────────────────
 
-# ─── Page renderers ────────────────────────────────────────────────────────────
-
-def render_cover(p: PageBuilder):
-    p.fill_page('#0d0d14')
-
-    # Decorative gradient circles (approximated as filled circles with low opacity)
-    # Top-left glow
-    for radius in [120, 90, 60, 30]:
-        alpha = 0.03 + (120 - radius) * 0.001
-        p.rect_filled(MARGIN - 40, PH - MARGIN - 40,
-                      radius * 2, radius * 2, '#0d0d14')
-
-    y = PH - MARGIN
+def render_cover(s: Stream):
+    s.bg('#0d0d14')
+    y = PH - M
 
     # Category bar
-    p.rect_filled_stroke(MARGIN, y - 18, 260, 16, '#11111e', '#2a2a55', 0.5)
-    p.text(MARGIN + 8, y - 12, 'АНГЛИЙСКИЙ ЯЗЫК  *  2026  *  ROADMAP  *  V1.0',
-           'F2', 7, '#6c63ff')
-    y -= 28
-
-    # Title
-    p.text(MARGIN, y - 18, 'Top 1%', 'F2', 36, '#ffffff')
-    y -= 42
-    p.text(MARGIN, y - 18, 'Nositel', 'F2', 36, '#a8a3ff')
-    y -= 42
-    p.text(MARGIN, y - 18, 'urovnya C1', 'F2', 36, '#6c63ff')
-    y -= 50
-
-    # Subtitle
-    p.text(MARGIN, y, '12 mesyacev * 52 nedeli * 5 faz * 38 tem * bez vody -- aktualno dlya 2026',
-           'F1', 9.5, '#7878a0')
-    y -= 22
-
-    # ─ Stats row ─
-    stat_w = (CW - 18) // 4
-    stats = [('52', 'Недели', '#6c63ff'), ('5', 'Фаз', '#f7971e'),
-             ('38', 'Тем', '#43e97b'), ('5', 'Капстонов', '#ff6584')]
-    sx = MARGIN
-    for num, label, col in stats:
-        bh = 60
-        p.rect_filled_stroke(sx, y - bh, stat_w, bh, '#16161f', '#242435', 0.5)
-        p.text(sx + stat_w//2 - len(num)*11, y - 22, num, 'F2', 26, col)
-        p.text(sx + stat_w//2 - len(label)*3, y - 38, label, 'F1', 7.5, '#7878a0')
-        sx += stat_w + 6
-    y -= 72
-
-    # Divider
-    p.line_h(MARGIN, y, CW, '#242435', 0.5)
-    y -= 14
-
-    # Nav title
-    p.text(MARGIN, y, '> Навигация по фазам', 'F2', 8, '#7878a0')
-    y -= 16
-
-    # Phase nav cards
-    phase_colors = ['#6c63ff', '#f7971e', '#43e97b', '#ff6584', '#38f9d7']
-    phase_names = ['Фундамент', 'Объём', 'Строгость', 'Полёт', 'Привычки']
-    phase_weeks = ['НЕД 1-6', 'НЕД 7-20', 'НЕД 21-36', 'НЕД 37-48', 'НЕД 49-52']
-    phase_durs = ['6 нед.', '14 нед.', '16 нед.', '12 нед.', '4 нед.']
-    phase_topics = ['6 тем', '10 тем', '9 тем', '8 тем', '5 тем']
-
-    nav_w = (CW - 24) // 5
-    nav_h = 80
-    nx = MARGIN
-    for i in range(5):
-        col = phase_colors[i]
-        p.rect_filled_stroke(nx, y - nav_h, nav_w, nav_h, '#16161f', col, 0.8)
-        p.text(nx + nav_w//2 - 7, y - 18, str(i+1), 'F2', 20, col)
-        pw_label = phase_weeks[i]
-        p.text(nx + 4, y - 33, pw_label, 'F1', 6.5, '#7878a0')
-        p.text(nx + 4, y - 44, phase_names[i], 'F2', 8.5, '#e8e8f0')
-        p.text(nx + 4, y - 55, phase_durs[i], 'F1', 7, '#7878a0')
-        p.text(nx + 4, y - 65, phase_topics[i], 'F1', 7, col)
-        nx += nav_w + 6
-    y -= nav_h + 12
-
-    # Divider
-    p.line_h(MARGIN, y, CW, '#242435', 0.5)
-    y -= 14
-
-    # Final goal box
-    box_h = 50
-    p.rect_filled_stroke(MARGIN, y - box_h, CW, box_h, '#0f0f1a', '#2a2a55', 0.8)
-    p.line_v(MARGIN + 2, y - box_h + 3, box_h - 6, '#6c63ff', 2.5)
-    p.text(MARGIN + 12, y - 12, '> Финальная цель', 'F2', 8, '#6c63ff')
-    p.text(MARGIN + 12, y - 24,
-           '30-минутный незаписанный разговор с носителем без подготовки',
-           'F2', 10.5, '#ffffff')
-    p.text(MARGIN + 12, y - 37,
-           'по теме, которую собеседник выбирает сам -- уверенно, без пауз на перевод',
-           'F1', 9, '#a8a3ff')
-
-
-def render_philosophy(p: PageBuilder):
-    p.fill_page('#0d0d14')
-    y = PH - MARGIN
-
-    # Header
-    p.rect_filled_stroke(MARGIN, y - 14, 30, 14, '#11111e', '#2a2a55', 0.5)
-    p.text(MARGIN + 5, y - 10, '02', 'F2', 8, '#6c63ff')
-    p.text(MARGIN + 38, y - 10, 'Filosofiya / Manifest', 'F2', 14, '#ffffff')
+    s.rect(M, y-16, 280, 16, '#11111e', '#2a2a55', 0.5)
+    s.txt(M+6, y-11, 'ANGLIISKIY YAZYK  *  2026  *  ROADMAP  *  V1.0', 'F2', 7, '#6c63ff')
     y -= 26
 
-    # Manifesto box
-    mbox_h = 62
-    p.rect_filled_stroke(MARGIN, y - mbox_h, CW, mbox_h, '#0f0f1a', '#2a2a55', 0.5)
-    p.line_v(MARGIN + 2, y - mbox_h + 4, mbox_h - 8, '#6c63ff', 2.5)
-    p.text(MARGIN + 12, y - 10, 'PARADOKS PROGRAMMY:', 'F2', 8.5, '#6c63ff')
-    manifesto_lines = [
-        'Ty ne izuchaesh angliiskii -- ty perestaesh perevodyt s russkogo. Pervyi mesyats',
-        'kazhetsia medlennym, potomu chto ty stroish myshlenie na drugom yazyke.',
-        'Govori s pervogo dnya -- koryavo, netochno, vslukh. AI-sobesednik prinimaet',
-        'lyuboi uroven i razbiraet kazhdyu oshibku. Snachala ob\'em -- potom tochnost.',
-        'Cherez 52 nedeli ty ne "vyuchish" yazyk -- ty na nem zhivesh.',
+    # Main title
+    for line, col in [('Top 1%','#ffffff'),("Nositel",'#a8a3ff'),('urovnya C1','#6c63ff')]:
+        s.txt(M, y-4, line, 'F2', 34, col)
+        y -= 40
+
+    # Subtitle
+    s.txt(M, y, '12 mesyacev * 52 nedeli * 5 faz * 38 tem * bez vody -- aktualno dlya 2026', 'F1', 9, '#7878a0')
+    y -= 18
+
+    # 4 stats
+    sw = (CW - 18) // 4
+    for i, (num, lbl, col) in enumerate([('52','Nedeli','#6c63ff'),('5','Faz','#f7971e'),
+                                          ('38','Tem','#43e97b'),('5','Kaostonov','#ff6584')]):
+        bx = M + i*(sw+6)
+        s.rect(bx, y-56, sw, 56, '#16161f', '#242435', 0.5)
+        s.txt(bx + sw//2 - len(num)*9, y-22, num, 'F2', 24, col)
+        s.txt(bx + sw//2 - len(lbl)*3, y-37, lbl, 'F1', 7.5, '#7878a0')
+    y -= 66
+
+    # Divider
+    s.line(M, y, M+CW, y, '#242435')
+    y -= 14
+
+    # Phase nav title
+    s.txt(M, y, '> Navigatsiya po fazam', 'F2', 8, '#7878a0')
+    y -= 14
+
+    # Phase nav cards
+    nw = (CW - 24) // 5
+    for i in range(5):
+        nx = M + i*(nw+6)
+        s.rect(nx, y-76, nw, 76, '#16161f', PC[i], 0.8)
+        s.txt(nx+nw//2-8, y-16, str(i+1), 'F2', 18, PC[i])
+        s.txt(nx+4, y-31, 'NED '+PH_WEEKS[i], 'F1', 6.5, '#7878a0')
+        s.txt(nx+4, y-42, PH_NAMES[i], 'F2', 8.5, '#e8e8f0')
+        s.txt(nx+4, y-53, PH_DUR[i], 'F1', 7, '#7878a0')
+        s.txt(nx+4, y-63, str(PH_TOPICS[i])+' tem', 'F1', 7, PC[i])
+    y -= 86
+
+    # Divider
+    s.line(M, y, M+CW, y, '#242435')
+    y -= 14
+
+    # Final goal
+    s.rect(M, y-54, CW, 54, '#0f0f1a', '#2a2a55', 0.8)
+    s.vbar(M+2, y-51, 47, '#6c63ff', 2.5)
+    s.txt(M+10, y-11, '> Finalnaya tsel', 'F2', 8, '#6c63ff')
+    s.txt(M+10, y-24, '30-minutnyy razgovor s nositelem bez podgotovki', 'F2', 11, '#ffffff')
+    s.txt(M+10, y-37, 'po teme, kotoruyu sobesednik vybirayet sam -- uverenno, bez paus na perevod', 'F1', 9, '#a8a3ff')
+
+
+def render_philosophy(s: Stream):
+    s.bg('#0d0d14')
+    y = PH - M
+
+    # Header
+    s.rect(M, y-14, 28, 14, '#11111e', '#2a2a55', 0.5)
+    s.txt(M+4, y-10, '02', 'F2', 8, '#6c63ff')
+    s.txt(M+36, y-10, 'Filosofiya / Manifest', 'F2', 13, '#ffffff')
+    y -= 24
+
+    # Manifesto
+    mh = 68
+    s.rect(M, y-mh, CW, mh, '#0f0f1a', '#2a2a55', 0.5)
+    s.vbar(M+2, y-mh+4, mh-8, '#6c63ff', 2.5)
+    s.txt(M+10, y-10, 'PARADOKS:', 'F2', 8.5, '#6c63ff')
+    manifest = [
+        'Ty ne izuchaesh angliiskiy -- ty perestaesh perevodyt s russkogo.',
+        'Pervyy mesyats kazhetsya medlennym: ty stroish myshlenie na drugom yazyke.',
+        'Govori s pervogo dnya -- koryavo, netochno, vslukh. AI prinimaet lyuboy uroven',
+        'i razbirает kazhdуyu oshibku. Snachala ob\'em -- potom tochnost.',
+        'Cherez 52 nedeli ty ne "vyuchish" yazyk -- ty na nem zhivyosh.',
     ]
     my = y - 22
-    for line in manifesto_lines:
-        p.text(MARGIN + 12, my, line, 'F1', 8.5, '#c8c8e0')
+    for line in manifest:
+        s.txt(M+10, my, line, 'F1', 8.5, '#c8c8e0')
         my -= 11
-    y -= mbox_h + 10
+    y -= mh + 8
 
-    # Principles grid (2 cols x 3 rows)
+    # Principles 2x3 grid
     principles = [
-        ('#ffffff', '01 Глубина одного навыка -- до уверенности',
-         'Один инструмент до автоматизма, прежде чем следующий. Anki-колода по Present',
-         'Simple закрыта только когда не думаешь о ней в разговоре.'),
-        ('#ffffff', '02 Осознанный пропуск -- часть плана',
-         'Каждая фаза имеет список "не трогай сейчас". Пропускать сложную грамматику',
-         'на A1 -- не лень, а дисциплина. Преждевременная сложность создаёт страх.'),
-        ('#ffffff', '03 Топ 1% -- это привычки, а не сложность',
-         '52 недели x 7 дней x 20 минут = ~121 час активной практики.',
-         'Носитель C1 отличается не редкими словами, а ежедневными привычками.'),
-        ('#ffffff', '04 Реальная ставка обязательна',
-         'Каждый капстоун -- живой собеседник или реальная аудитория. Tandem, iTalki,',
-         'запись для YouTube. Тренировочный полигон без ставки не засчитывается.'),
-        ('#ffffff', '05 Не используешь -- не знаешь',
-         'Если не можешь объяснить, зачем делаешь это и что меняет в твоей речи --',
-         'выброси инструмент. Anki, Grammarly, shadowing -- всё требует объяснения.'),
-        ('#a8a3ff', '06 AI-собеседник: партнёр по объёму, не костыль',
-         'ChatGPT/Claude -- 24/7 носитель без осуждения. Роль меняется по фазам:',
-         'партнёр -> тренер -> аудитор. Живое общение он не заменяет -- готовит к нему.'),
+        ('01','Glubina do uverennosti','Odin instrument do avtomatizma, prezhde chem sleduyuschiy. Anki-koloda zakryta kogda ne dumaesh o ney v razgovore.'),
+        ('02','Osoznanny propusk -- chast plana','Kazhdaya faza imeet spisok "ne trogay seychas". Propuskat grammatiku na A1 -- disciplina, ne len.'),
+        ('03','Top 1% -- eto privychki','52 ned x 7 dn x 20 min = ~121 chas aktivnoy praktiki. Nositel C1 otlichaetsya ezhednevnymi privychkami.'),
+        ('04','Realnaya stavka obyazatelna','Kazhdyy kapston -- zhivoy sobesednik ili realnaya auditoriya. Trenirovochnyy polygon bez stavki ne zachityvaetsya.'),
+        ('05','Ne ispolzuesh -- ne znaesh','Esli ne mozhesh ob\'yasnit zachem -- vybrosì instrument. Anki, shadowing -- vsyo trebuet ob\'yasneniya.'),
+        ('06 AI','AI -- partner, ne kostyl','ChatGPT/Claude -- 24/7 nositel bez osuzhdeniya. Rol menyaetsya: partner -> trener -> auditor. Zhivoye obshcheniye on ne zamenyayet.'),
     ]
-
-    pcol_w = (CW - 6) // 2
-    ph = 60
-    px, py = MARGIN, y
-    for i, (col, title, l1, l2) in enumerate(principles):
-        fill = '#11111a' if i < 5 else '#0f0f1e'
-        stroke = '#242435' if i < 5 else '#3a3a77'
-        p.rect_filled_stroke(px, py - ph, pcol_w, ph, fill, stroke, 0.5)
-        big_num = title[:2]
-        p.text(px + 6, py - 12, big_num, 'F2', 18, '#1e1e30')
-        p.text(px + 6, py - 26, title[3:], 'F2', 8, col)
-        p.text(px + 6, py - 38, l1, 'F1', 7.5, '#7878a0')
-        p.text(px + 6, py - 49, l2, 'F1', 7.5, '#7878a0')
-        if i % 2 == 0:
-            px = MARGIN + pcol_w + 6
+    pw2 = (CW - 6) // 2
+    ph2 = 58
+    px, py = M, y
+    for i, (num, title, body) in enumerate(principles):
+        fill = '#0f0f1e' if i==5 else '#11111a'
+        stroke = '#3a3a77' if i==5 else '#242435'
+        s.rect(px, py-ph2, pw2, ph2, fill, stroke, 0.5)
+        s.txt(px+6, py-14, num, 'F2', 16, '#1e1e30')
+        s.txt(px+6, py-27, title, 'F2', 8, '#a8a3ff' if i==5 else '#ffffff')
+        s.txt_wrap(px+6, py-39, body, pw2-12, 'F1', 7.5, '#7878a0', 10)
+        if i%2==0:
+            px = M + pw2 + 6
         else:
-            px = MARGIN
-            py -= ph + 5
-
+            px = M
+            py -= ph2 + 5
     y = py - 8
 
-    # Phase overview table
-    p.text(MARGIN, y, '> Obzor faz', 'F2', 8, '#7878a0')
+    # Phase table
+    s.txt(M, y, '> Obzor faz', 'F2', 8, '#7878a0')
     y -= 12
-
-    headers = ['#', 'Фаза', 'Фокус', 'Недели', 'Длит.', 'Тем']
-    col_widths = [18, 65, 265, 55, 45, 30]
-    # Header row
-    p.rect_filled(MARGIN, y - 14, CW, 14, '#16161f')
-    hx = MARGIN + 4
-    for h, cw in zip(headers, col_widths):
-        p.text(hx, y - 10, h.upper(), 'F2', 7, '#5858a0')
-        hx += cw
-
-    phase_rows = [
-        ('#6c63ff', '1', 'Фундамент', 'Базовые конструкции + ежедневное говорение с AI', '1-6', '6 нед.', '6'),
-        ('#f7971e', '2', 'Объём', 'Грамматика, лексика, слушание -- массовое поглощение', '7-20', '14 нед.', '10'),
-        ('#43e97b', '3', 'Строгость', 'Точность, произношение, реальные условия', '21-36', '16 нед.', '9'),
-        ('#ff6584', '4', 'Полёт', 'Спонтанная речь, широкий словарь, C1-регистры', '37-48', '12 нед.', '8'),
-        ('#38f9d7', '5', 'Привычки', 'Система поддержания C1 + финальная демонстрация', '49-52', '4 нед.', '5'),
-    ]
+    s.rect(M, y-14, CW, 14, '#16161f')
+    cols_x = [M+4, M+22, M+90, M+355, M+410, M+460]
+    for hdr, cx in zip(['#','Faza','Fokus','Ned.','Dlyt.','Tem'], cols_x):
+        s.txt(cx, y-10, hdr.upper(), 'F2', 7, '#5858a0')
     y -= 14
-    for col, num, name, focus, weeks, dur, tc in phase_rows:
-        p.line_h(MARGIN, y, CW, '#1e1e2e', 0.3)
-        rx = MARGIN + 4
-        p.circle_filled(rx + 4, y - 6, 3, col)
-        rx += 12
-        p.text(rx - 12, y - 10, num, 'F2', 9, col)
-        rx = MARGIN + 4 + col_widths[0]
-        p.text(rx, y - 10, name, 'F2', 9, '#e8e8f0')
-        rx += col_widths[1]
-        p.text(rx, y - 10, focus, 'F1', 8, '#7878a0')
-        rx += col_widths[2]
-        p.text(rx, y - 10, weeks, 'F2', 8.5, '#7878a0')
-        rx += col_widths[3]
-        p.text(rx, y - 10, dur, 'F2', 9, col)
-        rx += col_widths[4]
-        p.text(rx, y - 10, tc, 'F2', 9, '#ffffff')
+    rows = [
+        ('#6c63ff','1','Fundament','Bazovye konstruktsii + ezhednevnoe govorenie s AI','1-6','6 n.','6'),
+        ('#f7971e','2','Ob\'yom','Grammatika, leksika, slushanie -- massovoe pogloschenie','7-20','14 n.','10'),
+        ('#43e97b','3','Strogost','Tochnost, proiznosh., realnyye usloviya + error log','21-36','16 n.','9'),
+        ('#ff6584','4','Polet','Spontannaya rech, shirokiy slovar, C1-registry','37-48','12 n.','8'),
+        ('#38f9d7','5','Privychki','Sistema podderzhania C1 + finalnaya demonstratsiya','49-52','4 n.','5'),
+    ]
+    for col, n, name, focus, wk, dr, tc in rows:
+        s.line(M, y, M+CW, y, '#1e1e2e', 0.3)
+        s.txt(cols_x[0], y-10, n, 'F2', 9, col)
+        s.txt(cols_x[1], y-10, name, 'F2', 8.5, '#e8e8f0')
+        s.txt(cols_x[2], y-10, focus, 'F1', 7.5, '#7878a0')
+        s.txt(cols_x[3], y-10, wk, 'F1', 8, '#7878a0')
+        s.txt(cols_x[4], y-10, dr, 'F2', 8.5, col)
+        s.txt(cols_x[5], y-10, tc, 'F2', 9, '#ffffff')
         y -= 16
 
 
+def render_phase(s: Stream, ph: dict):
+    s.bg('#0d0d14')
+    col = ph['col']
+    y = PH - M
 
-def render_phase(p: PageBuilder, phase: dict):
-    p.fill_page('#0d0d14')
-    col = phase['color']
-    y = PH - MARGIN
+    # Badge
+    s.rect(M, y-15, CW, 15, '#0f0f1a', col, 0.6)
+    s.txt(M+6, y-11, f"FAZA {ph['n']}  *  NED {ph['weeks']}  *  {ph['code']}", 'F2', 8, col)
+    y -= 21
 
-    # Phase badge
-    p.rect_filled_stroke(MARGIN, y - 14, CW, 14, '#0f0f1a', col, 0.8)
-    badge_text = f"FAZA {phase['num']}  *  NED {phase['weeks']}  *  {phase['code']}"
-    p.text(MARGIN + 8, y - 10, badge_text, 'F2', 8, col)
-    y -= 20
+    # Title + mini stats (right)
+    s.txt(M, y-4, ph['name'], 'F2', 20, col)
+    sx = PW - M - 110
+    s.txt(sx, y-5, f"Ned: {ph['weeks']}", 'F2', 8, col)
+    s.txt(sx, y-15, f"Dur: {ph['dur']}", 'F2', 8, col)
+    s.txt(sx, y-25, f"Tem: {ph['ntop']}", 'F2', 8, col)
+    y -= 26
 
-    # Phase title
-    p.text(MARGIN, y - 5, phase['name'], 'F2', 22, col)
-    y -= 30
-
-    # Description
-    desc_words = phase['desc'].split()
-    desc_line = ''
-    desc_lines = []
-    for w in desc_words:
-        test = (desc_line + ' ' + w).strip()
-        if len(test) < 100:
-            desc_line = test
-        else:
-            desc_lines.append(desc_line)
-            desc_line = w
-    if desc_line:
-        desc_lines.append(desc_line)
-    for dl in desc_lines[:2]:
-        p.text(MARGIN, y, dl, 'F1', 8.5, '#9090b8')
-        y -= 11
-    y -= 4
-
-    # Mini stats
-    p.text(PW - MARGIN - 120, PH - MARGIN - 12, f"Ned: {phase['weeks']}", 'F2', 8.5, col)
-    p.text(PW - MARGIN - 120, PH - MARGIN - 23, f"Dur: {phase['dur']}", 'F2', 8.5, col)
-    p.text(PW - MARGIN - 120, PH - MARGIN - 34, f"Tem: {phase['topics_count']}", 'F2', 8.5, col)
+    # Desc
+    y = s.txt_wrap(M, y, ph['desc'], CW-120, 'F1', 8.5, '#9090b8', 11)
+    y -= 6
 
     # Skip box
-    skip_h = 14 + len(phase['skip']) * 12 + 4
-    p.rect_filled_stroke(MARGIN, y - skip_h, CW, skip_h, '#120a0a', '#3d1a1a', 0.6)
-    p.text(MARGIN + 8, y - 10, 'x  PROPUSKAY NA ETOI FAZE', 'F2', 8, '#ff6584')
+    skip_h = 14 + len(ph['skip']) * 11 + 4
+    s.rect(M, y-skip_h, CW, skip_h, '#120a0a', '#3d1a1a', 0.5)
+    s.txt(M+6, y-10, 'x  PROPUSKAY NA ETOY FAZE:', 'F2', 8, '#ff6584')
     sy = y - 21
-    for sk in phase['skip']:
-        p.text(MARGIN + 8, sy, f'x  {sk[:110]}', 'F1', 7.5, '#c8a0a0')
-        if len(sk) > 110:
-            p.text(MARGIN + 16, sy - 9, sk[110:], 'F1', 7.5, '#c8a0a0')
-            sy -= 9
-        sy -= 12
-    y -= skip_h + 8
+    for sk in ph['skip']:
+        s.txt_wrap(M+8, sy, 'x  '+sk, CW-16, 'F1', 7.5, '#c8a0a0', 10)
+        sy -= 11
+    y -= skip_h + 6
 
-    # Topics
-    topics = phase['topics']
-    ncols = 3 if len(topics) >= 6 else 2
-    tcol_w = (CW - (ncols - 1) * 5) // ncols
-    # Calculate rows needed
-    n_rows = (len(topics) + ncols - 1) // ncols
-    topic_h = min(80, max(60, (y - 80) // n_rows))  # dynamic height
+    # Topics grid
+    topics = ph['topics']
+    ncols = 3 if len(topics) >= 7 else 2
+    tw = (CW - (ncols-1)*5) // ncols
+    avail_h = y - 70  # leave room for capstone
+    nrows = (len(topics) + ncols - 1) // ncols
+    th = max(58, min(80, avail_h // nrows - 4))
 
-    tx, ty = MARGIN, y
-    for i, (weeks, name, body, dur, parallel) in enumerate(topics):
-        col_idx = i % ncols
-        row_idx = i // ncols
-        bx = MARGIN + col_idx * (tcol_w + 5)
-        by = ty - row_idx * (topic_h + 4)
+    for i, (wk, name, body, dur, par) in enumerate(topics):
+        ci = i % ncols
+        ri = i // ncols
+        bx = M + ci*(tw+5)
+        by = y - ri*(th+4)
+        s.rect(bx, by-th, tw, th, '#16161f', '#242435', 0.5)
+        s.vbar(bx+2, by-th+3, th-6, col, 2)
+        s.txt(bx+8, by-10, wk, 'F2', 7, '#5858a0')
+        nm = (name[:38]+'..') if len(name)>40 else name
+        s.txt(bx+8, by-20, nm, 'F2', 8.5, '#ffffff')
+        if par:
+            s.txt(bx+8+len(nm)*5, by-20, ' [PAR]', 'F2', 6.5, '#38f9d7')
+        body_lines = int((th-42)/9)
+        s.txt_wrap(bx+8, by-31, body, tw-14, 'F1', 7, '#9090b8', 9)
+        s.txt(bx+8, by-th+7, dur, 'F2', 7.5, col)
 
-        p.rect_filled_stroke(bx, by - topic_h, tcol_w, topic_h, '#16161f', '#242435', 0.5)
-        p.line_v(bx + 2, by - topic_h + 3, topic_h - 6, col, 2)
+    y -= nrows*(th+4) + 4
 
-        p.text(bx + 8, by - 10, weeks, 'F2', 7.5, '#5858a0')
-
-        # Name (possibly wrap)
-        name_display = name if len(name) < 45 else name[:44] + '...'
-        if parallel:
-            p.text(bx + 8, by - 21, name_display, 'F2', 8.5, '#ffffff')
-            p.text(bx + 8 + len(name_display) * 4.8, by - 21, ' // PAR', 'F2', 6.5, '#38f9d7')
-        else:
-            p.text(bx + 8, by - 21, name_display, 'F2', 8.5, '#ffffff')
-
-        # Body text (2 lines max)
-        body_words = body.split()
-        bl = ''
-        blines = []
-        for w in body_words:
-            test = (bl + ' ' + w).strip()
-            char_limit = int(tcol_w / 4.5)
-            if len(test) < char_limit:
-                bl = test
-            else:
-                blines.append(bl)
-                bl = w
-        if bl:
-            blines.append(bl)
-        max_blines = max(2, int((topic_h - 40) / 9))
-        by_text = by - 32
-        for bl in blines[:max_blines]:
-            p.text(bx + 8, by_text, bl, 'F1', 7, '#9090b8')
-            by_text -= 9
-
-        p.text(bx + 8, by - topic_h + 7, dur, 'F2', 7.5, col)
-
-    y -= n_rows * (topic_h + 4) + 4
-
-    # Capstone box
-    cap_h = max(58, 18 + len(phase['capstone']) * 13 + 5)
-    if y - cap_h < 20:
-        cap_h = y - 22
-    cap_h = max(cap_h, 55)
-
-    p.rect_filled_stroke(MARGIN, y - cap_h, CW, cap_h, '#0f0f1a', col, 1.0)
-    p.line_v(MARGIN + 2, y - cap_h + 3, cap_h - 6, col, 3)
-    p.text(MARGIN + 10, y - 10, f'-> KAPSTON FAZY {phase["num"]}', 'F2', 8, col)
-    p.text(MARGIN + 10, y - 22, phase['capstone_title'][:90], 'F2', 9.5, '#ffffff')
-    cy = y - 35
-    for item in phase['capstone'][:4]:
-        p.text(MARGIN + 10, cy, f'-> {item[:95]}', 'F1', 7.5, '#c8c8e0')
-        cy -= 12
+    # Capstone
+    ch = max(52, 16 + len(ph['cap'])*13 + 6)
+    if y - ch < 14:
+        ch = y - 14
+    s.rect(M, y-ch, CW, ch, '#0f0f1a', col, 1.0)
+    s.vbar(M+2, y-ch+3, ch-6, col, 3)
+    s.txt(M+10, y-11, ph['cap_title'], 'F2', 9, '#ffffff')
+    cy = y - 26
+    for item in ph['cap']:
+        s.txt_wrap(M+10, cy, item, CW-18, 'F1', 8, '#c8c8e0', 11)
+        cy -= 13
 
 
-def render_finish(p: PageBuilder):
-    p.fill_page('#0d0d14')
-    y = PH - MARGIN
+def render_finish(s: Stream):
+    s.bg('#0d0d14')
+    y = PH - M
 
-    # Header tag
-    p.rect_filled_stroke(MARGIN, y - 14, 30, 14, '#1a0a0f', '#3d1a2a', 0.5)
-    p.text(MARGIN + 5, y - 10, '05', 'F2', 8, '#ff6584')
-    p.text(MARGIN + 38, y - 10, 'Final / Samoproverka', 'F2', 14, '#ffffff')
-    y -= 28
+    # Header
+    s.rect(M, y-14, 28, 14, '#1a0a0f', '#3d1a2a', 0.5)
+    s.txt(M+4, y-10, '05', 'F2', 8, '#ff6584')
+    s.txt(M+36, y-10, 'Final / Samoproverka', 'F2', 13, '#ffffff')
+    y -= 26
 
-    # Question
-    p.text(MARGIN, y - 5, 'Ty v top-1%,', 'F2', 20, '#ffffff')
-    y -= 25
-    p.text(MARGIN, y - 5, 'kogda --', 'F2', 20, '#6c63ff')
+    s.txt(M, y-4,  'Ty v top-1%,', 'F2', 20, '#ffffff')
+    y -= 24
+    s.txt(M, y-4,  'kogda --', 'F2', 20, '#6c63ff')
     y -= 20
-    p.text(MARGIN, y, 'Povedencheskie markery, a ne sertifikaty. Ty ikh zamechaesh v razgovore -- ne v teste.',
-           'F1', 9, '#7878a0')
+    s.txt(M, y, 'Povedencheskie markery, a ne sertifikaty. Zamechaesh v razgovore, ne v teste.', 'F1', 9, '#7878a0')
     y -= 18
 
-    # Markers grid (2 cols x 3 rows)
-    mcol_w = (CW - 6) // 2
-    mh = 72
+    markers = [
+        ('#6c63ff','// BEGOST','Dumayesh na angliyskom, ne perevodish',
+         'Vnutrenniy monolog perelyuchaetsya na angliiskiy. Pri chtenii znacheniye poyavlyaetsya srazu.'),
+        ('#f7971e','// TOCHNOST','Slyshish oshibki u drugikh (i u sebya v zapisyakh)',
+         'Kogda nositel govori nepr. -- zamechaesh. Zapis mesyachnoy davnosti -- slyshish chto kazalos normalnym.'),
+        ('#43e97b','// VKUS','Vybiraesh slovo po nyuansu, ne pervoe popavsheyesya',
+         'Mezhdu big/large/vast/enormous -- vybiraesh osoznanno. Chuvstvuesh kogda "however" tyazhelo.'),
+        ('#ff6584','// STRESS','Neznakomaya tema vklyuchayet inference, ne paniku',
+         '"I am not sure about the term, but what I mean is..." -- eto C1-otvet, ne proval.'),
+        ('#38f9d7','// SISTEMA','35 minut v den ne oschuschayutsya kak uchyoba',
+         'Podkast vo vremya edy, statya vmesto lenty. Yazyk vstroen v potok -- ne intensivnost, a ustoychivost.'),
+        ('#a8a3ff','// AI-TOOL','Ispolzuesh AI kak zerkalo, a ne perevodchik',
+         'Davno ne prosish "perevedi". Prosish "otsenyi ubeditelnost", "naydyi 3 tochnee". AI -- instrument samootsenki.'),
+    ]
+    mw = (CW-6)//2
+    mh = 70
+    mx0, my0 = M, y
+    for i, (col, lbl, title, body) in enumerate(markers):
+        ci = i % 2
+        ri = i // 2
+        bx = M + ci*(mw+6)
+        by = my0 - ri*(mh+5)
+        fill = '#0e0e1e' if i==5 else '#12121e'
+        stroke = '#3a3a77' if i==5 else '#242435'
+        s.rect(bx, by-mh, mw, mh, fill, stroke, 0.5)
+        s.rect(bx, by, mw, 2, col)   # top accent
+        s.txt(bx+8, by-12, lbl, 'F2', 7.5, col)
+        s.txt(bx+8, by-24, title, 'F2', 9, '#ffffff')
+        s.txt_wrap(bx+8, by-37, body, mw-14, 'F1', 7.5, '#7878a0', 10)
+    y -= 3*(mh+5) + 10
 
-    for i, (col, label, title, body) in enumerate(MARKERS):
-        col_idx = i % 2
-        row_idx = i // 2
-        mx = MARGIN + col_idx * (mcol_w + 6)
-        my = y - row_idx * (mh + 5)
-        fill = '#12121e' if i < 5 else '#0e0e1e'
-        stroke = '#242435' if i < 5 else '#3a3a77'
-        p.rect_filled_stroke(mx, my - mh, mcol_w, mh, fill, stroke, 0.5)
-        p.rect_filled(mx, my, mcol_w, 2, col)  # top accent line
-
-        p.text(mx + 8, my - 12, label, 'F2', 7.5, col)
-        p.text(mx + 8, my - 24, title, 'F2', 9.5, '#ffffff')
-
-        # Body wrap
-        bwords = body.split()
-        bl = ''
-        blines = []
-        for w in bwords:
-            test = (bl + ' ' + w).strip()
-            if len(test) < int(mcol_w / 4.3):
-                bl = test
-            else:
-                blines.append(bl)
-                bl = w
-        if bl:
-            blines.append(bl)
-        by_m = my - 38
-        for bln in blines[:3]:
-            p.text(mx + 8, by_m, bln, 'F1', 7.5, '#7878a0')
-            by_m -= 10
-
-    y -= 3 * (mh + 5) + 10
-
-    # Closing line
-    closing_h = 50
-    p.rect_filled_stroke(MARGIN, y - closing_h, CW, closing_h,
-                         '#0f0f1a', '#3a3a77', 0.8)
-    p.text(MARGIN + CW//2 - 190, y - 16,
-           'Yazyk uchyat godami --', 'F2', 13, '#ffffff')
-    p.text(MARGIN + CW//2 - 130, y - 31,
-           'nositelyami stanovyatsya za 52 nedeli privychek.', 'F2', 11, '#6c63ff')
-    p.text(MARGIN + CW//2 - 170, y - 44,
-           'Ne znanie delaet raznitsu -- delaet raznitsu to, chto ty delaesh kazhdyi den.', 'F1', 9, '#7878a0')
+    # Closing
+    ch = 52
+    s.rect(M, y-ch, CW, ch, '#0f0f1a', '#3a3a77', 0.8)
+    s.txt(M+CW//2-185, y-14, 'Yazyk uchyat godami --', 'F2', 13, '#ffffff')
+    s.txt(M+CW//2-215, y-30, 'nositеlyami stanovyatsya za 52 nedeli privychek.', 'F2', 11, '#6c63ff')
+    s.txt(M+CW//2-215, y-44, 'Ne znanie delaet raznitsu -- to, chto ty delaesh kazhdyy den.', 'F1', 9, '#7878a0')
 
     # Footer
-    y -= closing_h + 12
-    p.line_h(MARGIN, y, CW, '#242435', 0.5)
-    y -= 10
-    p.text(MARGIN, y, 'ANGLIISKII YAZYK * ROADMAP * 2026 * V1.0', 'F2', 7, '#5858a0')
-    p.text(PW - MARGIN - 160, y, 'A1 -> C1 * 52 ned. * 5 faz * 38 tem * 5 kaostonov', 'F1', 7, '#5858a0')
+    y -= ch + 12
+    s.line(M, y, M+CW, y, '#242435', 0.5)
+    s.txt(M, y-9, 'ANGLIISKIY YAZYK * ROADMAP * 2026 * V1.0', 'F2', 7, '#5858a0')
+    s.txt(PW-M-200, y-9, 'A1->C1 * 52 ned. * 5 faz * 38 tem * 5 kaostonov', 'F1', 7, '#5858a0')
 
 
-# ─── PDF assembly ─────────────────────────────────────────────────────────────
+
+# ─── Main assembly ────────────────────────────────────────────────────────────
 
 def build_pdf() -> bytes:
-    pdf = PDFWriter()
+    w = PDFWriter()
 
-    # Font objects (standard PDF fonts -- no embedding needed)
-    # F1 = Helvetica, F2 = Helvetica-Bold
-    font1_id = pdf.add_object('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>')
-    font2_id = pdf.add_object('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>')
+    # Object 1: Catalog (points to pages obj = 3)
+    w.put(1, '<< /Type /Catalog /Pages 3 0 R >>')
+    # Object 2: Info
+    w.put(2, '<< /Title (Top 1% Nositel C1 -- English Roadmap 2026) /Author (Kiro) >>')
+    # Object 3: Pages dict (filled in later, after we know kids)
+    pages_id = 3
+    # Object 4: Font F1 Helvetica
+    w.put(4, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>')
+    # Object 5: Font F2 Helvetica-Bold
+    w.put(5, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>')
 
-    font_res = f'<< /F1 {font1_id} 0 R /F2 {font2_id} 0 R >>'
+    font_res = '<< /F1 4 0 R /F2 5 0 R >>'
+    next_id = 6
 
-    page_ids = []
-    pages_parent_id = pdf.new_id()  # reserve id for pages dict
-
-    def make_page(builder: PageBuilder) -> int:
-        content_str = builder.build()
-        content_bytes = content_str.encode('latin-1', errors='replace')
-        stream_id = pdf.add_object_raw(
-            f'<< /Length {len(content_bytes)} >>\nstream\n'.encode() +
-            content_bytes +
-            b'\nendstream'
-        )
-        page_id = pdf.add_object(
-            f'<< /Type /Page /Parent {pages_parent_id} 0 R '
-            f'/MediaBox [0 0 {PW} {PH}] '
-            f'/Contents {stream_id} 0 R '
-            f'/Resources << /Font {font_res} >> >>'
-        )
+    def add_page(renderer_fn, *args) -> int:
+        nonlocal next_id
+        st = Stream()
+        renderer_fn(st, *args)
+        data = st.build()
+        stream_id = next_id
+        w.put_stream(stream_id, data)
+        next_id += 1
+        page_id = next_id
+        w.put(page_id,
+              f'<< /Type /Page /Parent {pages_id} 0 R '
+              f'/MediaBox [0 0 {PW} {PH}] '
+              f'/Contents {stream_id} 0 R '
+              f'/Resources << /Font {font_res} >> >>')
+        next_id += 1
         return page_id
 
-    # Build pages
-    builders = []
+    kids = []
+    kids.append(add_page(lambda s: render_cover(s)))
+    kids.append(add_page(lambda s: render_philosophy(s)))
+    for ph in PHASES:
+        kids.append(add_page(lambda s, p=ph: render_phase(s, p)))
+    kids.append(add_page(lambda s: render_finish(s)))
 
-    # Cover
-    cover = PageBuilder()
-    render_cover(cover)
-    builders.append(cover)
+    # Now fill object 3 (Pages)
+    kids_str = ' '.join(f'{k} 0 R' for k in kids)
+    w.put(pages_id, f'<< /Type /Pages /Kids [{kids_str}] /Count {len(kids)} >>')
 
-    # Philosophy
-    phil = PageBuilder()
-    render_philosophy(phil)
-    builders.append(phil)
-
-    # Phases 1-5
-    for phase in PHASES:
-        pp = PageBuilder()
-        render_phase(pp, phase)
-        builders.append(pp)
-
-    # Finish
-    finish = PageBuilder()
-    render_finish(finish)
-    builders.append(finish)
-
-    for b in builders:
-        page_ids.append(make_page(b))
-
-    # Pages dictionary (uses the pre-reserved ID)
-    kids = ' '.join(f'{pid} 0 R' for pid in page_ids)
-    pages_content = f'<< /Type /Pages /Kids [{kids}] /Count {len(page_ids)} >>'
-    pdf.objects.append((pages_parent_id, pages_content.encode('latin-1')))
-
-    # Catalog
-    catalog_id = pdf.add_object(f'<< /Type /Catalog /Pages {pages_parent_id} 0 R >>')
-
-    # Info
-    info_id = pdf.add_object(
-        f'<< /Title (Top 1% Nositel C1 -- English Roadmap 2026) '
-        f'/Author (Kiro AI) '
-        f'/Subject (English Language Learning Roadmap A1 to C1) '
-        f'/Keywords (English C1 Roadmap 2026) >>'
-    )
-
-    # Fix catalog to be obj 1
-    # We need catalog at id 1 and info at id 2
-    # Let's reorder: swap catalog to position 1
-    # Actually let's just rebuild with catalog first
-    pdf2 = PDFWriter()
-    pdf2.obj_id = 0
-
-    catalog_id2 = pdf2.add_object(f'<< /Type /Catalog /Pages 3 0 R >>')  # id=1
-    info_id2 = pdf2.add_object(
-        f'<< /Title (Top 1% Nositel C1 -- English Roadmap 2026) '
-        f'/Author (Kiro AI) >>'
-    )  # id=2
-    pages_id2 = pdf2.new_id()  # id=3 reserved
-
-    # Font objects
-    f1_id = pdf2.add_object('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>')
-    f2_id = pdf2.add_object('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>')
-    font_res2 = f'<< /F1 {f1_id} 0 R /F2 {f2_id} 0 R >>'
-
-    page_ids2 = []
-
-    def make_page2(builder: PageBuilder) -> int:
-        content_str = builder.build()
-        content_bytes = content_str.encode('latin-1', errors='replace')
-        stream_id = pdf2.add_object_raw(
-            f'<< /Length {len(content_bytes)} >>\nstream\n'.encode() +
-            content_bytes +
-            b'\nendstream'
-        )
-        page_id = pdf2.add_object(
-            f'<< /Type /Page /Parent {pages_id2} 0 R '
-            f'/MediaBox [0 0 {PW} {PH}] '
-            f'/Contents {stream_id} 0 R '
-            f'/Resources << /Font {font_res2} >> >>'
-        )
-        return page_id
-
-    for b in builders:
-        page_ids2.append(make_page2(b))
-
-    kids2 = ' '.join(f'{pid} 0 R' for pid in page_ids2)
-    pdf2.objects.append((pages_id2, f'<< /Type /Pages /Kids [{kids2}] /Count {len(page_ids2)} >>'.encode()))
-
-    return pdf2.build()
+    return w.build()
 
 
 if __name__ == '__main__':
     print('Generating PDF...')
     data = build_pdf()
-    out_path = '/projects/sandbox/english_roadmap_c1.pdf'
-    with open(out_path, 'wb') as f:
+    out = '/projects/sandbox/english_roadmap_c1.pdf'
+    with open(out, 'wb') as f:
         f.write(data)
-    print(f'Done! Written {len(data):,} bytes to {out_path}')
-    print(f'Pages: 8 (cover + philosophy + 5 phases + finish)')
+    print(f'Written {len(data):,} bytes -> {out}')
+
+    # Verify
+    import re
+    pages = len(re.findall(rb'/Type /Page ', data))
+    has_xref = b'xref\n0 ' in data
+    has_eof  = data.endswith(b'%%EOF\n')
+    obj3_type = re.search(rb'3 0 obj\n(.*?)\nendobj', data, re.DOTALL)
+    obj3_is_pages = obj3_type and b'/Type /Pages' in obj3_type.group(1)
+    fonts_found = set(re.findall(rb'/BaseFont /(\w+)', data))
+    print(f'Pages: {pages} (expect 8) -- {"OK" if pages==8 else "FAIL"}')
+    print(f'xref correct: {has_xref} -- {"OK" if has_xref else "FAIL"}')
+    print(f'EOF marker: {has_eof} -- {"OK" if has_eof else "FAIL"}')
+    print(f'obj 3 is /Pages: {obj3_is_pages} -- {"OK" if obj3_is_pages else "FAIL"}')
+    print(f'Fonts: {fonts_found}')

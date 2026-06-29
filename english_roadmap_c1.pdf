@@ -4,7 +4,10 @@
 << /Type /Catalog /Pages 3 0 R >>
 endobj
 2 0 obj
-<< /Title (Top 1% Nositel C1 -- English Roadmap 2026) /Author (Kiro AI) >>
+<< /Title (Top 1% Nositel C1 -- English Roadmap 2026) /Author (Kiro) >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R] /Count 8 >>
 endobj
 4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -13,1149 +16,865 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 4513 >>
+<< /Length 4140 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.0510 0.0510 0.0784 rg
--4.00 766.00 240.00 240.00 re f
-0.0510 0.0510 0.0784 rg
--4.00 766.00 180.00 180.00 re f
-0.0510 0.0510 0.0784 rg
--4.00 766.00 120.00 120.00 re f
-0.0510 0.0510 0.0784 rg
--4.00 766.00 60.00 60.00 re f
-0.50 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0667 0.0667 0.1176 rg
-0.1647 0.1647 0.3333 RG
-36.00 788.00 260.00 16.00 re B
-BT /F2 7 Tf 0.4235 0.3882 1.0000 rg 44.00 794.00 Td (?????????? ????  *  2026  *  ROADMAP  *  V1.0) Tj ET
-BT /F2 36 Tf 1.0000 1.0000 1.0000 rg 36.00 760.00 Td (Top 1%) Tj ET
-BT /F2 36 Tf 0.6588 0.6392 1.0000 rg 36.00 718.00 Td (Nositel) Tj ET
-BT /F2 36 Tf 0.4235 0.3882 1.0000 rg 36.00 676.00 Td (urovnya C1) Tj ET
-BT /F1 9.5 Tf 0.4706 0.4706 0.6275 rg 36.00 644.00 Td (12 mesyacev * 52 nedeli * 5 faz * 38 tem * bez vody -- aktualno dlya 2026) Tj ET
-0.50 w
+0.50 w 0.1647 0.1647 0.3333 RG
+36.0 790.0 280.0 16.0 re B
+BT /F2 7 Tf 0.4235 0.3882 1.0000 rg 42.0 795.0 Td (ANGLIISKIY YAZYK  *  2026  *  ROADMAP  *  V1.0) Tj ET
+BT /F2 34 Tf 1.0000 1.0000 1.0000 rg 36.0 776.0 Td (Top 1%) Tj ET
+BT /F2 34 Tf 0.6588 0.6392 1.0000 rg 36.0 736.0 Td (Nositel) Tj ET
+BT /F2 34 Tf 0.4235 0.3882 1.0000 rg 36.0 696.0 Td (urovnya C1) Tj ET
+BT /F1 9 Tf 0.4706 0.4706 0.6275 rg 36.0 660.0 Td (12 mesyacev * 52 nedeli * 5 faz * 38 tem * bez vody -- aktualno dlya 2026) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 562.00 126.00 60.00 re B
-BT /F2 26 Tf 0.4235 0.3882 1.0000 rg 77.00 600.00 Td (52) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 81.00 584.00 Td (??????) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 586.0 126.0 56.0 re B
+BT /F2 24 Tf 0.4235 0.3882 1.0000 rg 81.0 620.0 Td (52) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 81.0 605.0 Td (Nedeli) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-168.00 562.00 126.00 60.00 re B
-BT /F2 26 Tf 0.9686 0.5922 0.1176 rg 220.00 600.00 Td (5) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 222.00 584.00 Td (???) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+168.0 586.0 126.0 56.0 re B
+BT /F2 24 Tf 0.9686 0.5922 0.1176 rg 222.0 620.0 Td (5) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 222.0 605.0 Td (Faz) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-300.00 562.00 126.00 60.00 re B
-BT /F2 26 Tf 0.2627 0.9137 0.4824 rg 341.00 600.00 Td (38) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 354.00 584.00 Td (???) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 586.0 126.0 56.0 re B
+BT /F2 24 Tf 0.2627 0.9137 0.4824 rg 345.0 620.0 Td (38) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 354.0 605.0 Td (Tem) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-432.00 562.00 126.00 60.00 re B
-BT /F2 26 Tf 1.0000 0.3961 0.5176 rg 484.00 600.00 Td (5) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 468.00 584.00 Td (?????????) Tj ET
-0.50 w
-0.1412 0.1412 0.2078 RG
-36.00 550.00 m 559.00 550.00 l S
-BT /F2 8 Tf 0.4706 0.4706 0.6275 rg 36.00 536.00 Td (> ????????? ?? ?????) Tj ET
-0.80 w
+0.50 w 0.1412 0.1412 0.2078 RG
+432.0 586.0 126.0 56.0 re B
+BT /F2 24 Tf 1.0000 0.3961 0.5176 rg 486.0 620.0 Td (5) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 468.0 605.0 Td (Kaostonov) Tj ET
+0.50 w 0.1412 0.1412 0.2078 RG 36.0 576.0 m 559.0 576.0 l S
+BT /F2 8 Tf 0.4706 0.4706 0.6275 rg 36.0 562.0 Td (> Navigatsiya po fazam) Tj ET
 0.0863 0.0863 0.1216 rg
-0.4235 0.3882 1.0000 RG
-36.00 440.00 99.00 80.00 re B
-BT /F2 20 Tf 0.4235 0.3882 1.0000 rg 78.00 502.00 Td (1) Tj ET
-BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 40.00 487.00 Td (??? 1-6) Tj ET
-BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 40.00 476.00 Td (?????????) Tj ET
-BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 40.00 465.00 Td (6 ???.) Tj ET
-BT /F1 7 Tf 0.4235 0.3882 1.0000 rg 40.00 455.00 Td (6 ???) Tj ET
-0.80 w
+0.80 w 0.4235 0.3882 1.0000 RG
+36.0 472.0 99.0 76.0 re B
+BT /F2 18 Tf 0.4235 0.3882 1.0000 rg 77.0 532.0 Td (1) Tj ET
+BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 40.0 517.0 Td (NED 1-6) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 40.0 506.0 Td (Fundament) Tj ET
+BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 40.0 495.0 Td (6 ned.) Tj ET
+BT /F1 7 Tf 0.4235 0.3882 1.0000 rg 40.0 485.0 Td (6 tem) Tj ET
 0.0863 0.0863 0.1216 rg
-0.9686 0.5922 0.1176 RG
-141.00 440.00 99.00 80.00 re B
-BT /F2 20 Tf 0.9686 0.5922 0.1176 rg 183.00 502.00 Td (2) Tj ET
-BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 145.00 487.00 Td (??? 7-20) Tj ET
-BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 145.00 476.00 Td (?????) Tj ET
-BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 145.00 465.00 Td (14 ???.) Tj ET
-BT /F1 7 Tf 0.9686 0.5922 0.1176 rg 145.00 455.00 Td (10 ???) Tj ET
-0.80 w
+0.80 w 0.9686 0.5922 0.1176 RG
+141.0 472.0 99.0 76.0 re B
+BT /F2 18 Tf 0.9686 0.5922 0.1176 rg 182.0 532.0 Td (2) Tj ET
+BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 145.0 517.0 Td (NED 7-20) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 145.0 506.0 Td (Ob'yom) Tj ET
+BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 145.0 495.0 Td (14 ned.) Tj ET
+BT /F1 7 Tf 0.9686 0.5922 0.1176 rg 145.0 485.0 Td (10 tem) Tj ET
 0.0863 0.0863 0.1216 rg
-0.2627 0.9137 0.4824 RG
-246.00 440.00 99.00 80.00 re B
-BT /F2 20 Tf 0.2627 0.9137 0.4824 rg 288.00 502.00 Td (3) Tj ET
-BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 250.00 487.00 Td (??? 21-36) Tj ET
-BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 250.00 476.00 Td (?????????) Tj ET
-BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 250.00 465.00 Td (16 ???.) Tj ET
-BT /F1 7 Tf 0.2627 0.9137 0.4824 rg 250.00 455.00 Td (9 ???) Tj ET
-0.80 w
+0.80 w 0.2627 0.9137 0.4824 RG
+246.0 472.0 99.0 76.0 re B
+BT /F2 18 Tf 0.2627 0.9137 0.4824 rg 287.0 532.0 Td (3) Tj ET
+BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 250.0 517.0 Td (NED 21-36) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 250.0 506.0 Td (Strogost) Tj ET
+BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 250.0 495.0 Td (16 ned.) Tj ET
+BT /F1 7 Tf 0.2627 0.9137 0.4824 rg 250.0 485.0 Td (9 tem) Tj ET
 0.0863 0.0863 0.1216 rg
-1.0000 0.3961 0.5176 RG
-351.00 440.00 99.00 80.00 re B
-BT /F2 20 Tf 1.0000 0.3961 0.5176 rg 393.00 502.00 Td (4) Tj ET
-BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 355.00 487.00 Td (??? 37-48) Tj ET
-BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 355.00 476.00 Td (?????) Tj ET
-BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 355.00 465.00 Td (12 ???.) Tj ET
-BT /F1 7 Tf 1.0000 0.3961 0.5176 rg 355.00 455.00 Td (8 ???) Tj ET
-0.80 w
+0.80 w 1.0000 0.3961 0.5176 RG
+351.0 472.0 99.0 76.0 re B
+BT /F2 18 Tf 1.0000 0.3961 0.5176 rg 392.0 532.0 Td (4) Tj ET
+BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 355.0 517.0 Td (NED 37-48) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 355.0 506.0 Td (Polet) Tj ET
+BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 355.0 495.0 Td (12 ned.) Tj ET
+BT /F1 7 Tf 1.0000 0.3961 0.5176 rg 355.0 485.0 Td (8 tem) Tj ET
 0.0863 0.0863 0.1216 rg
-0.2196 0.9765 0.8431 RG
-456.00 440.00 99.00 80.00 re B
-BT /F2 20 Tf 0.2196 0.9765 0.8431 rg 498.00 502.00 Td (5) Tj ET
-BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 460.00 487.00 Td (??? 49-52) Tj ET
-BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 460.00 476.00 Td (????????) Tj ET
-BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 460.00 465.00 Td (4 ???.) Tj ET
-BT /F1 7 Tf 0.2196 0.9765 0.8431 rg 460.00 455.00 Td (5 ???) Tj ET
-0.50 w
-0.1412 0.1412 0.2078 RG
-36.00 428.00 m 559.00 428.00 l S
-0.80 w
+0.80 w 0.2196 0.9765 0.8431 RG
+456.0 472.0 99.0 76.0 re B
+BT /F2 18 Tf 0.2196 0.9765 0.8431 rg 497.0 532.0 Td (5) Tj ET
+BT /F1 6.5 Tf 0.4706 0.4706 0.6275 rg 460.0 517.0 Td (NED 49-52) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 460.0 506.0 Td (Privychki) Tj ET
+BT /F1 7 Tf 0.4706 0.4706 0.6275 rg 460.0 495.0 Td (4 ned.) Tj ET
+BT /F1 7 Tf 0.2196 0.9765 0.8431 rg 460.0 485.0 Td (5 tem) Tj ET
+0.50 w 0.1412 0.1412 0.2078 RG 36.0 462.0 m 559.0 462.0 l S
 0.0588 0.0588 0.1020 rg
-0.1647 0.1647 0.3333 RG
-36.00 364.00 523.00 50.00 re B
-2.50 w
-0.4235 0.3882 1.0000 RG
-38.00 367.00 m 38.00 411.00 l S
-BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 48.00 402.00 Td (> ????????? ????) Tj ET
-BT /F2 10.5 Tf 1.0000 1.0000 1.0000 rg 48.00 390.00 Td (30-???????? ???????????? ???????? ? ????????? ??? ??????????) Tj ET
-BT /F1 9 Tf 0.6588 0.6392 1.0000 rg 48.00 377.00 Td (?? ????, ??????? ?????????? ???????? ??? -- ????????, ??? ???? ?? ???????) Tj ET
+0.80 w 0.1647 0.1647 0.3333 RG
+36.0 394.0 523.0 54.0 re B
+2.50 w 0.4235 0.3882 1.0000 RG 38.0 397.0 m 38.0 444.0 l S
+BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 46.0 437.0 Td (> Finalnaya tsel) Tj ET
+BT /F2 11 Tf 1.0000 1.0000 1.0000 rg 46.0 424.0 Td (30-minutnyy razgovor s nositelem bez podgotovki) Tj ET
+BT /F1 9 Tf 0.6588 0.6392 1.0000 rg 46.0 411.0 Td (po teme, kotoruyu sobesednik vybirayet sam -- uverenno, bez paus na perevod) Tj ET
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 8327 >>
+<< /Length 6923 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.50 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0667 0.0667 0.1176 rg
-0.1647 0.1647 0.3333 RG
-36.00 792.00 30.00 14.00 re B
-BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 41.00 796.00 Td (02) Tj ET
-BT /F2 14 Tf 1.0000 1.0000 1.0000 rg 74.00 796.00 Td (Filosofiya / Manifest) Tj ET
-0.50 w
+0.50 w 0.1647 0.1647 0.3333 RG
+36.0 792.0 28.0 14.0 re B
+BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 40.0 796.0 Td (02) Tj ET
+BT /F2 13 Tf 1.0000 1.0000 1.0000 rg 72.0 796.0 Td (Filosofiya / Manifest) Tj ET
 0.0588 0.0588 0.1020 rg
-0.1647 0.1647 0.3333 RG
-36.00 718.00 523.00 62.00 re B
-2.50 w
-0.4235 0.3882 1.0000 RG
-38.00 722.00 m 38.00 776.00 l S
-BT /F2 8.5 Tf 0.4235 0.3882 1.0000 rg 48.00 770.00 Td (PARADOKS PROGRAMMY:) Tj ET
-BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 48.00 758.00 Td (Ty ne izuchaesh angliiskii -- ty perestaesh perevodyt s russkogo. Pervyi mesyats) Tj ET
-BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 48.00 747.00 Td (kazhetsia medlennym, potomu chto ty stroish myshlenie na drugom yazyke.) Tj ET
-BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 48.00 736.00 Td (Govori s pervogo dnya -- koryavo, netochno, vslukh. AI-sobesednik prinimaet) Tj ET
-BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 48.00 725.00 Td (lyuboi uroven i razbiraet kazhdyu oshibku. Snachala ob'em -- potom tochnost.) Tj ET
-BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 48.00 714.00 Td (Cherez 52 nedeli ty ne "vyuchish" yazyk -- ty na nem zhivesh.) Tj ET
-0.50 w
+0.50 w 0.1647 0.1647 0.3333 RG
+36.0 714.0 523.0 68.0 re B
+2.50 w 0.4235 0.3882 1.0000 RG 38.0 718.0 m 38.0 778.0 l S
+BT /F2 8.5 Tf 0.4235 0.3882 1.0000 rg 46.0 772.0 Td (PARADOKS:) Tj ET
+BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 46.0 760.0 Td (Ty ne izuchaesh angliiskiy -- ty perestaesh perevodyt s russkogo.) Tj ET
+BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 46.0 749.0 Td (Pervyy mesyats kazhetsya medlennym: ty stroish myshlenie na drugom yazyke.) Tj ET
+BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 46.0 738.0 Td (Govori s pervogo dnya -- koryavo, netochno, vslukh. AI prinimaet lyuboy uroven) Tj ET
+BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 46.0 727.0 Td (i razbir??? kazhd?yu oshibku. Snachala ob'em -- potom tochnost.) Tj ET
+BT /F1 8.5 Tf 0.7843 0.7843 0.8784 rg 46.0 716.0 Td (Cherez 52 nedeli ty ne "vyuchish" yazyk -- ty na nem zhivyosh.) Tj ET
 0.0667 0.0667 0.1020 rg
-0.1412 0.1412 0.2078 RG
-36.00 648.00 258.00 60.00 re B
-BT /F2 18 Tf 0.1176 0.1176 0.1882 rg 42.00 696.00 Td (01) Tj ET
-BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 42.00 682.00 Td (??????? ?????? ?????? -- ?? ???????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.00 670.00 Td (???? ?????????? ?? ???????????, ?????? ??? ?????????. Anki-?????? ?? Present) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.00 659.00 Td (Simple ??????? ?????? ????? ?? ??????? ? ??? ? ?????????.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 648.0 258.0 58.0 re B
+BT /F2 16 Tf 0.1176 0.1176 0.1882 rg 42.0 692.0 Td (01) Tj ET
+BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 42.0 679.0 Td (Glubina do uverennosti) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.0 667.0 Td (Odin instrument do avtomatizma, prezhde chem sleduyuschiy.) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.0 657.0 Td (Anki-koloda zakryta kogda ne dumaesh o ney v razgovore.) Tj ET
 0.0667 0.0667 0.1020 rg
-0.1412 0.1412 0.2078 RG
-300.00 648.00 258.00 60.00 re B
-BT /F2 18 Tf 0.1176 0.1176 0.1882 rg 306.00 696.00 Td (02) Tj ET
-BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 306.00 682.00 Td (?????????? ??????? -- ????? ?????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.00 670.00 Td (?????? ???? ????? ?????? "?? ?????? ??????". ?????????? ??????? ??????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.00 659.00 Td (?? A1 -- ?? ????, ? ??????????. ??????????????? ????????? ??????? ?????.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 648.0 258.0 58.0 re B
+BT /F2 16 Tf 0.1176 0.1176 0.1882 rg 306.0 692.0 Td (02) Tj ET
+BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 306.0 679.0 Td (Osoznanny propusk -- chast plana) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 667.0 Td (Kazhdaya faza imeet spisok "ne trogay seychas". Propuskat) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 657.0 Td (grammatiku na A1 -- disciplina, ne len.) Tj ET
 0.0667 0.0667 0.1020 rg
-0.1412 0.1412 0.2078 RG
-36.00 583.00 258.00 60.00 re B
-BT /F2 18 Tf 0.1176 0.1176 0.1882 rg 42.00 631.00 Td (03) Tj ET
-BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 42.00 617.00 Td (??? 1% -- ??? ????????, ? ?? ?????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.00 605.00 Td (52 ?????? x 7 ???? x 20 ????? = ~121 ??? ???????? ????????.) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.00 594.00 Td (???????? C1 ?????????? ?? ??????? ???????, ? ??????????? ??????????.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 585.0 258.0 58.0 re B
+BT /F2 16 Tf 0.1176 0.1176 0.1882 rg 42.0 629.0 Td (03) Tj ET
+BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 42.0 616.0 Td (Top 1% -- eto privychki) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.0 604.0 Td (52 ned x 7 dn x 20 min = ~121 chas aktivnoy praktiki. Nositel) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.0 594.0 Td (C1 otlichaetsya ezhednevnymi privychkami.) Tj ET
 0.0667 0.0667 0.1020 rg
-0.1412 0.1412 0.2078 RG
-300.00 583.00 258.00 60.00 re B
-BT /F2 18 Tf 0.1176 0.1176 0.1882 rg 306.00 631.00 Td (04) Tj ET
-BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 306.00 617.00 Td (???????? ?????? ???????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.00 605.00 Td (?????? ???????? -- ????? ?????????? ??? ???????? ?????????. Tandem, iTalki,) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.00 594.00 Td (?????? ??? YouTube. ????????????? ??????? ??? ?????? ?? ?????????????.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 585.0 258.0 58.0 re B
+BT /F2 16 Tf 0.1176 0.1176 0.1882 rg 306.0 629.0 Td (04) Tj ET
+BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 306.0 616.0 Td (Realnaya stavka obyazatelna) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 604.0 Td (Kazhdyy kapston -- zhivoy sobesednik ili realnaya auditoriya.) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 594.0 Td (Trenirovochnyy polygon bez stavki ne zachityvaetsya.) Tj ET
 0.0667 0.0667 0.1020 rg
-0.1412 0.1412 0.2078 RG
-36.00 518.00 258.00 60.00 re B
-BT /F2 18 Tf 0.1176 0.1176 0.1882 rg 42.00 566.00 Td (05) Tj ET
-BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 42.00 552.00 Td (?? ??????????? -- ?? ??????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.00 540.00 Td (???? ?? ?????? ?????????, ????? ??????? ??? ? ??? ?????? ? ????? ???? --) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.00 529.00 Td (??????? ??????????. Anki, Grammarly, shadowing -- ??? ??????? ??????????.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 522.0 258.0 58.0 re B
+BT /F2 16 Tf 0.1176 0.1176 0.1882 rg 42.0 566.0 Td (05) Tj ET
+BT /F2 8 Tf 1.0000 1.0000 1.0000 rg 42.0 553.0 Td (Ne ispolzuesh -- ne znaesh) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.0 541.0 Td (Esli ne mozhesh ob'yasnit zachem -- vybrosì instrument. Anki,) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 42.0 531.0 Td (shadowing -- vsyo trebuet ob'yasneniya.) Tj ET
 0.0588 0.0588 0.1176 rg
-0.2275 0.2275 0.4667 RG
-300.00 518.00 258.00 60.00 re B
-BT /F2 18 Tf 0.1176 0.1176 0.1882 rg 306.00 566.00 Td (06) Tj ET
-BT /F2 8 Tf 0.6588 0.6392 1.0000 rg 306.00 552.00 Td (AI-??????????: ??????? ?? ??????, ?? ???????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.00 540.00 Td (ChatGPT/Claude -- 24/7 ???????? ??? ?????????. ???? ???????? ?? ?????:) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.00 529.00 Td (??????? -> ?????? -> ???????. ????? ??????? ?? ?? ???????? -- ??????? ? ????.) Tj ET
-BT /F2 8 Tf 0.4706 0.4706 0.6275 rg 36.00 505.00 Td (> Obzor faz) Tj ET
+0.50 w 0.2275 0.2275 0.4667 RG
+300.0 522.0 258.0 58.0 re B
+BT /F2 16 Tf 0.1176 0.1176 0.1882 rg 306.0 566.0 Td (06 AI) Tj ET
+BT /F2 8 Tf 0.6588 0.6392 1.0000 rg 306.0 553.0 Td (AI -- partner, ne kostyl) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 541.0 Td (ChatGPT/Claude -- 24/7 nositel bez osuzhdeniya. Rol menyaetsya:) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 531.0 Td (partner -> trener -> auditor. Zhivoye obshcheniye on ne) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 306.0 521.0 Td (zamenyayet.) Tj ET
+BT /F2 8 Tf 0.4706 0.4706 0.6275 rg 36.0 509.0 Td (> Obzor faz) Tj ET
 0.0863 0.0863 0.1216 rg
-36.00 479.00 523.00 14.00 re f
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 40.00 483.00 Td (#) Tj ET
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 58.00 483.00 Td (????) Tj ET
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 123.00 483.00 Td (?????) Tj ET
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 388.00 483.00 Td (??????) Tj ET
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 443.00 483.00 Td (????.) Tj ET
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 488.00 483.00 Td (???) Tj ET
-0.30 w
-0.1176 0.1176 0.1804 RG
-36.00 479.00 m 559.00 479.00 l S
-0.4235 0.3882 1.0000 rg
-41.00 473.00 m
-41.00 474.66 42.34 476.00 44.00 476.00 c
-45.66 476.00 47.00 474.66 47.00 473.00 c
-47.00 471.34 45.66 470.00 44.00 470.00 c
-42.34 470.00 41.00 471.34 41.00 473.00 c f
-BT /F2 9 Tf 0.4235 0.3882 1.0000 rg 40.00 469.00 Td (1) Tj ET
-BT /F2 9 Tf 0.9098 0.9098 0.9412 rg 58.00 469.00 Td (?????????) Tj ET
-BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 123.00 469.00 Td (??????? ??????????? + ?????????? ????????? ? AI) Tj ET
-BT /F2 8.5 Tf 0.4706 0.4706 0.6275 rg 388.00 469.00 Td (1-6) Tj ET
-BT /F2 9 Tf 0.4235 0.3882 1.0000 rg 443.00 469.00 Td (6 ???.) Tj ET
-BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 488.00 469.00 Td (6) Tj ET
-0.30 w
-0.1176 0.1176 0.1804 RG
-36.00 463.00 m 559.00 463.00 l S
-0.9686 0.5922 0.1176 rg
-41.00 457.00 m
-41.00 458.66 42.34 460.00 44.00 460.00 c
-45.66 460.00 47.00 458.66 47.00 457.00 c
-47.00 455.34 45.66 454.00 44.00 454.00 c
-42.34 454.00 41.00 455.34 41.00 457.00 c f
-BT /F2 9 Tf 0.9686 0.5922 0.1176 rg 40.00 453.00 Td (2) Tj ET
-BT /F2 9 Tf 0.9098 0.9098 0.9412 rg 58.00 453.00 Td (?????) Tj ET
-BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 123.00 453.00 Td (??????????, ???????, ???????? -- ???????? ??????????) Tj ET
-BT /F2 8.5 Tf 0.4706 0.4706 0.6275 rg 388.00 453.00 Td (7-20) Tj ET
-BT /F2 9 Tf 0.9686 0.5922 0.1176 rg 443.00 453.00 Td (14 ???.) Tj ET
-BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 488.00 453.00 Td (10) Tj ET
-0.30 w
-0.1176 0.1176 0.1804 RG
-36.00 447.00 m 559.00 447.00 l S
-0.2627 0.9137 0.4824 rg
-41.00 441.00 m
-41.00 442.66 42.34 444.00 44.00 444.00 c
-45.66 444.00 47.00 442.66 47.00 441.00 c
-47.00 439.34 45.66 438.00 44.00 438.00 c
-42.34 438.00 41.00 439.34 41.00 441.00 c f
-BT /F2 9 Tf 0.2627 0.9137 0.4824 rg 40.00 437.00 Td (3) Tj ET
-BT /F2 9 Tf 0.9098 0.9098 0.9412 rg 58.00 437.00 Td (?????????) Tj ET
-BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 123.00 437.00 Td (????????, ????????????, ???????? ???????) Tj ET
-BT /F2 8.5 Tf 0.4706 0.4706 0.6275 rg 388.00 437.00 Td (21-36) Tj ET
-BT /F2 9 Tf 0.2627 0.9137 0.4824 rg 443.00 437.00 Td (16 ???.) Tj ET
-BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 488.00 437.00 Td (9) Tj ET
-0.30 w
-0.1176 0.1176 0.1804 RG
-36.00 431.00 m 559.00 431.00 l S
-1.0000 0.3961 0.5176 rg
-41.00 425.00 m
-41.00 426.66 42.34 428.00 44.00 428.00 c
-45.66 428.00 47.00 426.66 47.00 425.00 c
-47.00 423.34 45.66 422.00 44.00 422.00 c
-42.34 422.00 41.00 423.34 41.00 425.00 c f
-BT /F2 9 Tf 1.0000 0.3961 0.5176 rg 40.00 421.00 Td (4) Tj ET
-BT /F2 9 Tf 0.9098 0.9098 0.9412 rg 58.00 421.00 Td (?????) Tj ET
-BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 123.00 421.00 Td (?????????? ????, ??????? ???????, C1-????????) Tj ET
-BT /F2 8.5 Tf 0.4706 0.4706 0.6275 rg 388.00 421.00 Td (37-48) Tj ET
-BT /F2 9 Tf 1.0000 0.3961 0.5176 rg 443.00 421.00 Td (12 ???.) Tj ET
-BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 488.00 421.00 Td (8) Tj ET
-0.30 w
-0.1176 0.1176 0.1804 RG
-36.00 415.00 m 559.00 415.00 l S
-0.2196 0.9765 0.8431 rg
-41.00 409.00 m
-41.00 410.66 42.34 412.00 44.00 412.00 c
-45.66 412.00 47.00 410.66 47.00 409.00 c
-47.00 407.34 45.66 406.00 44.00 406.00 c
-42.34 406.00 41.00 407.34 41.00 409.00 c f
-BT /F2 9 Tf 0.2196 0.9765 0.8431 rg 40.00 405.00 Td (5) Tj ET
-BT /F2 9 Tf 0.9098 0.9098 0.9412 rg 58.00 405.00 Td (????????) Tj ET
-BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 123.00 405.00 Td (??????? ??????????? C1 + ????????? ????????????) Tj ET
-BT /F2 8.5 Tf 0.4706 0.4706 0.6275 rg 388.00 405.00 Td (49-52) Tj ET
-BT /F2 9 Tf 0.2196 0.9765 0.8431 rg 443.00 405.00 Td (4 ???.) Tj ET
-BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 488.00 405.00 Td (5) Tj ET
+36.0 483.0 523.0 14.0 re f
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 40.0 487.0 Td (#) Tj ET
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 58.0 487.0 Td (FAZA) Tj ET
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 126.0 487.0 Td (FOKUS) Tj ET
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 391.0 487.0 Td (NED.) Tj ET
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 446.0 487.0 Td (DLYT.) Tj ET
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 496.0 487.0 Td (TEM) Tj ET
+0.30 w 0.1176 0.1176 0.1804 RG 36.0 483.0 m 559.0 483.0 l S
+BT /F2 9 Tf 0.4235 0.3882 1.0000 rg 40.0 473.0 Td (1) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 58.0 473.0 Td (Fundament) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 126.0 473.0 Td (Bazovye konstruktsii + ezhednevnoe govorenie s AI) Tj ET
+BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 391.0 473.0 Td (1-6) Tj ET
+BT /F2 8.5 Tf 0.4235 0.3882 1.0000 rg 446.0 473.0 Td (6 n.) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 496.0 473.0 Td (6) Tj ET
+0.30 w 0.1176 0.1176 0.1804 RG 36.0 467.0 m 559.0 467.0 l S
+BT /F2 9 Tf 0.9686 0.5922 0.1176 rg 40.0 457.0 Td (2) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 58.0 457.0 Td (Ob'yom) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 126.0 457.0 Td (Grammatika, leksika, slushanie -- massovoe pogloschenie) Tj ET
+BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 391.0 457.0 Td (7-20) Tj ET
+BT /F2 8.5 Tf 0.9686 0.5922 0.1176 rg 446.0 457.0 Td (14 n.) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 496.0 457.0 Td (10) Tj ET
+0.30 w 0.1176 0.1176 0.1804 RG 36.0 451.0 m 559.0 451.0 l S
+BT /F2 9 Tf 0.2627 0.9137 0.4824 rg 40.0 441.0 Td (3) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 58.0 441.0 Td (Strogost) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 126.0 441.0 Td (Tochnost, proiznosh., realnyye usloviya + error log) Tj ET
+BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 391.0 441.0 Td (21-36) Tj ET
+BT /F2 8.5 Tf 0.2627 0.9137 0.4824 rg 446.0 441.0 Td (16 n.) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 496.0 441.0 Td (9) Tj ET
+0.30 w 0.1176 0.1176 0.1804 RG 36.0 435.0 m 559.0 435.0 l S
+BT /F2 9 Tf 1.0000 0.3961 0.5176 rg 40.0 425.0 Td (4) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 58.0 425.0 Td (Polet) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 126.0 425.0 Td (Spontannaya rech, shirokiy slovar, C1-registry) Tj ET
+BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 391.0 425.0 Td (37-48) Tj ET
+BT /F2 8.5 Tf 1.0000 0.3961 0.5176 rg 446.0 425.0 Td (12 n.) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 496.0 425.0 Td (8) Tj ET
+0.30 w 0.1176 0.1176 0.1804 RG 36.0 419.0 m 559.0 419.0 l S
+BT /F2 9 Tf 0.2196 0.9765 0.8431 rg 40.0 409.0 Td (5) Tj ET
+BT /F2 8.5 Tf 0.9098 0.9098 0.9412 rg 58.0 409.0 Td (Privychki) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 126.0 409.0 Td (Sistema podderzhania C1 + finalnaya demonstratsiya) Tj ET
+BT /F1 8 Tf 0.4706 0.4706 0.6275 rg 391.0 409.0 Td (49-52) Tj ET
+BT /F2 8.5 Tf 0.2196 0.9765 0.8431 rg 446.0 409.0 Td (4 n.) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 496.0 409.0 Td (5) Tj ET
 endstream
 endobj
 9 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 8 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 10 0 obj
-<< /Length 6847 >>
+<< /Length 5663 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.80 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0588 0.0588 0.1020 rg
-0.4235 0.3882 1.0000 RG
-36.00 792.00 523.00 14.00 re B
-BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 44.00 796.00 Td (FAZA 1  *  NED 1-6  *  FOUNDATION) Tj ET
-BT /F2 22 Tf 0.4235 0.3882 1.0000 rg 36.00 781.00 Td (?????????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 756.00 Td (??????? ???????? ?? ??????????. AI-??????????: ??????????? ??????? -- ???????? ?????, ??) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 745.00 Td (??????????, ?????????, ?????????.) Tj ET
-BT /F2 8.5 Tf 0.4235 0.3882 1.0000 rg 439.00 794.00 Td (Ned: 1-6) Tj ET
-BT /F2 8.5 Tf 0.4235 0.3882 1.0000 rg 439.00 783.00 Td (Dur: 6 ???.) Tj ET
-BT /F2 8.5 Tf 0.4235 0.3882 1.0000 rg 439.00 772.00 Td (Tem: 6) Tj ET
-0.60 w
+0.60 w 0.4235 0.3882 1.0000 RG
+36.0 791.0 523.0 15.0 re B
+BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 42.0 795.0 Td (FAZA 1  *  NED 1-6  *  FOUNDATION) Tj ET
+BT /F2 20 Tf 0.4235 0.3882 1.0000 rg 36.0 781.0 Td (Fundament) Tj ET
+BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 449.0 780.0 Td (Ned: 1-6) Tj ET
+BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 449.0 770.0 Td (Dur: 6 ned.) Tj ET
+BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 449.0 760.0 Td (Tem: 6) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 759.0 Td (Stroish myshlenie na angliyskom. AI -- ob'yasnyayuschiy partner: govori vslukh, on) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 748.0 Td (ispravlyayet.) Tj ET
 0.0706 0.0392 0.0392 rg
-0.2392 0.1020 0.1020 RG
-36.00 664.00 523.00 66.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 44.00 720.00 Td (x  PROPUSKAY NA ETOI FAZE) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 709.00 Td (x  Present Perfect vs Past Simple -- ????????????? ??????? ???????? ?? ??????; ???????? ? ???? 2) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 697.00 Td (x  ???????? IELTS/TOEFL -- ??????????????? ?????? ?????? ???????????? ???? ?? A1) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 685.00 Td (x  ??????? ??????? ??????? -- ?????????? ????????????? ????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 673.00 Td (x  ??????? ???? ???????????? ???????? -- ??????? ???????, ????? ??????????) Tj ET
-0.50 w
+0.50 w 0.2392 0.1020 0.1020 RG
+36.0 669.0 523.0 62.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 42.0 721.0 Td (x  PROPUSKAY NA ETOY FAZE:) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 710.0 Td (x Present Perfect vs Past Simple -- slozhno na starte, dobavish v faze 2) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 699.0 Td (x Uchebniki IELTS/TOEFL -- ekzamenatsionnyy format lomayet estestvennuyu rech na A1) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 688.0 Td (x Perevod slozhnyh tekstov -- zakreplyayet russkoeyazychnoye myshlenie) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 677.0 Td (x Tablitsy vseh nepr. glagolov -- snachala pattern, potom isklyucheniya) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 576.00 171.00 80.00 re B
-2.00 w
-0.4235 0.3882 1.0000 RG
-38.00 579.00 m 38.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 646.00 Td (??? 1-2) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 635.00 Td (???????? ? ??????? ????????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 624.00 Td (IPA \(44 ????? RP\): Forvo, Cambridge) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 615.00 Td (Dictionary -- ?????? ? ????????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 606.00 Td (Minimal pairs: ship/sheep, bit/beat.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 597.00 Td (Youglish ?? ??????? ?????.) Tj ET
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.00 583.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 583.0 259.0 80.0 re B
+2.00 w 0.4235 0.3882 1.0000 RG 38.0 586.0 m 38.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 653.0 Td (N 1-2) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 643.0 Td (IPA Fonetika) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 632.0 Td (44 zvuka British RP: Forvo, Cambridge Dict. Minimal pairs:) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 623.0 Td (ship/sheep. Youglish po kazhdomu zvuku.) Tj ET
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.0 590.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 576.00 171.00 80.00 re B
-2.00 w
-0.4235 0.3882 1.0000 RG
-214.00 579.00 m 214.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 646.00 Td (??? 1-6) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 635.00 Td (?????????? ????????? 5 ???/????) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 368.80 635.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 624.00 Td (5 ????? ? AI ?????????. ???? -- ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 615.00 Td (????. ?????? ???????, ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 606.00 Td (?????. ?????? ?????? ? Otter.ai.) Tj ET
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 220.00 583.00 Td (6 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 583.0 259.0 80.0 re B
+2.00 w 0.4235 0.3882 1.0000 RG 302.0 586.0 m 302.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 308.0 653.0 Td (N 1-6) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.0 643.0 Td (Ezhednevnoye govorenie 5 min) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 448.0 643.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 632.0 Td (5 min s AI kazhdyy den. Tema -- tvoy den. Govori snachala,) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 623.0 Td (ispravlyay potom. Zapis v Otter.ai.) Tj ET
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 308.0 590.0 Td (6 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 576.00 171.00 80.00 re B
-2.00 w
-0.4235 0.3882 1.0000 RG
-390.00 579.00 m 390.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 646.00 Td (??? 2-3) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 635.00 Td (Present Simple + Present Continuous) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 624.00 Td (Anki 150 ???????? -- ???????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 615.00 Td (???????????, ?? ???????? ????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 606.00 Td (British Council Grammar Guide. ????:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 597.00 Td (50 ??????????? ????? ??? ???????.) Tj ET
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 396.00 583.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 499.0 259.0 80.0 re B
+2.00 w 0.4235 0.3882 1.0000 RG 38.0 502.0 m 38.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 569.0 Td (N 2-3) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 559.0 Td (Present Simple + Continuous) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 548.0 Td (Anki 150 kartochek -- kontekstnye predlozheniya. British Council) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 539.0 Td (Grammar. Tsel: 50 predlozheniy bez zapinki.) Tj ET
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.0 506.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 492.00 171.00 80.00 re B
-2.00 w
-0.4235 0.3882 1.0000 RG
-38.00 495.00 m 38.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 562.00 Td (??? 3-4) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 551.00 Td (???-500 ???? -- ??????? ????????? ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 540.00 Td (Oxford 3000 Word List -- ?????? 500.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 531.00 Td (Anki ? ????? Forvo. ????? ???????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 522.00 Td (?????? ????? 3 ????????????? ?????.) Tj ET
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.00 499.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 499.0 259.0 80.0 re B
+2.00 w 0.4235 0.3882 1.0000 RG 302.0 502.0 m 302.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 308.0 569.0 Td (N 3-4) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.0 559.0 Td (Top-500 slov -- yadro) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 548.0 Td (Oxford 3000 -- pervye 500. Anki + audio Forvo. Slovo aktivno posle) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 539.0 Td (3 ispolzovaniy vslukh.) Tj ET
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 308.0 506.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 492.00 171.00 80.00 re B
-2.00 w
-0.4235 0.3882 1.0000 RG
-214.00 495.00 m 214.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 562.00 Td (??? 4-5) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 551.00 Td (Past Simple -- ?????????? ? ???-30 ?????????...) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 540.00 Td (???-30 ???????????? ????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 531.00 Td (\(go/went, see/saw\). Anki + ?????. AI:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 522.00 Td (???????? ????????? ???? ?????? ??) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 513.00 Td (Past Simple.) Tj ET
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 220.00 499.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 415.0 259.0 80.0 re B
+2.00 w 0.4235 0.3882 1.0000 RG 38.0 418.0 m 38.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 485.0 Td (N 4-5) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 475.0 Td (Past Simple -- top-30 glagolov) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 464.0 Td (go/went, see/saw, make/made. Anki + audio. AI: rasskazhi) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 455.0 Td (vcherashney den -- tolko Past Simple.) Tj ET
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.0 422.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 492.00 171.00 80.00 re B
-2.00 w
-0.4235 0.3882 1.0000 RG
-390.00 495.00 m 390.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 562.00 Td (??? 5-6) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 551.00 Td (??????? ??????? ? ?????????? ????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 540.00 Td (Wh-??????? + Yes/No. Shadowing: BBC) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 531.00 Td (Learning English Short Talks. 10) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 522.00 Td (?????????: ??????????, ???????, ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 513.00 Td (???. AI roleplay.) Tj ET
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 396.00 499.00 Td (2 ???.) Tj ET
-1.00 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 415.0 259.0 80.0 re B
+2.00 w 0.4235 0.3882 1.0000 RG 302.0 418.0 m 302.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 308.0 485.0 Td (N 5-6) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.0 475.0 Td (Voprosy i dialogovye patterny) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 464.0 Td (Wh-voprosy + Yes/No. BBC Learning English Short Talks shadowing. 10) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 455.0 Td (stsenariyev. AI roleplay.) Tj ET
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 308.0 422.0 Td (2 ned.) Tj ET
 0.0588 0.0588 0.1020 rg
-0.4235 0.3882 1.0000 RG
-36.00 409.00 523.00 75.00 re B
-3.00 w
-0.4235 0.3882 1.0000 RG
-38.00 412.00 m 38.00 481.00 l S
-BT /F2 8 Tf 0.4235 0.3882 1.0000 rg 46.00 474.00 Td (-> KAPSTON FAZY 1) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 46.00 462.00 Td («??? ????? ?? 3 ??????» -- ?????? ????? ????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 449.00 Td (-> 5-???????? ?????? ?? Tandem/HelloTalk: ???????? ? ???? ??? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 437.00 Td (-> AI-??????: ?????? 3 ??? -> ???????????? -> Claude ?????? ???-5 ??????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 425.00 Td (-> ????????? 10 ????????? ?????? ? ?????????? ?? ?? 1 ?????? ??? ????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 413.00 Td (-> ????????: ?????????? ?????, ????????? ????????, ?? ?????? ????????? ??????) Tj ET
+1.00 w 0.4235 0.3882 1.0000 RG
+36.0 333.0 523.0 74.0 re B
+3.00 w 0.4235 0.3882 1.0000 RG 38.0 336.0 m 38.0 404.0 l S
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 46.0 396.0 Td ([Kapston 1] "Moya zhizn za 3 minuty" -- pervyy zhivoy razgovor) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 381.0 Td (-> 5-min zvonok na Tandem/HelloTalk: rasskazhi o sebe bez zagotovok) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 368.0 Td (-> AI-razbor: zapis 3 min -> transkriptsiya -> top-5 oshibok) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 355.0 Td (-> Nazyvaesh 10 predmetov i opisyvaesh za 1 minutu bez paus) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 342.0 Td (-> Kriteriy: sobesednik ponyal i prodolzhil razgovor) Tj ET
 endstream
 endobj
 11 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 10 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 12 0 obj
-<< /Length 10130 >>
+<< /Length 8807 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.80 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0588 0.0588 0.1020 rg
-0.9686 0.5922 0.1176 RG
-36.00 792.00 523.00 14.00 re B
-BT /F2 8 Tf 0.9686 0.5922 0.1176 rg 44.00 796.00 Td (FAZA 2  *  NED 7-20  *  VOLUME) Tj ET
-BT /F2 22 Tf 0.9686 0.5922 0.1176 rg 36.00 781.00 Td (?????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 756.00 Td (???????? ?????????? -- ??????????, ???????, ????????. AI: ?????? ???????? -- 10-???????? ??????,) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 745.00 Td (???????????? ????????? ?????????? ??????.) Tj ET
-BT /F2 8.5 Tf 0.9686 0.5922 0.1176 rg 439.00 794.00 Td (Ned: 7-20) Tj ET
-BT /F2 8.5 Tf 0.9686 0.5922 0.1176 rg 439.00 783.00 Td (Dur: 14 ???.) Tj ET
-BT /F2 8.5 Tf 0.9686 0.5922 0.1176 rg 439.00 772.00 Td (Tem: 10) Tj ET
-0.60 w
+0.60 w 0.9686 0.5922 0.1176 RG
+36.0 791.0 523.0 15.0 re B
+BT /F2 8 Tf 0.9686 0.5922 0.1176 rg 42.0 795.0 Td (FAZA 2  *  NED 7-20  *  VOLUME) Tj ET
+BT /F2 20 Tf 0.9686 0.5922 0.1176 rg 36.0 781.0 Td (Ob'yom) Tj ET
+BT /F2 8 Tf 0.9686 0.5922 0.1176 rg 449.0 780.0 Td (Ned: 7-20) Tj ET
+BT /F2 8 Tf 0.9686 0.5922 0.1176 rg 449.0 770.0 Td (Dur: 14 ned.) Tj ET
+BT /F2 8 Tf 0.9686 0.5922 0.1176 rg 449.0 760.0 Td (Tem: 10) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 759.0 Td (Massovoe pogloschenie: grammatika, leksika, slushanie. AI -- trener beglosty, 10-minutnye) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 748.0 Td (sessii.) Tj ET
 0.0706 0.0392 0.0392 rg
-0.2392 0.1020 0.1020 RG
-36.00 652.00 523.00 78.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 44.00 720.00 Td (x  PROPUSKAY NA ETOI FAZE) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 709.00 Td (x  Subjunctive Mood -- ?????? ?????????, ?? ????? ?? B2) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 697.00 Td (x  ?????? ? ????? ?? TikTok -- ??? ?????????????? ???? ?????? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 685.00 Td (x  ????????????? ?????? -- ??? ????????, ?? ??? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 673.00 Td (x  ???????????? ??????? -- ???? ???????? ?? ????? \(English Grammar in Use\)) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 661.00 Td (x  ???????? ???????? ??? ???????????? -- ??????? ??????? ?????????) Tj ET
-0.50 w
+0.50 w 0.2392 0.1020 0.1020 RG
+36.0 658.0 523.0 73.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 42.0 721.0 Td (x  PROPUSKAY NA ETOY FAZE:) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 710.0 Td (x Subjunctive Mood -- redkaya struktura, ne nuzhna do B2) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 699.0 Td (x Idiomy i sleng iz TikTok -- bez grammatiki zvuchat neusmestno) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 688.0 Td (x Akademicheskoe pismo -- dlya ekzamena, ne dlya razgovora) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 677.0 Td (x Parallelnyy uchebnik -- odin istochnik do kontsa \(English Grammar in Use\)) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 666.0 Td (x Nativnye podkasty bez transkriptsii -- sozdayut illyuziyu ponimaniya) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 564.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-38.00 567.00 m 38.00 641.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 634.00 Td (??? 7-9) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 623.00 Td (???? ??????????: ??????? ???????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 612.00 Td (Murphy "English Grammar in Use" B1:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 603.00 Td (Units 1-20. ??? ??????? + Perfect.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 594.00 Td (Anki 200 ????????. AI ????????? --) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 585.00 Td (????????? ????????? ??? ???????.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.00 571.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 572.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 38.0 575.0 m 38.0 649.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 642.0 Td (N 7-9) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 632.0 Td (Vremena glagola -- yadro) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 621.0 Td (Murphy "English Grammar in Use" B1: Units) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 612.0 Td (1-20. Vse vremena + Perfect. Anki 200 kart.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 603.0 Td (AI: naumerenno ispolzuy vse vremena.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.0 579.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 564.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-214.00 567.00 m 214.00 641.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 634.00 Td (??? 7-10) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 623.00 Td (???????? -- ??????????-?????) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 354.40 623.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 612.00 Td (BBC 6 Minute English -- 3) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 603.00 Td (???????/???: ?????? -> ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 594.00 Td (?????????? -> ?????? ??? ??????. ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 585.00 Td (? ???.10: 70% ??? ???????????.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 220.00 571.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 572.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 214.0 575.0 m 214.0 649.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 642.0 Td (N 7-10) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 632.0 Td (Slushanie -- transkript-metod) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 365.0 632.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 621.0 Td (BBC 6 Minute English -- 3 epizoda/ned:) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 612.0 Td (slushay -> chitay transkript -> slushay bez) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 603.0 Td (teksta. Tsel: 70% bez transkripta.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 220.0 579.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 564.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-390.00 567.00 m 390.00 641.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 634.00 Td (??? 9-11) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 623.00 Td (????????? ????? 500->1500 ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 612.00 Td (Oxford 3000: ????????? 1000 ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 603.00 Td (????????????? ?????????? \(???,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 594.00 Td (??????, ??????\). Anki ? ?????. ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 585.00 Td (??????? ????? 3 ?????????????.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 396.00 571.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 572.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 390.0 575.0 m 390.0 649.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 642.0 Td (N 9-11) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 632.0 Td (Slovar 500->1500 slov) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 621.0 Td (Oxford 3000: sleduyuschie 1000 slov) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 612.0 Td (tematich. klasterami. Anki + audio. Slovo) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 603.0 Td (aktivno posle 3 ispolzovaniy.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 396.0 579.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 480.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-38.00 483.00 m 38.00 557.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 550.00 Td (??? 11-13) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 539.00 Td (????????? ??????? ? conditionals \(0,1,2\)) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 528.00 Td (Murphy Units 25-35. Conditionals Type) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 519.00 Td (0,1,2. AI roleplay: "??? ????????,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 510.00 Td (????..." -- ?????? ? conditionals.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.00 487.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 488.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 38.0 491.0 m 38.0 565.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 558.0 Td (N 11-13) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 548.0 Td (Modalnyye glagoly + Conditionals 0,1,2) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 537.0 Td (Murphy Units 25-35. Anki deck na kazhdyy) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 528.0 Td (tip. AI roleplay: "Chto sdelayesh,) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 519.0 Td (yesli..." tolko s conditionals.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.0 495.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 480.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-214.00 483.00 m 214.00 557.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 550.00 Td (??? 11-14) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 539.00 Td (??????????? ???????? 15 ???/????) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 373.60 539.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 528.00 Td (Tandem/HelloTalk: 2 ??????/???. AI) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 519.00 Td (????????? -- ????????? ????. ?????? +) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 510.00 Td (?????? ???????? \(????/???\).) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 220.00 487.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 488.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 214.0 491.0 m 214.0 565.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 558.0 Td (N 11-14) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 548.0 Td (Razgovornaya praktika 15 min/den) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 380.0 548.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 537.0 Td (Tandem 2x/ned. AI ezhednevno -- sluchaynaya) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 528.0 Td (tema. Zapis + analiz skorosti \(slov/min\).) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 220.0 495.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 480.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-390.00 483.00 m 390.00 557.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 550.00 Td (??? 13-15) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 539.00 Td (???????? ? ???????? ??????? \(???-50\)) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 528.00 Td (Prepositions of time/place/movement.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 519.00 Td (???-50 phrasal verbs: pick up, turn) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 510.00 Td (off, give up. AI: ????-??????? ?) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 501.00 Td (????????? ????????.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 396.00 487.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 488.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 390.0 491.0 m 390.0 565.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 558.0 Td (N 13-15) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 548.0 Td (Predlogi + Frazovye glagoly top-50) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 537.0 Td (Prepositions of time/place/movement. pick) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 528.0 Td (up, turn off, give up. AI: mini-istoriya s) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 519.0 Td (kazdym glagolom.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 396.0 495.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 396.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-38.00 399.00 m 38.00 473.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 466.00 Td (??? 15-17) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 455.00 Td (?????? ?? ?????? A2-B1) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 444.00 Td (Penguin Readers L2-3: ???? ????? ?? 2) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 435.00 Td (?????? \(Forrest Gump Adapted\).) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 426.00 Td (??????????? ????? ????????. BBC News) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 417.00 Td (Simple English.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.00 403.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 404.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 38.0 407.0 m 38.0 481.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 474.0 Td (N 15-17) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 464.0 Td (Chtenie A2-B1) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 453.0 Td (Penguin Readers L2-3: 1 kniga/2 ned) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 444.0 Td (\(Forrest Gump Adapted\). Kontekstnyy vyvod) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 435.0 Td (znacheniy. BBC News Simple.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.0 411.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 396.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-214.00 399.00 m 214.00 473.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 466.00 Td (??? 17-19) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 455.00 Td (????????????: ????????? ? ??????? ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 444.00 Td (Rachel's English: connected speech,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 435.00 Td (linking, reduction. Shadowing: TED-Ed) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 426.00 Td (\(3-4 ???\) -- 5 ??? ??????. AI: ??????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 417.00 Td (?????????????.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 220.00 403.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 404.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 214.0 407.0 m 214.0 481.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 474.0 Td (N 17-19) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 464.0 Td (Intonatsiya i svyaznaya rech) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 453.0 Td (Rachel's English: connected speech,) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 444.0 Td (linking, reduction. TED-Ed shadowing \(5) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 435.0 Td (raz\). AI: otsenka naturalnosti.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 220.0 411.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 396.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-390.00 399.00 m 390.00 473.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 466.00 Td (??? 18-20) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 455.00 Td (????????? ????? + reported speech) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 554.40 455.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 444.00 Td (Murphy Units 40-50. Passive ?? ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 435.00 Td (????????. Reported speech:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 426.00 Td (say/tell/ask + backshift. AI:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 417.00 Td (????????? ??????? BBC.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 396.00 403.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 404.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 390.0 407.0 m 390.0 481.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 474.0 Td (N 18-20) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 464.0 Td (Passivnyy zalog + reported speech) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 561.0 464.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 453.0 Td (Murphy Units 40-50. AI: pereskazi novost) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 444.0 Td (BBC tolko v reported speech.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 396.0 411.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 312.00 171.00 80.00 re B
-2.00 w
-0.9686 0.5922 0.1176 RG
-38.00 315.00 m 38.00 389.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 382.00 Td (??? 19-20) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 371.00 Td (??????? 1500->2500 ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 360.00 Td (Oxford 3000 ????????? ????. Oxford) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 351.00 Td (Collocations Dictionary: 100 ????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 342.00 Td (??? \(make a decision, take a risk\).) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 333.00 Td (Anki + AI-???????.) Tj ET
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.00 319.00 Td (2 ???.) Tj ET
-1.00 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 320.0 171.0 80.0 re B
+2.00 w 0.9686 0.5922 0.1176 RG 38.0 323.0 m 38.0 397.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 390.0 Td (N 19-20) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 380.0 Td (Slovar 1500->2500) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 369.0 Td (Oxford 3000 finalnyy blok + 100 kollokatsiy) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 360.0 Td (\(make a decision, take a risk\). Anki +) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 351.0 Td (AI-dialogi.) Tj ET
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 44.0 327.0 Td (2 ned.) Tj ET
 0.0588 0.0588 0.1020 rg
-0.9686 0.5922 0.1176 RG
-36.00 229.00 523.00 75.00 re B
-3.00 w
-0.9686 0.5922 0.1176 RG
-38.00 232.00 m 38.00 301.00 l S
-BT /F2 8 Tf 0.9686 0.5922 0.1176 rg 46.00 294.00 Td (-> KAPSTON FAZY 2) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 46.00 282.00 Td («10 ????? ??? ?????????» -- ????????????????? ???????? ?? B1) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 269.00 Td (-> ?????? ? Tandem/Preply \(30 ???\) ?? ????????? ???? -- ??? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 257.00 Td (-> AI-?????: ???????????? -> ?????????? \(% ?????????? ??????, ???-10 ??????, ????/???\)) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 245.00 Td (-> ?????????????? ????? ????? 5 ????? ?? ?????? -- ??? ???? \(skip or guess\)) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 233.00 Td (-> ????????: ???????? >= 90 ????/???, ?????????? ?? ?????????????? > 1 ???? ?? 5 ???) Tj ET
+1.00 w 0.9686 0.5922 0.1176 RG
+36.0 238.0 523.0 74.0 re B
+3.00 w 0.9686 0.5922 0.1176 RG 38.0 241.0 m 38.0 309.0 l S
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 46.0 301.0 Td ([Kapston 2] "10 minut bez ostanovki" -- razgovor na B1) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 286.0 Td (-> Zvonok Tandem/Preply 30 min na svobodnuyu temu bez zagotovok) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 273.0 Td (-> AI-audit: transkriptsiya -> % pravilnyh vremen, top-10 oshibok, slov/min) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 260.0 Td (-> Adaptirovannaya kniga vslukh 5 min na zapis -- bez paus \(skip or guess\)) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 247.0 Td (-> Kriteriy: skorost >= 90 slov/min, sobesednik ne peresprashivayet > 1r/5min) Tj ET
 endstream
 endobj
 13 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 12 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 14 0 obj
-<< /Length 9540 >>
+<< /Length 8237 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.80 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0588 0.0588 0.1020 rg
-0.2627 0.9137 0.4824 RG
-36.00 792.00 523.00 14.00 re B
-BT /F2 8 Tf 0.2627 0.9137 0.4824 rg 44.00 796.00 Td (FAZA 3  *  NED 21-36  *  PRECISION) Tj ET
-BT /F2 22 Tf 0.2627 0.9137 0.4824 rg 36.00 781.00 Td (?????????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 756.00 Td (???????? ????????????, ???????? ???????, ??????????? ????????? ??????. AI: ??????? ??????? --) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 745.00 Td (???????? ?????? ??????????, ?????? ???????????? error log.) Tj ET
-BT /F2 8.5 Tf 0.2627 0.9137 0.4824 rg 439.00 794.00 Td (Ned: 21-36) Tj ET
-BT /F2 8.5 Tf 0.2627 0.9137 0.4824 rg 439.00 783.00 Td (Dur: 16 ???.) Tj ET
-BT /F2 8.5 Tf 0.2627 0.9137 0.4824 rg 439.00 772.00 Td (Tem: 9) Tj ET
-0.60 w
+0.60 w 0.2627 0.9137 0.4824 RG
+36.0 791.0 523.0 15.0 re B
+BT /F2 8 Tf 0.2627 0.9137 0.4824 rg 42.0 795.0 Td (FAZA 3  *  NED 21-36  *  PRECISION) Tj ET
+BT /F2 20 Tf 0.2627 0.9137 0.4824 rg 36.0 781.0 Td (Strogost) Tj ET
+BT /F2 8 Tf 0.2627 0.9137 0.4824 rg 449.0 780.0 Td (Ned: 21-36) Tj ET
+BT /F2 8 Tf 0.2627 0.9137 0.4824 rg 449.0 770.0 Td (Dur: 16 ned.) Tj ET
+BT /F2 8 Tf 0.2627 0.9137 0.4824 rg 449.0 760.0 Td (Tem: 9) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 759.0 Td (Tochnost, proiznosheniye, realnyye usloviya. AI -- strogiy auditor: otmechayet kazhdyy) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 748.0 Td (lyap, stroyt error log.) Tj ET
 0.0706 0.0392 0.0392 rg
-0.2392 0.1020 0.1020 RG
-36.00 664.00 523.00 66.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 44.00 720.00 Td (x  PROPUSKAY NA ETOI FAZE) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 709.00 Td (x  ????? ???? ?? Murphy -- ?????????? ??????? ? ???? 2; ?????? ??????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 697.00 Td (x  Advanced IELTS writing tasks -- ?????? ???????????? ?????? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 685.00 Td (x  ?????????? ??????? ??????? -- 2500 ???? ?????????? ??? B2; ????? ???????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 673.00 Td (x  ???????? ???????? "??? ????" -- ????????? ??????????? ??? ?????? ?? ???? ?????????) Tj ET
-0.50 w
+0.50 w 0.2392 0.1020 0.1020 RG
+36.0 669.0 523.0 62.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 42.0 721.0 Td (x  PROPUSKAY NA ETOY FAZE:) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 710.0 Td (x Novyye temy iz Murphy -- grammatika zakryta v faze 2, tolko primeneniye) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 699.0 Td (x Advanced IELTS writing -- lomayet estestvennuyu ustnuyu intonatsiyu) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 688.0 Td (x Rasshireniye redkimi slovami -- 2500 slov dostatochno dlya B2, nuzhna glubina) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 677.0 Td (x Serialy "dlya fona" -- passivnoye audirovaniye bez zadachi ne dayet progressa) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 576.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-38.00 579.00 m 38.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 646.00 Td (??? 21-23) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 635.00 Td (????????????: ?????? ? ????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 624.00 Td (Rachel's English + ???????? TED Talks) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 615.00 Td (\(Brené Brown\). ?????? ???? ???????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 606.00 Td (\(RP ??? GA\) ? ?? ?????. AI: ?????? 1) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 597.00 Td (??? -> ?????? ?????????? ??????.) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.00 583.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 583.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 38.0 586.0 m 38.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 653.0 Td (N 21-23) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 643.0 Td (Aktsent i reduktsiya) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 632.0 Td (Rachel's English + TED Talks \(Brene Brown\).) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 623.0 Td (Vyberi odin dialekt \(RP ili GA\). AI: zapis) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 614.0 Td (1 min -> razbor zvukov.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.0 590.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 576.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-214.00 579.00 m 214.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 646.00 Td (??? 21-36) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 635.00 Td (Error Log -- ???????????? ??????? ??????) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 412.00 635.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 624.00 Td (Notion-???????: ????, ??????,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 615.00 Td (?????????? ???????, ????????. ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 606.00 Td (?????? AI-?????? -- 3 ??????. ??? ? 2) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 597.00 Td (?????? -- AI ??????????? ???-3) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 220.00 583.00 Td (16 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 583.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 214.0 586.0 m 214.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 653.0 Td (N 21-36) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 643.0 Td (Error Log -- dnevnik oshibok) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 360.0 643.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 632.0 Td (Notion-tablitsa: data, oshibka, pravilno,) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 623.0 Td (kontekst. 3 zapisi posle kazhdoy AI-sessii.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 614.0 Td (Raz v 2 ned: AI analizir??? top-3 pattern.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 220.0 590.0 Td (16 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 576.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-390.00 579.00 m 390.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 646.00 Td (??? 23-26) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 635.00 Td (???????? ????: ??????? ? ????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 624.00 Td ("Friends" ??? "The Crown" -- ?? ???) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 615.00 Td (????. 15 ??? -> ????? -> ???????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 606.00 Td (????? ????? \(mirroring\). 10 ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 597.00 Td (????????? ? Anki. ????: 85% ???) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 396.00 583.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 583.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 390.0 586.0 m 390.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 653.0 Td (N 23-26) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 643.0 Td (Nativnyy slukh: serialy s zadaniyem) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 632.0 Td ("Friends" ili "The Crown" -- ne dlya fona.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 623.0 Td (15 min -> pauza -> povtori frazu vslukh. 10) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 614.0 Td (novykh vyrazheniy v Anki/den.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 396.0 590.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 492.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-38.00 495.00 m 38.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 562.00 Td (??? 25-28) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 551.00 Td (??????? ?????????????? ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 540.00 Td (Cleft sentences, inversion \(Never) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 531.00 Td (have I...\), Conditional Type 3,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 522.00 Td (mixed. Murphy Advanced Units 1-30.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 513.00 Td (????: ???????? ? ???????????? 2-3 ?) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.00 499.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 499.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 38.0 502.0 m 38.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 569.0 Td (N 25-28) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 559.0 Td (Slozhnyye grammatich. struktury) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 548.0 Td (Cleft sentences, inversion \(Never have) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 539.0 Td (I...\), Conditional 3, mixed. Murphy) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 530.0 Td (Advanced Units 1-30.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.0 506.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 492.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-214.00 495.00 m 214.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 562.00 Td (??? 27-30) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 551.00 Td (??????? 2500->4000 ????) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 330.40 551.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 540.00 Td (Oxford 5000 + Academic Word List \(570) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 531.00 Td (????\). Vocabulary.com ??? ?????????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 522.00 Td (????: 10 ????? ???? ? ?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 513.00 Td (AI-????????? ??? ?????????.) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 220.00 499.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 499.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 214.0 502.0 m 214.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 569.0 Td (N 27-30) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 559.0 Td (Slovar 2500->4000) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 305.0 559.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 548.0 Td (Oxford 5000 + Academic Word List \(570) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 539.0 Td (slov\). Vocabulary.com. Test: 10 novykh slov) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 530.0 Td (v AI-razgovore bez podskazki.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 220.0 506.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 492.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-390.00 495.00 m 390.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 562.00 Td (??? 29-32) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 551.00 Td (?????????? ??????? ? ??????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 540.00 Td (4 ?????? ?? iTalki ? certified) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 531.00 Td (teacher. ???? -- ?????? ?????,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 522.00 Td (?????????? ????????. Error correction) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 513.00 Td (? ???????? ???????. ?????? ??????) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 396.00 499.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 499.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 390.0 502.0 m 390.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 569.0 Td (N 29-32) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 559.0 Td (Vstrechi s nositelyami) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 548.0 Td (4 sessii iTalki s certified teacher. Tema) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 539.0 Td (-- vsegda novaya, predlozhena uchitelem.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 530.0 Td (Error correction v realnom vremeni.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 396.0 506.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 408.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-38.00 411.00 m 38.00 485.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 478.00 Td (??? 31-33) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 467.00 Td (?????????? ? ???????? ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 456.00 Td (Oxford Collocations: 500 ???. Formal) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 447.00 Td (vs Informal -- Oxford Living) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 438.00 Td (Dictionaries. AI roleplay: ???? ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 429.00 Td (? ???? ????????? \(???????? vs ????\).) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.00 415.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 415.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 38.0 418.0 m 38.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 485.0 Td (N 31-33) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 475.0 Td (Kollokatsii i registry rechi) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 464.0 Td (Oxford Collocations: 500 par. Formal vs) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 455.0 Td (Informal. AI roleplay: odna tema v dvukh) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 446.0 Td (registrakh \(intervyu vs drug\).) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.0 422.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 408.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-214.00 411.00 m 214.00 485.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 478.00 Td (??? 33-35) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 467.00 Td (?????? ???????????? ???????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 456.00 Td (?????? ???????????????? ?????: "The) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 447.00 Td (Alchemist" ??? Sherlock Holmes.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 438.00 Td (??????? 50 \(50+ ?????????? ????/??? =) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 429.00 Td (??????? ??????\). 20 ???/????.) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 220.00 415.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 415.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 214.0 418.0 m 214.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 485.0 Td (N 33-35) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 475.0 Td (Originalnyye teksty -- pervaya kniga) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 464.0 Td ('The Alchemist' ili Sherlock Holmes.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 455.0 Td (Pravilo 50. Kontekstnyy vyvod znacheniy. 20) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 446.0 Td (str/den.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 220.0 422.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 408.00 171.00 80.00 re B
-2.00 w
-0.2627 0.9137 0.4824 RG
-390.00 411.00 m 390.00 485.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 478.00 Td (??? 35-36) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 467.00 Td (Fluency drill -- ???????? ??? ????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 456.00 Td (2 ?????? ??? ????????? ?? ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 447.00 Td (???? \(RandomWordGenerator.com\). AI) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 438.00 Td (????????? ????? ? ?????-????????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 429.00 Td (????: >= 110 ????/???.) Tj ET
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 396.00 415.00 Td (2 ???.) Tj ET
-1.00 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 415.0 171.0 80.0 re B
+2.00 w 0.2627 0.9137 0.4824 RG 390.0 418.0 m 390.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 485.0 Td (N 35-36) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 475.0 Td (Fluency drill -- skorost bez kachestva) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 464.0 Td (2 min bez ostanovki) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 455.0 Td (\(RandomWordGenerator.com\). AI: tolko pauzy) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 446.0 Td (i slova-parazity. Tsel: >= 110 slov/min.) Tj ET
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 396.0 422.0 Td (2 ned.) Tj ET
 0.0588 0.0588 0.1020 rg
-0.2627 0.9137 0.4824 RG
-36.00 325.00 523.00 75.00 re B
-3.00 w
-0.2627 0.9137 0.4824 RG
-38.00 328.00 m 38.00 397.00 l S
-BT /F2 8 Tf 0.2627 0.9137 0.4824 rg 46.00 390.00 Td (-> KAPSTON FAZY 3) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 46.00 378.00 Td («?????? ??? ???????? ?????????» -- YouTube-??????? 5 ?????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 365.00 Td (-> ?????? ????? 5 ????? ??? ????????, ?????? 3 ??????. ????????? ?? YouTube \(???? unlisted\)) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 353.00 Td (-> AI-????? ????????????: error rate, ?????, ?????????????? ?????? ?? ??????. ????: <= 3 ??????/??) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 341.00 Td (-> iTalki-??????: ??????? ??????? ????? ? ???? ?????????? feedback ? ??????? B2/C1 ??????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 329.00 Td (-> ????????: ?????????? ???????? ???????? ??? ??????, accent ?? ?????? ????????????) Tj ET
+1.00 w 0.2627 0.9137 0.4824 RG
+36.0 333.0 523.0 74.0 re B
+3.00 w 0.2627 0.9137 0.4824 RG 38.0 336.0 m 38.0 404.0 l S
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 46.0 396.0 Td ([Kapston 3] "Zapis dlya YouTube" -- monolog 5 minut) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 381.0 Td (-> Video 5 min bez stsenariya, tolko 3 tezisa. Opublikuy na YouTube) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 368.0 Td (-> AI-audit: error rate, pauzy, oshibki na minutu. Tsel: <= 3 oshibok/min) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 355.0 Td (-> iTalki-sessiya: uchitel smotrit video, dayet otsenku B2/C1 gotovnosti) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 342.0 Td (-> Kriteriy: nositel ponimayet bez usiliy, aktsent ne meshayet kommunikatsii) Tj ET
 endstream
 endobj
 15 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 14 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 16 0 obj
-<< /Length 8689 >>
+<< /Length 7594 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.80 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0588 0.0588 0.1020 rg
-1.0000 0.3961 0.5176 RG
-36.00 792.00 523.00 14.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 44.00 796.00 Td (FAZA 4  *  NED 37-48  *  FLIGHT) Tj ET
-BT /F2 22 Tf 1.0000 0.3961 0.5176 rg 36.00 781.00 Td (?????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 756.00 Td (?????????? ????, ??????? ????????? ?????, C1-????????. AI: ????????? ???????? -- ?????? ?????????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 745.00 Td (????, ??????????, ????????? ????????.) Tj ET
-BT /F2 8.5 Tf 1.0000 0.3961 0.5176 rg 439.00 794.00 Td (Ned: 37-48) Tj ET
-BT /F2 8.5 Tf 1.0000 0.3961 0.5176 rg 439.00 783.00 Td (Dur: 12 ???.) Tj ET
-BT /F2 8.5 Tf 1.0000 0.3961 0.5176 rg 439.00 772.00 Td (Tem: 8) Tj ET
-0.60 w
+0.60 w 1.0000 0.3961 0.5176 RG
+36.0 791.0 523.0 15.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 42.0 795.0 Td (FAZA 4  *  NED 37-48  *  FLIGHT) Tj ET
+BT /F2 20 Tf 1.0000 0.3961 0.5176 rg 36.0 781.0 Td (Polet) Tj ET
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 449.0 780.0 Td (Ned: 37-48) Tj ET
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 449.0 770.0 Td (Dur: 12 ned.) Tj ET
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 449.0 760.0 Td (Tem: 8) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 759.0 Td (Spontannaya rech, shirokiy slovar, C1-registry. AI -- simulator nositelya: neudob. temy,) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 748.0 Td (perebivaet, menyaet temu.) Tj ET
 0.0706 0.0392 0.0392 rg
-0.2392 0.1020 0.1020 RG
-36.00 664.00 523.00 66.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 44.00 720.00 Td (x  PROPUSKAY NA ETOI FAZE) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 709.00 Td (x  ????? ???????? Anki ??????? ??????? -- ???? ???????; ?????? C1-???????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 697.00 Td (x  Graded readers \(?????????????? ?????\) -- ????????? ?????????? ???????? ????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 685.00 Td (x  ?????????????? ??????????? ?????? 2 ?????? -- ???????? inference ?? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 673.00 Td (x  ????? ?? ????? ??????? -- C1 ???????? British, American, Australian, Indian) Tj ET
-0.50 w
+0.50 w 0.2392 0.1020 0.1020 RG
+36.0 669.0 523.0 62.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 42.0 721.0 Td (x  PROPUSKAY NA ETOY FAZE:) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 710.0 Td (x Novyye kartochki Anki bazovoy leksiki -- baza zakryta, tolko C1-frazeologiya) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 699.0 Td (x Graded readers \(adaptirovannye\) -- zamedlyayut vospriyatiye nativnoy skorosti) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 688.0 Td (x Peresprashivat sobesednika kazhdye 2 min -- treniruy inference iz konteksta) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 677.0 Td (x Fokus na odnom aktse -- C1 ponimayet British, American, Australian, Indian) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 576.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-38.00 579.00 m 38.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 646.00 Td (??? 37-39) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 635.00 Td (?????? ? ??????????? ????????? C1) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 624.00 Td (Oxford Dictionary of Idioms. ???-200) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 615.00 Td (????? ?? ????? \(business, emotions,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 606.00 Td (time\). Anki + ?????. AI: ???????? ? 5) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 597.00 Td (???????? ?????????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 44.00 583.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 583.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 38.0 586.0 m 38.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 653.0 Td (N 37-39) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 643.0 Td (Idiomy i razgovornye vyrazheniya C1) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 632.0 Td (Oxford Dict of Idioms. Top-200 idiom po) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 623.0 Td (temam \(business, emotions, time\). AI:) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 614.0 Td (razgovor s 5 idiomami organichno.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 44.0 590.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 576.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-214.00 579.00 m 214.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 646.00 Td (??? 37-48) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 635.00 Td (?????????? AI-?????? 20 ???) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 349.60 635.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 624.00 Td (AI ?????? ??????? ????. ?? ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 615.00 Td (??????? 5 ??? -> AI) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 606.00 Td (?????????????????? -> ?? ?????????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 597.00 Td (??? ????????????? ???. 12 ??????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 220.00 583.00 Td (12 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 583.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 214.0 586.0 m 214.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 653.0 Td (N 37-48) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 643.0 Td (Ezhednevnye AI-debaty 20 min) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 360.0 643.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 632.0 Td (AI zadayet spornuyu temu. Ty zashchischaesh) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 623.0 Td (pozitsiyu 5 min -> AI kontrargumentiruyet) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 614.0 Td (-> ty otvechaesh. 12 nedel.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 220.0 590.0 Td (12 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 576.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-390.00 579.00 m 390.00 653.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 646.00 Td (??? 39-42) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 635.00 Td (??????? 4000->6000 ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 624.00 Td (Oxford 5000 ????????? ???? + C1 Word) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 615.00 Td (List. The Economist/Atlantic: 2) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 606.00 Td (??????/???, 10 ????. ????: ???????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 597.00 Td (????? ??? ????????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 396.00 583.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 583.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 390.0 586.0 m 390.0 660.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 653.0 Td (N 39-42) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 643.0 Td (Slovar 4000->6000 slov) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 632.0 Td (Oxford 5000 + C1 Word List. The) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 623.0 Td (Economist/Atlantic: 2 stati/ned, 10 slov.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 614.0 Td (Test: ob'yasni slovo bez perevoda.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 396.0 590.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 492.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-38.00 495.00 m 38.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 562.00 Td (??? 40-43) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 551.00 Td (???????? ??????? ??? ?????????) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 188.00 551.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 540.00 Td ("How I Built This", "Lex Fridman) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 531.00 Td (Podcast". 30 ???/????. ????? 15 ???) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 522.00 Td (-- ???????? AI ?????. ????: >= 90%) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 513.00 Td (????????? ??? ???????????????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 44.00 499.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 499.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 38.0 502.0 m 38.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 569.0 Td (N 40-43) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 559.0 Td (Nativnyy kontent bez subtitrov) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 194.0 559.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 548.0 Td ("How I Built This", "Lex Fridman Podcast".) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 539.0 Td (30 min/den. Posle 15 min -- pereskaz AI.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 530.0 Td (Tsel: >= 90% bez pomoschi.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 44.0 506.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 492.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-214.00 495.00 m 214.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 562.00 Td (??? 42-45) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 551.00 Td (??????? ????????? ? ?????????? \(30+ ???\)) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 540.00 Td (???????????: 45 ??? ?? Preply -- ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 531.00 Td (?????????? ????????????, ??) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 522.00 Td (?????????? ???????. AI-?????? ?????:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 513.00 Td (?????, ????-?????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 220.00 499.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 499.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 214.0 502.0 m 214.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 569.0 Td (N 42-45) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 559.0 Td (Dlinnye razgovory 30+ min) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 548.0 Td (Ezhenedelno: 45 min na Preply, tema) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 539.0 Td (predlozhena sobesednikom. Ne gotovitsya) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 530.0 Td (zaranee. AI-analiz posle.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 220.0 506.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-388.00 492.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-390.00 495.00 m 390.00 569.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 396.00 562.00 Td (??? 44-46) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.00 551.00 Td (????????, ???? ? ?????????? ???) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 540.00 Td (The Office, Friends. British irony vs) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 531.00 Td (American sarcasm. KnowYourMeme. AI) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 522.00 Td (roleplay: small talk ? ??????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.00 513.00 Td (???????? ????? ? ??????? ???????????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 396.00 499.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+388.0 499.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 390.0 502.0 m 390.0 576.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 396.0 569.0 Td (N 44-46) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 396.0 559.0 Td (Metafory, yumor, kulturnyy kod) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 548.0 Td (The Office, Friends. British irony vs) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 539.0 Td (American sarcasm. KnowYourMeme. AI: small) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 396.0 530.0 Td (talk s yumorom.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 396.0 506.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 408.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-38.00 411.00 m 38.00 485.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 478.00 Td (??? 45-47) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 467.00 Td (???????????? ?????????? ? ???-?????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 456.00 Td ("Sapiens" ??? "Thinking, Fast and) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 447.00 Td (Slow" -- ????????. 25 ???/???? ???) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 438.00 Td (???????. The Guardian, Wired. AI:) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 429.00 Td (?????? ??? ? ???????????? ?????????.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 44.00 415.00 Td (3 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 415.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 38.0 418.0 m 38.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 485.0 Td (N 45-47) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 475.0 Td (Originalnaya literatura i non-fiction) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 464.0 Td ("Sapiens" ili "Thinking Fast and Slow" --) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 455.0 Td (original. 25 str/den bez slovarya. AI:) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 446.0 Td (obsudi kak s obrazovannym nositelem.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 44.0 422.0 Td (3 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-212.00 408.00 171.00 80.00 re B
-2.00 w
-1.0000 0.3961 0.5176 RG
-214.00 411.00 m 214.00 485.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 220.00 478.00 Td (??? 47-48) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.00 467.00 Td (????????? ?????????? ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 456.00 Td (AI ???????? mock-????????: 30 ?????,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 447.00 Td (3 ????? ???? ??? ??????????????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 438.00 Td (????????? ???????, ????????, TTR.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.00 429.00 Td (????: ?????? C1.) Tj ET
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 220.00 415.00 Td (2 ???.) Tj ET
-1.00 w
+0.50 w 0.1412 0.1412 0.2078 RG
+212.0 415.0 171.0 80.0 re B
+2.00 w 1.0000 0.3961 0.5176 RG 214.0 418.0 m 214.0 492.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 220.0 485.0 Td (N 47-48) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 220.0 475.0 Td (Simulyatsiya finalnogo razgovora) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 464.0 Td (AI mock-intervyu: 30 min, 3 smeny temy.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 455.0 Td (Otsenka kogezii, skorosti, TTR. Tsel:) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 220.0 446.0 Td (otsenka C1.) Tj ET
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 220.0 422.0 Td (2 ned.) Tj ET
 0.0588 0.0588 0.1020 rg
-1.0000 0.3961 0.5176 RG
-36.00 325.00 523.00 75.00 re B
-3.00 w
-1.0000 0.3961 0.5176 RG
-38.00 328.00 m 38.00 397.00 l S
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 46.00 390.00 Td (-> KAPSTON FAZY 4) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 46.00 378.00 Td («?????????? ????, ????? ????????» -- 20 ????? ??? ??????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 365.00 Td (-> ?????? iTalki: ???????? ???????? ???? ?? 5 \(?? ?? ??????\). 20 ????? ???????????? ?????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 353.00 Td (-> AI-?????: error rate, ?????, TTR -- ????????? ? ?????????? ???? 3 \(?????? ?????\)) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 341.00 Td (-> ?????????????? ?????? The Economist \(800 ????\) ?? 3 ??? ????? ?????? ???????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 329.00 Td (-> ????????: ?????????? ????????? ??????? ??? "advanced" ??? ????????? ? ????? ???????) Tj ET
+1.00 w 1.0000 0.3961 0.5176 RG
+36.0 333.0 523.0 74.0 re B
+3.00 w 1.0000 0.3961 0.5176 RG 38.0 336.0 m 38.0 404.0 l S
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 46.0 396.0 Td ([Kapston 4] "Neznakomaya tema, zhivoy nositel" -- 20 min bez podgotovki) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 381.0 Td (-> Sessiya iTalki: nositel vybirayet temu iz 5. 20 min nepreryvnogo razgovora) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 368.0 Td (-> AI-audit: error rate, pauzy, TTR -- sravneniye s kapston-3 \(delta rosta\)) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 355.0 Td (-> Pereskaz stati The Economist \(800 slov\) za 3 min vslukh svoimi slovami) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 342.0 Td (-> Kriteriy: sobesednik otseniva uroven kak "advanced" bez podskazki) Tj ET
 endstream
 endobj
 17 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 16 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 18 0 obj
-<< /Length 5810 >>
+<< /Length 5074 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.80 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.0588 0.0588 0.1020 rg
-0.2196 0.9765 0.8431 RG
-36.00 792.00 523.00 14.00 re B
-BT /F2 8 Tf 0.2196 0.9765 0.8431 rg 44.00 796.00 Td (FAZA 5  *  NED 49-52  *  HABITS) Tj ET
-BT /F2 22 Tf 0.2196 0.9765 0.8431 rg 36.00 781.00 Td (????????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 756.00 Td (????? ???????? ?? ????? -- ????? ???????. AI: ?????? ?????? ???????? -- ????????????) Tj ET
-BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.00 745.00 Td (????????-??????, ???????????? ??????????.) Tj ET
-BT /F2 8.5 Tf 0.2196 0.9765 0.8431 rg 439.00 794.00 Td (Ned: 49-52) Tj ET
-BT /F2 8.5 Tf 0.2196 0.9765 0.8431 rg 439.00 783.00 Td (Dur: 4 ???.) Tj ET
-BT /F2 8.5 Tf 0.2196 0.9765 0.8431 rg 439.00 772.00 Td (Tem: 5) Tj ET
-0.60 w
+0.60 w 0.2196 0.9765 0.8431 RG
+36.0 791.0 523.0 15.0 re B
+BT /F2 8 Tf 0.2196 0.9765 0.8431 rg 42.0 795.0 Td (FAZA 5  *  NED 49-52  *  HABITS) Tj ET
+BT /F2 20 Tf 0.2196 0.9765 0.8431 rg 36.0 781.0 Td (Privychki) Tj ET
+BT /F2 8 Tf 0.2196 0.9765 0.8431 rg 449.0 780.0 Td (Ned: 49-52) Tj ET
+BT /F2 8 Tf 0.2196 0.9765 0.8431 rg 449.0 770.0 Td (Dur: 4 ned.) Tj ET
+BT /F2 8 Tf 0.2196 0.9765 0.8431 rg 449.0 760.0 Td (Tem: 5) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 759.0 Td (Novyy material ne nuzhen -- nuzhna sistema. AI -- lichnyy kompas kachestva: ezhenedelnyy) Tj ET
+BT /F1 8.5 Tf 0.5647 0.5647 0.7216 rg 36.0 748.0 Td (progress-report.) Tj ET
 0.0706 0.0392 0.0392 rg
-0.2392 0.1020 0.1020 RG
-36.00 676.00 523.00 54.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 44.00 720.00 Td (x  PROPUSKAY NA ETOI FAZE) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 709.00 Td (x  ????? ???? ? ???????? -- ???? ????????, ?? ??????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 697.00 Td (x  ??????? ?? ?????? ??????? -- ???????? ???????? ????, ??? ???? ??????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.00 685.00 Td (x  ???????????? ?????????? ?????? ????????? -- ???????? ?? ???????????) Tj ET
-0.50 w
+0.50 w 0.2392 0.1020 0.1020 RG
+36.0 680.0 523.0 51.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 42.0 721.0 Td (x  PROPUSKAY NA ETOY FAZE:) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 710.0 Td (x Novyye temy i uchebniki -- faza zakrytiya, ne rasshireniya) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 699.0 Td (x Perekhod na drugoy dialekt -- smesheniye aktsentov khuzhe, chem odin chistyy) Tj ET
+BT /F1 7.5 Tf 0.7843 0.6275 0.6275 rg 44.0 688.0 Td (x Otkladyvaniye finalnogo razgovora -- kapston ne perenositsya) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 588.00 259.00 80.00 re B
-2.00 w
-0.2196 0.9765 0.8431 RG
-38.00 591.00 m 38.00 665.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 658.00 Td (??? 49-50) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 647.00 Td (??????? ??????????? C1 -- daily stack) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 636.00 Td (?????????? ????: 10 ??? Anki + 15 ??? ???????? ??????? +) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 627.00 Td (10 ??? AI. ?????: 35 ???/????. Habit tracker ? Notion) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 618.00 Td (??? Streaks.) Tj ET
-BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.00 595.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 594.0 259.0 80.0 re B
+2.00 w 0.2196 0.9765 0.8431 RG 38.0 597.0 m 38.0 671.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 664.0 Td (N 49-50) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 654.0 Td (Systema C1 -- daily stack) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 643.0 Td (10 min Anki + 15 min nativnyy kontent + 10 min AI. Itogo 35) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 634.0 Td (min/den. Habit tracker v Notion ili Streaks app.) Tj ET
+BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.0 601.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-300.00 588.00 259.00 80.00 re B
-2.00 w
-0.2196 0.9765 0.8431 RG
-302.00 591.00 m 302.00 665.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 308.00 658.00 Td (??? 49-52) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.00 647.00 Td (???????????? AI progress-report) Tj ET
-BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 456.80 647.00 Td ( // PAR) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.00 636.00 Td (?????? ???????????: 10 ??? AI ?? 5 ???????? -- ????????,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.00 627.00 Td (error rate, TTR, ?????, ??????????. ???? ?????????. ????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.00 618.00 Td (?????????? -- ??????????? drill.) Tj ET
-BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 308.00 595.00 Td (4 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 594.0 259.0 80.0 re B
+2.00 w 0.2196 0.9765 0.8431 RG 302.0 597.0 m 302.0 671.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 308.0 664.0 Td (N 49-52) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.0 654.0 Td (Ezhenedelnyy AI progress-report) Tj ET
+BT /F2 6.5 Tf 0.2196 0.9765 0.8431 rg 463.0 654.0 Td ( [PAR]) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 643.0 Td (Kazhdoye voskresenye: 10 min po 5 metrikam -- skorost, error rate,) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 634.0 Td (TTR, pauzy, peresprasy. Graf progressa.) Tj ET
+BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 308.0 601.0 Td (4 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 504.00 259.00 80.00 re B
-2.00 w
-0.2196 0.9765 0.8431 RG
-38.00 507.00 m 38.00 581.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 574.00 Td (??? 50-51) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 563.00 Td (????????? error-log ??????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 552.00 Td (?????? ????? error log ?? 52 ??????. 5 ??????-???????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 543.00 Td (AI ?????? micro-drills ?? ??????. 3 ??? ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 534.00 Td (?????????? ??????.) Tj ET
-BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.00 511.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 510.0 259.0 80.0 re B
+2.00 w 0.2196 0.9765 0.8431 RG 38.0 513.0 m 38.0 587.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 580.0 Td (N 50-51) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 570.0 Td (Finalnyy error-log razbor) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 559.0 Td (Polnyy audit loga za 52 nedeli. Top-5 povtoryayuschkhsya oshibok.) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 550.0 Td (AI micro-drills. 3 dnya na kazhdyy pattern.) Tj ET
+BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.0 517.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-300.00 504.00 259.00 80.00 re B
-2.00 w
-0.2196 0.9765 0.8431 RG
-302.00 507.00 m 302.00 581.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 308.00 574.00 Td (??? 51-52) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.00 563.00 Td (????? ?????? ??????????? -- ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.00 552.00 Td (??????????????: ???-5 ????????????, ??? ???? ??????,) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.00 543.00 Td (????? ??????????? ?????. AI ???????? ???????????????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.00 534.00 Td (???????? -- ??? ???????? ??????.) Tj ET
-BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 308.00 511.00 Td (2 ???.) Tj ET
-0.50 w
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 510.0 259.0 80.0 re B
+2.00 w 0.2196 0.9765 0.8431 RG 302.0 513.0 m 302.0 587.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 308.0 580.0 Td (N 51-52) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 308.0 570.0 Td (Karta svoyego angliyskogo) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 559.0 Td (Top-5 instrumentov, chto bylo lishnim, samyy effektivnyy navyk. AI) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 308.0 550.0 Td (pomogaet strukturirovat. Publikuy.) Tj ET
+BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 308.0 517.0 Td (2 ned.) Tj ET
 0.0863 0.0863 0.1216 rg
-0.1412 0.1412 0.2078 RG
-36.00 420.00 259.00 80.00 re B
-2.00 w
-0.2196 0.9765 0.8431 RG
-38.00 423.00 m 38.00 497.00 l S
-BT /F2 7.5 Tf 0.3451 0.3451 0.6275 rg 44.00 490.00 Td (??? 52) Tj ET
-BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.00 479.00 Td (???? ?????????? ?????????) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 468.00 Td (iTalki: ????? ????????, ?? ???????? ????. 30 ?????.) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 459.00 Td (??????? ???????. ??? ? ???? ???? -- ????? ???????? ???) Tj ET
-BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.00 450.00 Td (????, ?? ??????.) Tj ET
-BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.00 427.00 Td (1 ???.) Tj ET
-1.00 w
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 426.0 259.0 80.0 re B
+2.00 w 0.2196 0.9765 0.8431 RG 38.0 429.0 m 38.0 503.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 44.0 496.0 Td (N 52) Tj ET
+BT /F2 8.5 Tf 1.0000 1.0000 1.0000 rg 44.0 486.0 Td (Den finalnogo razgovora) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 475.0 Td (iTalki: novyy nositel, on vybirayet temu. 30 minut. Nikakih) Tj ET
+BT /F1 7 Tf 0.5647 0.5647 0.7216 rg 44.0 466.0 Td (tezisov. Zhivoy razgovor kak fakt, ne diplom.) Tj ET
+BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.0 433.0 Td (1 ned.) Tj ET
 0.0588 0.0588 0.1020 rg
-0.2196 0.9765 0.8431 RG
-36.00 337.00 523.00 75.00 re B
-3.00 w
-0.2196 0.9765 0.8431 RG
-38.00 340.00 m 38.00 409.00 l S
-BT /F2 8 Tf 0.2196 0.9765 0.8431 rg 46.00 402.00 Td (-> KAPSTON FAZY 5) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 46.00 390.00 Td («30 ?????. ?????????? ????????. ??? ????. ??? ??????????.») Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 377.00 Td (-> ?????? iTalki ? ????? ?????????: ?? ???????? ????, ?? ?????????????? 30 ?????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 365.00 Td (-> ??????? ???????? ??????? ??????? ? 1 ???????????. "Advanced / C1" -- ????????? ????????) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 353.00 Td (-> AI ????????? ?????: ?????? ????????? ???? 5 ?????? ?? ???? 1 ?? ???? 5) Tj ET
-BT /F1 7.5 Tf 0.7843 0.7843 0.8784 rg 46.00 341.00 Td (-> ?????????? ?????? ??? AI-summary -- ? ????????, ????????. ???????? ?????? ???????.) Tj ET
+1.00 w 0.2196 0.9765 0.8431 RG
+36.0 344.0 523.0 74.0 re B
+3.00 w 0.2196 0.9765 0.8431 RG 38.0 347.0 m 38.0 415.0 l S
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 46.0 407.0 Td ([Kapston 5 -- FINALNYY] "30 minut. Neznakomyy nositel. Ego tema. Bez podgotovki.") Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 392.0 Td (-> Sessiya iTalki: nositel vybirayet temu, ty govopish 30 minut svobodno) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 379.0 Td (-> Popros nositelya otsenit tvoy uroven v 1 predlozhenii -- "C1" = kriteriy) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 366.0 Td (-> AI finalnyy otchet: krivaya progressa vsekh 5 metrik za 52 nedeli) Tj ET
+BT /F1 8 Tf 0.7843 0.7843 0.8784 rg 46.0 353.0 Td (-> Publikuesh zapis ili AI-sammari -- v sotsssetyakh, dnevnike. Stavka zakryta.) Tj ET
 endstream
 endobj
 19 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 18 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
 endobj
 20 0 obj
-<< /Length 4878 >>
+<< /Length 4366 >>
 stream
-0.0510 0.0510 0.0784 rg
-0 0 595 842 re f
-0.50 w
+0.0510 0.0510 0.0784 rg 0 0 595 842 re f
 0.1020 0.0392 0.0588 rg
-0.2392 0.1020 0.1647 RG
-36.00 792.00 30.00 14.00 re B
-BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 41.00 796.00 Td (05) Tj ET
-BT /F2 14 Tf 1.0000 1.0000 1.0000 rg 74.00 796.00 Td (Final / Samoproverka) Tj ET
-BT /F2 20 Tf 1.0000 1.0000 1.0000 rg 36.00 773.00 Td (Ty v top-1%,) Tj ET
-BT /F2 20 Tf 0.4235 0.3882 1.0000 rg 36.00 748.00 Td (kogda --) Tj ET
-BT /F1 9 Tf 0.4706 0.4706 0.6275 rg 36.00 733.00 Td (Povedencheskie markery, a ne sertifikaty. Ty ikh zamechaesh v razgovore -- ne v teste.) Tj ET
-0.50 w
+0.50 w 0.2392 0.1020 0.1647 RG
+36.0 792.0 28.0 14.0 re B
+BT /F2 8 Tf 1.0000 0.3961 0.5176 rg 40.0 796.0 Td (05) Tj ET
+BT /F2 13 Tf 1.0000 1.0000 1.0000 rg 72.0 796.0 Td (Final / Samoproverka) Tj ET
+BT /F2 20 Tf 1.0000 1.0000 1.0000 rg 36.0 776.0 Td (Ty v top-1%,) Tj ET
+BT /F2 20 Tf 0.4235 0.3882 1.0000 rg 36.0 752.0 Td (kogda --) Tj ET
+BT /F1 9 Tf 0.4706 0.4706 0.6275 rg 36.0 736.0 Td (Povedencheskie markery, a ne sertifikaty. Zamechaesh v razgovore, ne v teste.) Tj ET
 0.0706 0.0706 0.1176 rg
-0.1412 0.1412 0.2078 RG
-36.00 643.00 258.00 72.00 re B
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 648.0 258.0 70.0 re B
 0.4235 0.3882 1.0000 rg
-36.00 715.00 258.00 2.00 re f
-BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.00 703.00 Td (// ????????) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 44.00 691.00 Td (??????? ?? ??????????, ?? ??????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 677.00 Td (?????????? ??????? ???????????? ?? ?????????? ? ???????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 667.00 Td (????????????. ??? ?????? ???????? ?????????? ????? -- ???) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 657.00 Td (?????????????? ???????? ?????.) Tj ET
-0.50 w
+36.0 718.0 258.0 2.0 re f
+BT /F2 7.5 Tf 0.4235 0.3882 1.0000 rg 44.0 706.0 Td (// BEGOST) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 44.0 694.0 Td (Dumayesh na angliyskom, ne perevodish) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.0 681.0 Td (Vnutrenniy monolog perelyuchaetsya na angliiskiy. Pri chtenii) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.0 671.0 Td (znacheniye poyavlyaetsya srazu.) Tj ET
 0.0706 0.0706 0.1176 rg
-0.1412 0.1412 0.2078 RG
-300.00 643.00 258.00 72.00 re B
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 648.0 258.0 70.0 re B
 0.9686 0.5922 0.1176 rg
-300.00 715.00 258.00 2.00 re f
-BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 308.00 703.00 Td (// ????????) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 308.00 691.00 Td (??????? ?????? ? ?????? \(? ? ???? ? ???????\)) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 677.00 Td (????? ???????? ??????? ??????????? -- ?????????. ??????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 667.00 Td (?????? ???????? ???????? -- ??????? ??, ??? ????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 657.00 Td (??????????.) Tj ET
-0.50 w
+300.0 718.0 258.0 2.0 re f
+BT /F2 7.5 Tf 0.9686 0.5922 0.1176 rg 308.0 706.0 Td (// TOCHNOST) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 308.0 694.0 Td (Slyshish oshibki u drugikh \(i u sebya v zapisyakh\)) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.0 681.0 Td (Kogda nositel govori nepr. -- zamechaesh. Zapis mesyachnoy) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.0 671.0 Td (davnosti -- slyshish chto kazalos normalnym.) Tj ET
 0.0706 0.0706 0.1176 rg
-0.1412 0.1412 0.2078 RG
-36.00 566.00 258.00 72.00 re B
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 573.0 258.0 70.0 re B
 0.2627 0.9137 0.4824 rg
-36.00 638.00 258.00 2.00 re f
-BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.00 626.00 Td (// ????) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 44.00 614.00 Td (????????? ????? ?? ??????, ? ?? ?????? ??????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 600.00 Td (????? big/large/vast/enormous -- ????????? ?????????.) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 590.00 Td (??????????, ????? "however" ??????, ? "but" -- ?????.) Tj ET
-0.50 w
+36.0 643.0 258.0 2.0 re f
+BT /F2 7.5 Tf 0.2627 0.9137 0.4824 rg 44.0 631.0 Td (// VKUS) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 44.0 619.0 Td (Vybiraesh slovo po nyuansu, ne pervoe popavsheyesya) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.0 606.0 Td (Mezhdu big/large/vast/enormous -- vybiraesh osoznanno.) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.0 596.0 Td (Chuvstvuesh kogda "however" tyazhelo.) Tj ET
 0.0706 0.0706 0.1176 rg
-0.1412 0.1412 0.2078 RG
-300.00 566.00 258.00 72.00 re B
+0.50 w 0.1412 0.1412 0.2078 RG
+300.0 573.0 258.0 70.0 re B
 1.0000 0.3961 0.5176 rg
-300.00 638.00 258.00 2.00 re f
-BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 308.00 626.00 Td (// ???????????????????) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 308.00 614.00 Td (?????????? ???? ???????? inference, ? ?? ??????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 600.00 Td ("I'm not sure about the exact term, but what I mean is...") Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 590.00 Td (-- ??? C1-?????, ? ?? ??????. ??????? ?? ????, ??? ????.) Tj ET
-0.50 w
+300.0 643.0 258.0 2.0 re f
+BT /F2 7.5 Tf 1.0000 0.3961 0.5176 rg 308.0 631.0 Td (// STRESS) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 308.0 619.0 Td (Neznakomaya tema vklyuchayet inference, ne paniku) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.0 606.0 Td ("I am not sure about the term, but what I mean is..." -- eto) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.0 596.0 Td (C1-otvet, ne proval.) Tj ET
 0.0706 0.0706 0.1176 rg
-0.1412 0.1412 0.2078 RG
-36.00 489.00 258.00 72.00 re B
+0.50 w 0.1412 0.1412 0.2078 RG
+36.0 498.0 258.0 70.0 re B
 0.2196 0.9765 0.8431 rg
-36.00 561.00 258.00 2.00 re f
-BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.00 549.00 Td (// ???????) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 44.00 537.00 Td (35 ????? ? ???? ?? ????????? ??? ?????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 523.00 Td (??????? ?? ????? ???, ?????? ?????? ?????, AI ???? ?????.) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.00 513.00 Td (???? ??????? ? ????? -- ?? ?????????????, ? ????????????.) Tj ET
-0.50 w
+36.0 568.0 258.0 2.0 re f
+BT /F2 7.5 Tf 0.2196 0.9765 0.8431 rg 44.0 556.0 Td (// SISTEMA) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 44.0 544.0 Td (35 minut v den ne oschuschayutsya kak uchyoba) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.0 531.0 Td (Podkast vo vremya edy, statya vmesto lenty. Yazyk vstroen v) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 44.0 521.0 Td (potok -- ne intensivnost, a ustoychivost.) Tj ET
 0.0549 0.0549 0.1176 rg
-0.2275 0.2275 0.4667 RG
-300.00 489.00 258.00 72.00 re B
+0.50 w 0.2275 0.2275 0.4667 RG
+300.0 498.0 258.0 70.0 re B
 0.6588 0.6392 1.0000 rg
-300.00 561.00 258.00 2.00 re f
-BT /F2 7.5 Tf 0.6588 0.6392 1.0000 rg 308.00 549.00 Td (// AI-??????????) Tj ET
-BT /F2 9.5 Tf 1.0000 1.0000 1.0000 rg 308.00 537.00 Td (??????????? AI ??? ???????, ? ?? ??????????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 523.00 Td (?? ????? ?? ??????? "????????". ???????: "?????) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 513.00 Td (??????????????", "????? 3 ??????", "??? ??????? ????". AI) Tj ET
-BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.00 503.00 Td (-- ?????????? ??????????.) Tj ET
-0.80 w
+300.0 568.0 258.0 2.0 re f
+BT /F2 7.5 Tf 0.6588 0.6392 1.0000 rg 308.0 556.0 Td (// AI-TOOL) Tj ET
+BT /F2 9 Tf 1.0000 1.0000 1.0000 rg 308.0 544.0 Td (Ispolzuesh AI kak zerkalo, a ne perevodchik) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.0 531.0 Td (Davno ne prosish "perevedi". Prosish "otsenyi ubeditelnost",) Tj ET
+BT /F1 7.5 Tf 0.4706 0.4706 0.6275 rg 308.0 521.0 Td ("naydyi 3 tochnee". AI -- instrument samootsenki.) Tj ET
 0.0588 0.0588 0.1020 rg
-0.2275 0.2275 0.4667 RG
-36.00 424.00 523.00 50.00 re B
-BT /F2 13 Tf 1.0000 1.0000 1.0000 rg 107.00 458.00 Td (Yazyk uchyat godami --) Tj ET
-BT /F2 11 Tf 0.4235 0.3882 1.0000 rg 167.00 443.00 Td (nositelyami stanovyatsya za 52 nedeli privychek.) Tj ET
-BT /F1 9 Tf 0.4706 0.4706 0.6275 rg 127.00 430.00 Td (Ne znanie delaet raznitsu -- delaet raznitsu to, chto ty delaesh kazhdyi den.) Tj ET
-0.50 w
-0.1412 0.1412 0.2078 RG
-36.00 412.00 m 559.00 412.00 l S
-BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 36.00 402.00 Td (ANGLIISKII YAZYK * ROADMAP * 2026 * V1.0) Tj ET
-BT /F1 7 Tf 0.3451 0.3451 0.6275 rg 399.00 402.00 Td (A1 -> C1 * 52 ned. * 5 faz * 38 tem * 5 kaostonov) Tj ET
+0.80 w 0.2275 0.2275 0.4667 RG
+36.0 431.0 523.0 52.0 re B
+BT /F2 13 Tf 1.0000 1.0000 1.0000 rg 112.0 469.0 Td (Yazyk uchyat godami --) Tj ET
+BT /F2 11 Tf 0.4235 0.3882 1.0000 rg 82.0 453.0 Td (nosit?lyami stanovyatsya za 52 nedeli privychek.) Tj ET
+BT /F1 9 Tf 0.4706 0.4706 0.6275 rg 82.0 439.0 Td (Ne znanie delaet raznitsu -- to, chto ty delaesh kazhdyy den.) Tj ET
+0.50 w 0.1412 0.1412 0.2078 RG 36.0 419.0 m 559.0 419.0 l S
+BT /F2 7 Tf 0.3451 0.3451 0.6275 rg 36.0 410.0 Td (ANGLIISKIY YAZYK * ROADMAP * 2026 * V1.0) Tj ET
+BT /F1 7 Tf 0.3451 0.3451 0.6275 rg 359.0 410.0 Td (A1->C1 * 52 ned. * 5 faz * 38 tem * 5 kaostonov) Tj ET
 endstream
 endobj
 21 0 obj
 << /Type /Page /Parent 3 0 R /MediaBox [0 0 595 842] /Contents 20 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
-endobj
-3 0 obj
-<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R] /Count 8 >>
 endobj
 xref
 0 22
 0000000000 65535 f 
 0000000015 00000 n 
 0000000064 00000 n 
-0000060610 00000 n 
-0000000154 00000 n 
-0000000251 00000 n 
+0000000151 00000 n 
+0000000256 00000 n 
 0000000353 00000 n 
-0000004918 00000 n 
-0000005054 00000 n 
-0000013433 00000 n 
-0000013569 00000 n 
-0000020469 00000 n 
-0000020607 00000 n 
-0000030791 00000 n 
-0000030929 00000 n 
-0000040522 00000 n 
-0000040660 00000 n 
-0000049402 00000 n 
-0000049540 00000 n 
-0000055403 00000 n 
-0000055541 00000 n 
-0000060472 00000 n 
+0000000455 00000 n 
+0000004647 00000 n 
+0000004783 00000 n 
+0000011758 00000 n 
+0000011894 00000 n 
+0000017610 00000 n 
+0000017748 00000 n 
+0000026608 00000 n 
+0000026746 00000 n 
+0000035036 00000 n 
+0000035174 00000 n 
+0000042821 00000 n 
+0000042959 00000 n 
+0000048086 00000 n 
+0000048224 00000 n 
+0000052643 00000 n 
 trailer
 << /Size 22 /Root 1 0 R /Info 2 0 R >>
 startxref
-60715
+52781
 %%EOF
